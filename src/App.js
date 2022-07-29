@@ -1,9 +1,18 @@
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./components/NavbarNew";
+import Hero from "./components/HeroTest";
+import Details from "./components/Details";
+import About from "./components/About";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-indigo-500 text-center py-8">
-    Hello world!
-  </h1>
+    <div className="App">
+      <Navbar />
+      <Hero />
+      <Details />
+      <About />
+    </div>
   );
 }
 
