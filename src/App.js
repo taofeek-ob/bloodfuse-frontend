@@ -1,4 +1,4 @@
-import { Navbar, Hero, Details, WhoWeAre, MakeADiff, Footer } from './components';
+import { Navbar, Hero, Details, WhoWeAre,KnowOurPatients, MakeADiff, Footer } from './components';
 import './index.css';
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <Hero />
       <Details />
       <WhoWeAre />
+      <KnowOurPatients />
       <MakeADiff />
       <Footer />
     </div>

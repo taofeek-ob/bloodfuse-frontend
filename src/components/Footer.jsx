@@ -6,20 +6,19 @@ import { LocationMarkerIcon } from '@heroicons/react/solid'
 
 const Footer = () => {
     return (
-        <>
             <footer className='bg-[#141414] w-full'>
                 <div className="flex flex-col items-center justify-center gap-8 w-full h-full py-8 px-4 lg:px-8">
-                    <div className='grid grid-cols-1 lg:grid-cols-7 max-w-7xl gap-8 w-full mx-auto pb-8 md:pb-12 lg:pb-32 border-b border-[#FCFCFC]'>
+                    <div className='grid grid-cols-1 lg:grid-cols-7 max-w-7xl gap-8 lg:gap-16 w-full mx-auto pb-8 md:pb-12 lg:pb-24 border-b border-[#FCFCFC]'>
                         {/* First Grid */}
                         <div className='lg:col-span-2'>
                             <div className='flex flex-col items-center h-full'>
-                                <p className='text-white text-center text-2xl md:text-4xl pb-4'>
+                                <p className='text-white text-center lg:text-start text-2xl md:text-4xl pb-4'>
                                     Sign up to our
                                     newsletter to stay
-                                    up to date
+                                    <span className='lg:block'>up to date</span>
                                 </p>
                                 <div className='flex flex-col items-center justify-center gap-4 w-full'>
-                                    <p className='text-white text-center text-xl lg:text-2xl'>With our latest news</p>
+                                    <p className='text-white text-center lg:mr-auto text-xl lg:text-2xl'>With our latest news</p>
                                     <div className='flex items-center w-full sm:w-[60%] lg:w-full'>
                                     <input
                                         className='w-full mx-auto py-2 text-white text-center'
@@ -95,7 +94,6 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-        </>
     )
 }
 
