@@ -4,13 +4,13 @@ const Details = () => {
   return (
     <div className="h-auto relative ">
       <div className="flex flex-col mt-20 max-w-7xl mx-auto px-4 sm:px-6 justify-center">
-        <div className="text-lg lg:text-[30px] text-center font-[700]"> EVERY TWO SECONDS</div>
+        <div className="text-[24px] lg:text-[30px] text-center font-[700]"> EVERY TWO SECONDS</div>
         <div className="mt-5 text-start md:text-center font-[300] text-[#333333]">
           Someone in your community needs blood. This number counter shows how
           many people have needed blood since you arrived here.
         </div>
         <div className="text-incremental my-10 text-center">00 - 499</div>
-        <div className="flex flex-col sm:flex-row flex-wrap gap-16 md:gap-4 max-w-7xl my-10 px-6">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-16 sm:gap-x-5 md:gap-4 max-w-7xl my-10 px-2">
           <div className="flex-1 flex flex-col items-center gap-6">
             <img className=" w-14 h-14 " src={BloodBankLogo} alt="Bonnie" />
             <h5 className="text-xl font-medium text-gray-900">
