@@ -27,7 +27,7 @@ const Footer = () => {
                                         placeholder='example@gmail.com'
                                     />
                                     <div className=' px-4 py-2 bg-slate-600 flex items-center justify-center'>
-                                        <ChevronRightIcon className='h-6 w-6 text-white' />
+                                        <ChevronRightIcon className='h-6 w-6 text-white cursor-pointer' />
                                     </div>
                                     </div>
                                 </div>

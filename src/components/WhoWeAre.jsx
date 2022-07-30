@@ -4,10 +4,10 @@ import { ChevronRightIcon } from "@heroicons/react/outline";
 
 const WhoWeAre = () => {
   return (
-    <div className=" relative my-10 md:my-20 min-h-screen" id="about">
+    <div className=" relative my-10 md:my-20 " id="about">
       <div className="flex flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 justify-between gap-4">
         <div className="text-left mt-20 basis-full lg:basis-1/2">
-          <h1 className="text-lg sm:text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</h1>
+          <h1 className="text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</h1>
           <div className="">
             <h4 className="text-semibold text-[#333333] mb-4">
               At BloodFuse, we know how important blood is for life and we

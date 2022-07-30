@@ -1,5 +1,8 @@
 import React from "react";
 import BloodBankLogo from "../assets/BloodBank.png";
+import CanIDonate from "../assets/can-i-donate.png";
+import DonateNow from "../assets/donate-now-icon.png";
+
 const Details = () => {
   return (
     <div className="h-auto relative ">
@@ -12,7 +15,7 @@ const Details = () => {
         <div className="text-incremental my-10 text-center">00 - 499</div>
         <div className="flex flex-col sm:flex-row flex-wrap gap-16 sm:gap-x-5 md:gap-4 max-w-7xl my-10 px-8 sm:px-0">
           <div className="flex-1 flex flex-col items-center gap-6">
-            <img className=" w-14 h-14 " src={BloodBankLogo} alt="Bonnie" />
+            <img className=" w-14 h-14 " src={DonateNow} alt="Donate now" />
             <h5 className="text-xl font-medium text-gray-900">
               Donate Now
             </h5>
@@ -28,7 +31,7 @@ const Details = () => {
             </a>
           </div>
           <div className="flex-1 flex flex-col items-center gap-6">
-            <img className="w-14 h-14" src={BloodBankLogo} alt="Bonnie" />
+            <img className="w-14 h-14" src={CanIDonate} alt="Can I donate" />
             <h5 className="text-xl font-medium text-gray-900">
               Can I Donate Blood?
             </h5>
@@ -43,7 +46,7 @@ const Details = () => {
             </a>
           </div>
           <div className="flex-1 flex flex-col items-center gap-6">
-            <img className="w-14 h-14" src={BloodBankLogo} alt="Bonnie" />
+            <img className="w-14 h-14" src={BloodBankLogo} alt="Where to donate" />
             <h5 className="text-xl font-medium text-gray-900">
               Where To Donate
             </h5>
