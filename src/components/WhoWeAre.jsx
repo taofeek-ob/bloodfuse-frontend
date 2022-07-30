@@ -2,22 +2,22 @@ import React from "react";
 import Scientist from "../assets/Lab.png";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
-const About = () => {
+const WhoWeAre = () => {
   return (
-    <div className=" relative mt-10 md:mt-20 h-screen" id="about">
-      <div className="flex max-w-7xl mx-auto px-4 sm:px-6 md:px-10 justify-between">
-        <div className=" text-left mt-20">
-          <div className="text-lg sm:text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</div>
+    <div className=" relative my-10 md:my-20 min-h-screen" id="about">
+      <div className="flex flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 justify-between gap-4">
+        <div className="text-left mt-20 basis-full lg:basis-1/2">
+          <h1 className="text-lg sm:text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</h1>
           <div className="">
             <h4 className="text-semibold text-[#333333] mb-4">
               At BloodFuse, we know how important blood is for life and we
               believe every Individual should be given an opportunity to stay
               alive, which is why we:
             </h4>
-            <div className="my-5 w-[90%] md:w-[60%] mx-auto block lg:hidden">
+            <div className="my-5 w-[90%] md:w-[300px] h-[300px] mx-auto block lg:hidden">
               <img src={Scientist} alt="" className="w-full h-full object-center object-cover"/>
             </div>
-            <ul className="marker:text-red-400 list-disc pl-5 space-y-3 text-[#333333]">
+            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-light">
               <li>
                 Connect Blood Donors & Recipients in a convenient and safe way.
               </li>
@@ -30,7 +30,7 @@ const About = () => {
                 transparency, security of data and decentralization.
               </li>
             </ul>
-            <div className="md:mr-auto hidden md:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center w-[70%] sm:w-auto">
+            <div className="lg:mr-auto hidden lg:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start w-[70%] sm:w-auto">
               <button
                 type="button"
                 className="bttn bttn-primary"
@@ -48,12 +48,12 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="my-20 hidden lg:block">
-          <img src={Scientist} alt="" />
+        <div className="my-20 hidden lg:block basis-1/2">
+          <img src={Scientist} alt="" className="" />
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default WhoWeAre;

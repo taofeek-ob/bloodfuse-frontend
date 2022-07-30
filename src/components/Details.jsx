@@ -10,7 +10,7 @@ const Details = () => {
           many people have needed blood since you arrived here.
         </div>
         <div className="text-incremental my-10 text-center">00 - 499</div>
-        <div className="flex flex-col sm:flex-row flex-wrap gap-16 sm:gap-x-5 md:gap-4 max-w-7xl my-10 px-2">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-16 sm:gap-x-5 md:gap-4 max-w-7xl my-10 px-8 sm:px-0">
           <div className="flex-1 flex flex-col items-center gap-6">
             <img className=" w-14 h-14 " src={BloodBankLogo} alt="Bonnie" />
             <h5 className="text-xl font-medium text-gray-900">

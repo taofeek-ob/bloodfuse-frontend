@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Logo from "../assets/logo.png";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { ViewListIcon, XIcon } from "@heroicons/react/outline";
 const solutions = [
   {
     name: "Donate Blood",
@@ -41,9 +41,9 @@ export default function NavBar() {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-primarybg rounded-md p-2 inline-flex items-center justify-center text-white-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="bg-primarybg rounded-md p-2 inline-flex items-center justify-center text-white-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <ViewListIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           
