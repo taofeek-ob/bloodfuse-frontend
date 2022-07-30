@@ -1,12 +1,13 @@
 import React from 'react'
 import { MailIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon } from '@heroicons/react/outline'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
 // import { Phon}
 
 const Footer = () => {
     return (
         <>
-            <footer className='bg-[#141414] min-h-[40vh] w-full'>
+            <footer className='bg-[#141414] w-full'>
                 <div className="flex flex-col items-center justify-center gap-8 w-full h-full py-8 px-4 lg:px-8">
                     <div className='grid grid-cols-1 lg:grid-cols-7 max-w-7xl gap-8 w-full mx-auto pb-8 md:pb-12 lg:pb-32 border-b border-[#FCFCFC]'>
                         {/* First Grid */}
@@ -19,11 +20,16 @@ const Footer = () => {
                                 </p>
                                 <div className='flex flex-col items-center justify-center gap-4 w-full'>
                                     <p className='text-white text-center text-xl lg:text-2xl'>With our latest news</p>
+                                    <div className='flex items-center w-full sm:w-[60%] lg:w-full'>
                                     <input
-                                        className='w-full sm:w-[60%] lg:w-full mx-auto py-2 text-white text-center'
+                                        className='w-full mx-auto py-2 text-white text-center'
                                         type='text'
                                         placeholder='example@gmail.com'
                                     />
+                                    <div className=' px-4 py-2 bg-slate-600 flex items-center justify-center'>
+                                        <ChevronRightIcon className='h-6 w-6 text-white' />
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
