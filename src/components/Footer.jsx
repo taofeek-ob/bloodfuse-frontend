@@ -20,7 +20,7 @@ const Footer = () => {
                                 <div className='flex flex-col items-center justify-center gap-4 w-full'>
                                     <p className='text-white text-center text-xl lg:text-2xl'>With our latest news</p>
                                     <input
-                                        className='w-full py-2 text-white text-center'
+                                        className='w-full sm:w-[60%] lg:w-full mx-auto py-2 text-white text-center'
                                         type='text'
                                         placeholder='example@gmail.com'
                                     />
