@@ -1,9 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Navbar from "./components/NavbarNew";
-import Hero from "./components/HeroTest";
-import Details from "./components/Details";
-import About from "./components/About";
+import { Navbar, Hero, Details, About } from './components';
+import './index.css';
 
 function App() {
   return (
