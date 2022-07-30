@@ -57,7 +57,7 @@ export default function NavBar() {
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
-                    <span className="text-[12px] lg:text-base">Make an appointment</span>
+                    <span className="text-[12px] lg:text-base font-[400]">Make an appointment</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-white-600" : "text-white-400",
@@ -109,7 +109,7 @@ export default function NavBar() {
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
-                    <span className="text-[12px] lg:text-base">Who can donate blood</span>
+                    <span className="text-[12px] lg:text-base font-[400]">Who can donate blood</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-white-600" : "text-white-400",
