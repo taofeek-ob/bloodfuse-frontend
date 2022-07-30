@@ -8,7 +8,7 @@ const Footer = () => {
         <>
             <footer className='bg-[#141414] min-h-[40vh] w-full'>
                 <div className="flex flex-col items-center justify-center gap-8 w-full h-full py-8 px-4 lg:px-8">
-                    <div className='grid grid-cols-1 lg:grid-cols-6 max-w-7xl gap-8 w-full mx-auto pb-8 md:pb-12 lg:pb-32 border-b border-[#FCFCFC]'>
+                    <div className='grid grid-cols-1 lg:grid-cols-7 max-w-7xl gap-8 w-full mx-auto pb-8 md:pb-12 lg:pb-32 border-b border-[#FCFCFC]'>
                         {/* First Grid */}
                         <div className='lg:col-span-2'>
                             <div className='flex flex-col items-center h-full'>
@@ -28,7 +28,7 @@ const Footer = () => {
                             </div>
                         </div>
                         {/* Second Grid */}
-                        <div className='lg:col-span-4 w-full grid grid-cols-1 sm:grid-cols-3 gap-8 content-center md:grid-cols-3'>
+                        <div className='lg:col-span-5 w-full grid grid-cols-1 sm:grid-cols-3 gap-8 content-center md:grid-cols-3'>
                             <div className='flex flex-col items-center md:items-start text-[#FCFCFC] text-[14px] lg:text-base space-y-2 md:space-y-3'>
                                 <h1 className="text-xl text-white font-semibold">Donate Blood</h1>
                                 <a href="#" >
