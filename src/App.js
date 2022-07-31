@@ -1,17 +1,19 @@
-import { Navbar, Hero, Details, WhoWeAre,KnowOurPatients, MakeADiff, Footer } from './components';
+import { Navbar, Footer } from './components';
+import LandingPage from './pages/LandingPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Details />
-      <WhoWeAre />
-      <KnowOurPatients />
-      <MakeADiff />
-      <Footer />
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

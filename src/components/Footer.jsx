@@ -2,7 +2,6 @@ import React from 'react'
 import { MailIcon } from '@heroicons/react/outline'
 import { ChevronRightIcon } from '@heroicons/react/outline'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
-// import { Phon}
 
 const Footer = () => {
     return (
