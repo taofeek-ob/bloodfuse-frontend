@@ -4,16 +4,26 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const KnowOurPatients = () => {
-  const screenWidth = () => {
-    if (window.innerWidth < 768) {
-      return false;
-    } else {
-      return true;
-    }
-  };
+  const [ScreenSize, setScreenSize] = useState();
+
+  useEffect(() => {
+    const screenWidth = () => {
+      if (window.innerWidth < 768) {
+        setScreenSize(false);
+      } else {
+        setScreenSize(true);
+      }
+    };
+    window.addEventListener("resize", screenWidth);
+
+    return (_) => {
+      window.removeEventListener("resize", screenWidth);
+    };
+  });
+
   const persons = [
     {
       name: "Oluwole Seun",
@@ -45,7 +55,7 @@ const KnowOurPatients = () => {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
-        navigation={screenWidth()}
+        navigation={ScreenSize}
         modules={[Pagination, Navigation]}
         className="mySwiper w-full"
       >
