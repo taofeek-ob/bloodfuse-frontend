@@ -1,50 +1,62 @@
-import VideoCard from './VideoCard'
+import VideoCard from "./VideoCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import { useState } from "react";
 
 const KnowOurPatients = () => {
-    const persons = [
-        {
-            name: "Oluwole Seun",
-            videoSrc: "",
-            details: "Meet 14 years old Seun from Lagos. She and others who are fighting Leukemia often need blood trans-fusions while going through chemo treatments.",
-            btnDescription: "Watch on Our Youtube",
-            youtubeLink: "www.youtube.com"
-        },
-        {
-            name: "Audu Haruna",
-            videoSrc: "",
-            details: "Meet 28 years old Haruna from Kano, who is fighting Cancer often need blood trans-fusions while going through chemo treatments.",
-            btnDescription: "Watch on Our Youtube",
-            youtubeLink: "www.youtube.com"
-        }
-    ]
-    return (
-        <section className='w-full pb-8 md:pb-16 h-auto'>
-            <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold hidden sm:block">GET TO KNOW OUR PATIENTS MORE</h1>
-            <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold block sm:hidden">GET TO KNOW OUR PATIENTS</h1>
-            {/* The Swiper Component */}
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                loop={true}
-                navigation={true}
-                modules={[Pagination, Navigation]}
-                className="mySwiper w-full"
-            >
-                {persons.map((person, index) => (
-                    <SwiperSlide key={index}>
-                        <VideoCard person={person} />
-                    </SwiperSlide>
-                ))}
+  const screenWidth = () => {
+    if (window.innerWidth < 768) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+  const persons = [
+    {
+      name: "Oluwole Seun",
+      videoSrc: "",
+      details:
+        "Meet 14 years old Seun from Lagos. She and others who are fighting Leukemia often need blood trans-fusions while going through chemo treatments.",
+      btnDescription: "Watch on Our Youtube",
+      youtubeLink: "https://www.youtube.com/embed/JU5ZoGU3wzA",
+    },
+    {
+      name: "Audu Haruna",
+      videoSrc: "",
+      details:
+        "Meet 28 years old Haruna from Kano, who is fighting Cancer often need blood trans-fusions while going through chemo treatments.",
+      btnDescription: "Watch on Our Youtube",
+      youtubeLink: "https://www.youtube.com/embed/fehAgOqTR44",
+    },
+  ];
+  return (
+    <section className="w-full pb-8 md:pb-16 h-auto">
+      <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold hidden sm:block">
+        GET TO KNOW OUR PATIENTS MORE
+      </h1>
+      <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold block sm:hidden">
+        GET TO KNOW OUR PATIENTS
+      </h1>
+      {/* The Swiper Component */}
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        navigation={screenWidth()}
+        modules={[Pagination, Navigation]}
+        className="mySwiper w-full"
+      >
+        {persons.map((person, index) => (
+          <SwiperSlide key={index}>
+            <VideoCard person={person} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+};
 
-            </Swiper>
-        </section>
-    )
-}
-
-export default KnowOurPatients
+export default KnowOurPatients;
