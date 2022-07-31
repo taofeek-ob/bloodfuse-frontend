@@ -2,8 +2,10 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import Logo from "../assets/logo.png";
 import { ViewListIcon, XIcon } from "@heroicons/react/outline";
+import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+
 const solutions = [
   {
     name: "Donate Blood",
@@ -36,9 +38,9 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6  md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <Link to="/">
               <img className="h-10 w-auto" src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-primarybg rounded-md p-2 inline-flex items-center justify-center text-white-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
@@ -151,12 +153,12 @@ export default function NavBar() {
                 </>
               )}
             </Popover>
-            <a
-              href="#about"
+            <Link
+              to="/aboutus"
               className="text-[12px] lg:text-base text-white-500 hover:text-white-900"
             >
               About Us
-            </a>
+            </Link>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a

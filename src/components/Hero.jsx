@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "@heroicons/react/outline";
 const Hero = () => {
   return (
     <div className="bg-primarybg relative h-auto text-white">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col gap-6 md:flex-row sm:px-6 md:px-8 min-h-[90vh] sm:h-auto">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-start slg:justify-center gap-6 md:flex-row sm:px-6 md:px-8 min-h-[90vh] sm:h-auto">
         <div className="py-8 sm:py-10 md:py-0 flex flex-col items-center justify-center gap-4 w-full lg:w-1/2">
           <div className="text-[30px] md:text-4xl lg:text-5xl xl:text-6xl text-center sm:text-left font-semibold px-4 sm:px-0">
             Save a Life Today By Donating{' '}
