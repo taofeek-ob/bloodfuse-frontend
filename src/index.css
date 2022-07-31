@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Moderat";
-    src: url("../../../../../Downloads/Moderat/Moderat-Regular.ttf")
-  }
+  font-family: "Moderat";
+  src: url("./assets/fonts/Moderat-Regular.ttf");
+}
 
-  body {
-    font-family: "Moderat";
-  }
-  .font-moderat {
-    font-family: "Moderat";
-  }
+body {
+  font-family: "Moderat";
+}
+.font-moderat {
+  font-family: "Moderat";
+}
 
 .bttn {
-    @apply w-full sm:w-fit flex items-center justify-center px-8 py-2 border border-transparent;
+  @apply w-full sm:w-fit flex items-center justify-center px-8 py-2 border border-transparent;
 }
 
 .bttn-primary {
-    @apply text-white bg-[#F00530] hover:bg-red-700 rounded-[4px] focus:ring-2 focus:outline-none focus:ring-blue-300 focus:ring-opacity-50;
+  @apply text-white bg-[#F00530] hover:bg-red-700 rounded-[4px] focus:ring-2 focus:outline-none focus:ring-blue-300 focus:ring-opacity-50;
 }
 .bttn-secondary {
-    @apply text-white bg-transparent border border-white rounded-[4px] focus:ring-2 focus:outline-none focus:ring-blue-300 focus:ring-opacity-50;
+  @apply text-white bg-transparent border border-white rounded-[4px] focus:ring-2 focus:outline-none focus:ring-blue-300 focus:ring-opacity-50;
 }
 .bttn-tertiary {
   @apply text-[#F00530] bg-transparent border border-[#F00530] rounded-[4px] focus:ring-2 focus:outline-none focus:ring-blue-300 focus:ring-opacity-50;
 }
 .text-incremental {
-    @apply text-4xl lg:text-5xl xl:text-7xl;
+  @apply text-4xl lg:text-5xl xl:text-7xl;
 }
