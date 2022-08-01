@@ -1,5 +1,5 @@
 import { Navbar, Footer } from "./components";
-import { LandingPage, AboutUs } from "./pages";
+import { LandingPage, AboutUs, WhoCanDonate } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/who-can-donate" element={<WhoCanDonate />} />
         </Routes>
         <Footer />
       </Router>

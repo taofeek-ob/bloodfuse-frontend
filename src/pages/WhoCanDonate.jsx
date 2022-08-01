@@ -1,24 +1,19 @@
 import React from "react";
 import Outreach from "../assets/Outreach.png";
 import HealthyMan from "../assets/HealthyMan.png";
-import HealthyMobile from "../assets/HealthyMobile.png";
+
 import { ChevronRightIcon } from "@heroicons/react/outline";
 const WhoCanDonate = () => {
   return (
     <div className=" relative h-auto  text-white">
-      <div className="relative">
+      <div className="w-full h-[40vh] md:h-[30vh] lg:h-[50vh] relative flex flex-col justify-center">
+        <div className="absolute bg-black opacity-30 inset-0"></div>
         <img
           src={Outreach}
-          alt=""
-          className="backdrop-contrast-200 hidden md:block"
+          alt="Healthy Man"
+          className="absolute bottom-0 left-0 w-full h-full object-center object-cover -z-10"
         />
-        <img
-          src={HealthyMobile}
-          alt=""
-          className="backdrop-contrast-200 md:hidden w-full"
-        />
-
-        <h1 class="absolute text-5xl text-[#FCFCFC]  font-bold  top-1/2 left-[36%] md:left-1/4 -translate-x-1/2 -translate-y-1/2">
+        <h1 className="text-4xl md:text-5xl text-[#fcfcfc] ml-4 md:ml-8 lg:ml-24 z-10 font-bold">
           Who Is Eligible To Donate
         </h1>
       </div>
