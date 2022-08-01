@@ -8,7 +8,7 @@ const Details = () => {
     <div className="h-auto relative ">
       <div className="flex flex-col mt-20 max-w-7xl mx-auto px-4 sm:px-6 justify-center">
         <div className="text-[24px] lg:text-[30px] text-center font-[700]"> EVERY TWO SECONDS</div>
-        <div className="mt-5 text-start md:text-center font-[300] text-[#333333]">
+        <div className="mt-5 text-start md:text-center font-[300] font-mod-light text-[#333333]">
           Someone in your community needs blood. This number counter shows how
           many people have needed blood since you arrived here.
         </div>

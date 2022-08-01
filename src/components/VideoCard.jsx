@@ -12,12 +12,12 @@ const VideoCard = ({ person }) => {
     <div className='px-8 flex flex-col'>
         <div className='w-[80%] mx-auto'>
         <iframe
-          className="w-full md:aspect-[20/9] aspect-video mx-auto px-auto md:px-20"
+          className="w-full md:aspect-[20/9] aspect-[16/10] mx-auto px-auto md:px-20"
           src={person.youtubeLink}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <p className="text-center font-medium py-4 text-2xl lg:text-3xl">

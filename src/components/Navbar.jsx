@@ -10,21 +10,25 @@ const solutions = [
   {
     name: "Donate Blood",
     slug: "#",
+    href: "/"
   },
   {
     name: "Request Blood",
     slug: "#",
+    href: "/"
   },
 ];
 
 const resources = [
   {
     name: "How to Donate",
-    link: "#",
+    link: "/",
+    href: "/",
   },
   {
     name: "Eligibilty Requirement",
     link: "/who-can-donate",
+    href: "/who-can-donate",
   },
 ];
 
@@ -89,7 +93,7 @@ export default function NavBar() {
                           {solutions.map((item) => (
                             <a
                               key={item.name}
-                              href={item.link}
+                              href={item?.link}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-200"
                             >
                               <div className="">
@@ -169,13 +173,13 @@ export default function NavBar() {
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Link
-              to="#"
+              to="/"
               className="whitespace-nowrap text-white-500 hover:text-white-900 text-[12px] lg:text-base"
             >
               Sign up
             </Link>
             <Link
-              to="#"
+              to="/"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-8 py-2 border border-transparent rounded-sm shadow-sm text-[12px] lg:text-base font-normal text-white bg-red-600 hover:bg-red-700"
             >
               Login
@@ -235,7 +239,7 @@ export default function NavBar() {
                 {resources.map((item) => (
                   <Link
                     key={item.name}
-                    tof={item.href}
+                    to={item.href}
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
@@ -244,14 +248,14 @@ export default function NavBar() {
               </div>
               <div>
                 <Link
-                  to="#"
+                  to="/"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
                 >
                   Sign up
                 </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
                   Existing Donor?{" "}
-                  <Link to="#" className="text-red-600 hover:text-red-500">
+                  <Link to="/" className="text-red-600 hover:text-red-500">
                     Login
                   </Link>
                 </p>
