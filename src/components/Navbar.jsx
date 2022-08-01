@@ -269,7 +269,7 @@ export default function NavBar() {
                   {resources.map((item) => (
                     <Link
                       key={item.name}
-                      tof={item.href}
+                      to={item.href}
                       className="text-base font-medium text-gray-900 hover:text-gray-700"
                     >
                       {item.name}
