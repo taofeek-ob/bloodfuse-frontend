@@ -13,7 +13,7 @@ const WhoCanDonate = () => {
           alt="Healthy Man"
           className="absolute bottom-0 left-0 w-full h-full object-center object-cover -z-10"
         />
-        <h1 className="text-4xl md:text-5xl text-[#fcfcfc] ml-4 md:ml-8 lg:ml-24 z-10 font-bold">
+        <h1 className="text-4xl md:text-5xl text-[#fcfcfc] ml-4 md:ml-8 lg:ml-16 z-10 font-bold">
           Who Is Eligible To Donate
         </h1>
       </div>
