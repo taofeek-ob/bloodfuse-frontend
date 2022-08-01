@@ -9,7 +9,7 @@ const WhoWeAre = () => {
         <div className="text-left mt-20 basis-full lg:basis-1/2">
           <h1 className="text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</h1>
           <div className="">
-            <h4 className="text-semibold text-[#333333] mb-4">
+            <h4 className="text-semibold font-mod-light text-[#333333] mb-4">
               At BloodFuse, we know how important blood is for life and we
               believe every Individual should be given an opportunity to stay
               alive, which is why we:
@@ -17,7 +17,7 @@ const WhoWeAre = () => {
             <div className="my-5 w-[90%] md:w-[300px] h-[300px] mx-auto block lg:hidden">
               <img src={Scientist} alt="" className="w-full h-full object-center object-cover"/>
             </div>
-            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-light">
+            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-mod-light">
               <li>
                 Connect Blood Donors & Recipients in a convenient and safe way.
               </li>

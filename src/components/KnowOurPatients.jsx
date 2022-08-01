@@ -27,10 +27,10 @@ const KnowOurPatients = () => {
   ];
   return (
     <section className="w-full pb-8 md:pb-16 h-auto">
-      <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold hidden sm:block">
+      <h1 className="text-2xl md:text-3xl text-center pb-16 px-2 font-bold hidden sm:block">
         GET TO KNOW OUR PATIENTS MORE
       </h1>
-      <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold block sm:hidden">
+      <h1 className="text-2xl md:text-3xl text-center py-12 px-2 font-bold block sm:hidden">
         GET TO KNOW OUR PATIENTS
       </h1>
       {/* The Swiper Component */}

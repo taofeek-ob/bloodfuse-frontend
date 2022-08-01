@@ -20,20 +20,20 @@ const WhoCanDonate = () => {
 
       <div className="flex flex-row  mx-auto  mb-20 px-4 sm:px-6 text-black md:mx-5  md:px-10 justify-between ">
         <div className="text-left mt-20  md:mr-8 basis-full lg:basis-1/2">
-          <h1 className="text-2xl md:text-lg font-[700] text-semibold my-5 text-center lg:text-left">
+          <h1 className="text-2xl md:text-3xl text-[#333333] my-5 text-center lg:text-left">
             Know if You Are Eligible To Save a Life by Donating Blood
           </h1>
           <div className="">
-            <h4 className="text-semibold text-[#333333] mb-4">
+            <h4 className="text-semibold text-[#333333] mb-4 font-mod-light">
               To ensure the safety of both patients and donors, these are some
               of the requirements donors must meet to be eligible to donate
               blood based on their donation type
             </h4>
-            <h4 className=" font-[700] text-semibold text-black mb-4">
+            <h4 className="text-[#333333] mb-4 text-[14px] sm:text-xl md:text-2xl">
               Here are the essential qualifications, you can choose to donate
               blood:
             </h4>
-            <h4 className="text-semibold text-[#333333] mb-4">
+            <h4 className="text-semibold text-[#333333] mb-4 font-mod-light">
               Donor eligibility rules help to protect the health and safety of
               the donor as well as the person who will receive a blood
               transfusion. The guidelines listed below will help you determine
@@ -46,7 +46,7 @@ const WhoCanDonate = () => {
                 className="w-full h-full object-center object-cover"
               />
             </div>
-            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-light">
+            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-mod-light">
               <li>
                 To donate blood you must be in good general health, weigh at
                 least 110 pounds, and be at least 16 years old.

@@ -11,21 +11,25 @@ const solutions = [
   {
     name: "Donate Blood",
     slug: "#",
+    href: "/",
   },
   {
     name: "Request Blood",
     slug: "#",
+    href: "/",
   },
 ];
 
 const resources = [
   {
     name: "How to Donate",
-    link: "#",
+    link: "/",
+    href: "/",
   },
   {
     name: "Eligibilty Requirement",
     link: "/who-can-donate",
+    href: "/who-can-donate",
   },
 ];
 
@@ -274,14 +278,22 @@ export default function NavBar() {
                 </div>
                 <div>
                   <Link
-                    to="#"
+                    to="/"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+                <div>
+                  <Link
+                    to="/"
                     className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
                   >
                     Sign up
                   </Link>
                   <p className="mt-6 text-center text-base font-medium text-gray-500">
                     Existing Donor?{" "}
-                    <Link to="#" className="text-red-600 hover:text-red-500">
+                    <Link to="/" className="text-red-600 hover:text-red-500">
                       Login
                     </Link>
                   </p>
