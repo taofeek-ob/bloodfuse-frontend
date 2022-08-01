@@ -1,7 +1,7 @@
-import { Navbar, Footer } from './components';
-import { LandingPage, AboutUs }from './pages';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './index.css';
+import { Navbar, Footer } from "./components";
+import { LandingPage, AboutUs, WhoCanDonate } from "./pages";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./index.css";
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element={<LandingPage />} />
-          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/who-can-donate" element={<WhoCanDonate />} />
         </Routes>
         <Footer />
       </Router>

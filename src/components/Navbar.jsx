@@ -9,22 +9,22 @@ import { Link } from "react-router-dom";
 const solutions = [
   {
     name: "Donate Blood",
-    href: '#'
+    slug: "#",
   },
   {
     name: "Request Blood",
-    href: '#'
+    slug: "#",
   },
 ];
 
 const resources = [
   {
     name: "How to Donate",
-    href: '#'
+    link: "#",
   },
   {
     name: "Eligibilty Requirement",
-    href: '#'
+    link: "/who-can-donate",
   },
 ];
 
@@ -48,8 +48,11 @@ export default function NavBar() {
               <ViewListIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          
-          <Popover.Group as="nav" className="hidden md:flex md:items-center space-x-10">
+
+          <Popover.Group
+            as="nav"
+            className="hidden md:flex md:items-center space-x-10"
+          >
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -59,7 +62,9 @@ export default function NavBar() {
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
-                    <span className="text-[12px] lg:text-base font-[400]">Make an appointment</span>
+                    <span className="text-[12px] lg:text-base font-[400]">
+                      Make an appointment
+                    </span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-white-600" : "text-white-400",
@@ -84,7 +89,7 @@ export default function NavBar() {
                           {solutions.map((item) => (
                             <a
                               key={item.name}
-                              href={item.href}
+                              href={item.link}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-200"
                             >
                               <div className="">
@@ -111,7 +116,9 @@ export default function NavBar() {
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
-                    <span className="text-[12px] lg:text-base font-[400]">Who can donate blood</span>
+                    <span className="text-[12px] lg:text-base font-[400]">
+                      Who can donate blood
+                    </span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-white-600" : "text-white-400",
@@ -136,7 +143,7 @@ export default function NavBar() {
                           {resources.map((item) => (
                             <a
                               key={item.name}
-                              href={item.href}
+                              href={item.link}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <div className="ml-1">
@@ -161,18 +168,18 @@ export default function NavBar() {
             </Link>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="whitespace-nowrap text-white-500 hover:text-white-900 text-[12px] lg:text-base"
             >
               Sign up
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-8 py-2 border border-transparent rounded-sm shadow-sm text-[12px] lg:text-base font-normal text-white bg-red-600 hover:bg-red-700"
             >
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -206,9 +213,9 @@ export default function NavBar() {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {solutions.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                     >
                       {/* <item.icon
@@ -218,48 +225,35 @@ export default function NavBar() {
                       <span className="ml-3 text-base font-medium text-gray-900">
                         {item.name}
                       </span>
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
                 {resources.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    tof={item.href}
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
               <div>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
                 >
                   Sign up
-                </a>
+                </Link>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href="#" className="text-red-600 hover:text-red-500">
+                  Existing Donor?{" "}
+                  <Link to="#" className="text-red-600 hover:text-red-500">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
