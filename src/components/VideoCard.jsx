@@ -1,5 +1,4 @@
-import { ChevronRightIcon } from "@heroicons/react/solid";
-import AboutWoman from "../assets/about-woman.png";
+import { ChevronRightIcon } from '@heroicons/react/solid'
 
 const VideoCard = ({ person }) => {
   // {
@@ -10,8 +9,8 @@ const VideoCard = ({ person }) => {
   //     youtubeLink: "youtube.com"
   // }
   return (
-    <div className="px-8 flex flex-col">
-      <div className="w-[80%] mx-auto">
+    <div className='px-8 flex flex-col'>
+        <div className='w-[80%] mx-auto'>
         <iframe
           className="w-full md:aspect-[20/9] aspect-video mx-auto px-auto md:px-20"
           src={person.youtubeLink}

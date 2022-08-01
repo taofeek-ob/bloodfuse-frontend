@@ -51,5 +51,4 @@ const KnowOurPatients = () => {
     </section>
   );
 };
-
 export default KnowOurPatients;

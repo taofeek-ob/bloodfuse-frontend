@@ -2,8 +2,10 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import Logo from "../assets/logo.png";
 import { ViewListIcon, XIcon } from "@heroicons/react/outline";
+import Logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+
 const solutions = [
   {
     name: "Donate Blood",
@@ -36,9 +38,9 @@ export default function NavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6  md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <Link to="/">
               <img className="h-10 w-auto" src={Logo} alt="Logo" />
-            </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-primarybg rounded-md p-2 inline-flex items-center justify-center text-white-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
@@ -53,7 +55,7 @@ export default function NavBar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-white-900" : "text-white-500",
+                      open ? "text-[#F00530]" : "text-white-500",
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
@@ -76,7 +78,7 @@ export default function NavBar() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-full max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-20 -ml-4 mt-3 transform px-2 w-full max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-2 py-6 sm:gap-8">
                           {solutions.map((item) => (
@@ -105,7 +107,7 @@ export default function NavBar() {
                 <>
                   <Popover.Button
                     className={classNames(
-                      open ? "text-white-900" : "text-white-500",
+                      open ? "text-[#F00530]" : "text-white-500",
                       "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
                     )}
                   >
@@ -128,7 +130,7 @@ export default function NavBar() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-full max-w-md sm:px-0">
+                    <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-full max-w-md sm:px-0">
                       <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-2 py-6 sm:gap-8">
                           {resources.map((item) => (
@@ -151,12 +153,12 @@ export default function NavBar() {
                 </>
               )}
             </Popover>
-            <a
-              href="#about"
+            <Link
+              to="/aboutus"
               className="text-[12px] lg:text-base text-white-500 hover:text-white-900"
             >
               About Us
-            </a>
+            </Link>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a

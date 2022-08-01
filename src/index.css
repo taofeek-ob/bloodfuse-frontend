@@ -33,3 +33,7 @@ body {
 .text-incremental {
   @apply text-4xl lg:text-5xl xl:text-7xl;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #F00530!important;
+}
