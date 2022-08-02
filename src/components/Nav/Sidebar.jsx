@@ -19,10 +19,10 @@ const Sidebar = ({ closeModal }) => {
     >
       <Popover.Panel
         focus
-        className="absolute top-0 right-0  w-[80%] transition overflow-hidden z-20  md:hidden"
+        className="absolute top-0 right-0  w-[85%] transition overflow-hidden z-20  md:hidden"
       >
-        <div className=" ">
-          <div className="  shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
+        <div className="">
+          <div className="shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
             <div className="pt-5 pb-6  ">
               <div className="flex mt-10 px-10 mb-5 items-center justify-between">
                 <div className="">
@@ -49,7 +49,7 @@ const Sidebar = ({ closeModal }) => {
                         <div className=" py-auto   px-5 rounded-md ">
                           <Disclosure.Button
                             as="div"
-                            className={`${
+                            className={`transition duration-100 ease-in-out ${
                               open ? "text-red-600 " : "text-black "
                             } w-full flex justify-between px-5 items-center"
                             } `}
@@ -114,7 +114,7 @@ const Sidebar = ({ closeModal }) => {
                       </>
                     )}
                   </Disclosure>
-                  <div className="mt-2 py-5  border-t-2 border-solid">
+                  <div className="mt-2 py-5  border-t border-solid">
                     <Link
                       to="/aboutus"
                       className="text-black text-base font-medium px-10"
