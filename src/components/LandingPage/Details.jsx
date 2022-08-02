@@ -1,7 +1,8 @@
 import React from "react";
-import BloodBankLogo from "../assets/BloodBank.png";
-import CanIDonate from "../assets/can-i-donate.png";
-import DonateNow from "../assets/donate-now-icon.png";
+import BloodBankLogo from "../../assets/BloodBank.png";
+import CanIDonate from "../../assets/can-i-donate.png";
+import DonateNow from "../../assets/donate-now-icon.png";
+
 
 const Details = () => {
   return (

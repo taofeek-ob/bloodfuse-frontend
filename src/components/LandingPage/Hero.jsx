@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/GroupHero.png";
+import HeroImage from "../../assets/GroupHero.png";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
 const Hero = () => {

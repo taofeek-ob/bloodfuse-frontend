@@ -1,5 +1,11 @@
-import React from 'react'
-import { Hero, Details, WhoWeAre,KnowOurPatients, MakeADiff } from '../components';
+import React from "react";
+import {
+  Hero,
+  Details,
+  WhoWeAre,
+  KnowOurPatients,
+  MakeADiff,
+} from "../components/LandingPage";
 
 const LandingPage = () => {
   return (
@@ -10,7 +16,7 @@ const LandingPage = () => {
       <KnowOurPatients />
       <MakeADiff />
     </>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

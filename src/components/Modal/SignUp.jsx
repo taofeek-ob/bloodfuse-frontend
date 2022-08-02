@@ -4,20 +4,8 @@ import { FiTwitter, FiFacebook } from "react-icons/fi";
 
 import Tabs from "./Tab.jsx";
 
-export default function MyModal({
-  isModalOpen,
-  closeModalFunc,
- 
-}) {
-  //   let [isOpen, setIsOpen] = useState(isModalOpen);
-
-  //   function closeModal() {
-  //     setIsOpen(false);
-  //   }
-
-  //   //   function openModal() {
-  //   //     setIsOpen(true);
-  //   //   }
+export default function MyModal({ isModalOpen, closeModalFunc }) {
+  
 
   return (
     <>
@@ -47,9 +35,8 @@ export default function MyModal({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full px-10 md:px-28 max-w-3xl transform overflow-hidden rounded-2xl py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
-                 
                   <div className="mt-5">
-                    <Tabs  closeModal={closeModalFunc}/>
+                    <Tabs closeModal={closeModalFunc} />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
