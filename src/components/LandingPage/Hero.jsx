@@ -20,14 +20,14 @@ const Hero = () => {
               type="button"
               className="bttn bttn-primary"
             >
-              <span className="text-[14px] lg:text-base items-center">Donate Now</span>
+              <span className="text-base items-center">Donate Now</span>
               <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
             </button>
             <button
               type="button"
               className="bttn bttn-secondary"
             >
-              <span className="text-[14px] lg:text-base items-center">Request Blood</span>
+              <span className="text-base items-center">Request Blood</span>
               <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
             </button>
           </div>
