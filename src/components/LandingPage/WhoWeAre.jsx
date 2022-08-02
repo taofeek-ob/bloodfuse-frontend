@@ -1,5 +1,5 @@
 import React from "react";
-import Scientist from "../assets/Lab.png";
+import Scientist from "../../assets/Lab.png";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 
 const WhoWeAre = () => {
@@ -7,7 +7,9 @@ const WhoWeAre = () => {
     <div className=" relative my-10 md:my-20 " id="about">
       <div className="flex flex-row max-w-7xl mx-auto px-4 sm:px-6 md:px-10 justify-between gap-4">
         <div className="text-left mt-20 basis-full lg:basis-1/2">
-          <h1 className="text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">WHO WE ARE</h1>
+          <h1 className="text-2xl md:text-3xl font-[700] text-semibold my-5 text-center lg:text-left">
+            WHO WE ARE
+          </h1>
           <div className="">
             <h4 className="text-semibold font-mod-light text-[#333333] mb-4">
               At BloodFuse, we know how important blood is for life and we
@@ -15,7 +17,11 @@ const WhoWeAre = () => {
               alive, which is why we:
             </h4>
             <div className="my-5 w-[90%] md:w-[300px] h-[300px] mx-auto block lg:hidden">
-              <img src={Scientist} alt="" className="w-full h-full object-center object-cover"/>
+              <img
+                src={Scientist}
+                alt=""
+                className="w-full h-full object-center object-cover"
+              />
             </div>
             <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-mod-light">
               <li>
@@ -31,18 +37,16 @@ const WhoWeAre = () => {
               </li>
             </ul>
             <div className="lg:mr-auto hidden lg:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start w-[70%] sm:w-auto">
-              <button
-                type="button"
-                className="bttn bttn-primary"
-              >
-                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">Donate Now</span>
+              <button type="button" className="bttn bttn-primary">
+                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
+                  Donate Now
+                </span>
                 <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
               </button>
-              <button
-                type="button"
-                className="bttn bttn-tertiary"
-              >
-                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">Request Blood</span>
+              <button type="button" className="bttn bttn-tertiary">
+                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
+                  Request Blood
+                </span>
                 <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
               </button>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import AboutWoman from '../assets/about-woman.png';
-import MakeADiff1 from '../assets/make-a-diff-1.png';
-import MakeADiff2 from '../assets/make-a-diff-2.png';
+import AboutWoman from '../../assets/about-woman.png';
+import MakeADiff1 from '../../assets/make-a-diff-1.png';
+import MakeADiff2 from '../../assets/make-a-diff-2.png';
 import { ChevronDoubleRightIcon } from '@heroicons/react/outline';
 
 const MakeADiff = () => {

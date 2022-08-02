@@ -13,6 +13,7 @@
 
 body {
   font-family: "Moderat";
+  overflow-x: hidden;
 }
 .font-moderat {
   font-family: "Moderat";
@@ -42,5 +43,5 @@ body {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #F00530!important;
+  color: #f00530 !important;
 }

@@ -1,4 +1,4 @@
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer } from "./components/LandingPage";
 import { LandingPage, AboutUs, WhoCanDonate } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
