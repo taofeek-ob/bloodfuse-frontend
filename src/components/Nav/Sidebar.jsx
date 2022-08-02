@@ -19,14 +19,14 @@ const Sidebar = ({ closeModal }) => {
     >
       <Popover.Panel
         focus
-        className="absolute top-0 right-0  w-[85%] transition overflow-hidden z-20  md:hidden"
+        className="absolute top-0 right-0  w-[85%] h-screen transition overflow-hidden z-20  md:hidden"
       >
         <div className="">
           <div className="shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
             <div className="pt-5 pb-6  ">
               <div className="flex mt-10 px-10 mb-5 items-center justify-between">
                 <div className="">
-                  <h3 className="font-mod-light text-2xl text-black font-[700]">
+                  <h3 className="font-moderat text-2xl text-black font-[700]">
                     Menu
                   </h3>
                 </div>
@@ -39,14 +39,14 @@ const Sidebar = ({ closeModal }) => {
               </div>
 
               <div className="mt-2">
-                <nav className="flex flex-col  justify-between items-left">
+                <nav className="flex flex-col justify-between items-left">
                   <Disclosure
                     as="div"
-                    className="mt-2 py-5 border-t-2 border-solid"
+                    className="mt-2 py-5 border-t border-solid"
                   >
                     {({ open }) => (
                       <>
-                        <div className=" py-auto   px-5 rounded-md ">
+                        <div className=" py-auto px-5 rounded-md ">
                           <Disclosure.Button
                             as="div"
                             className={`transition duration-100 ease-in-out ${
@@ -58,9 +58,9 @@ const Sidebar = ({ closeModal }) => {
                               <h4>Make an Appointment</h4>
                             </span>
                             <ChevronUpIcon
-                              className={`transition duration-300 ease-in-out ${
-                                open ? "rotate-180 transform" : ""
-                              } h-5 w-5  shrink float-right right-0`}
+                              className={`transition duration-300 ease-in-out text-gray-500 ${
+                                open ? "rotate-180 transform text-red-600" : ""
+                              } h-6 w-6  shrink float-right right-0`}
                             />
                           </Disclosure.Button>
                         </div>
@@ -79,7 +79,7 @@ const Sidebar = ({ closeModal }) => {
                   </Disclosure>
                   <Disclosure
                     as="div"
-                    className="mt-2 py-5 border-t-2 border-solid"
+                    className="mt-2 py-4 border-t border-solid"
                   >
                     {({ open }) => (
                       <>
@@ -95,9 +95,9 @@ const Sidebar = ({ closeModal }) => {
                               <h4>Who can donate blood</h4>
                             </span>
                             <ChevronUpIcon
-                              className={`transition duration-300 ease-in-out ${
-                                open ? "rotate-180 transform" : ""
-                              } h-5 w-5 shrink float-right right-0`}
+                           className={`transition duration-300 ease-in-out text-gray-500 ${
+                            open ? "rotate-180 transform text-red-600" : ""
+                          } h-6 w-6  shrink float-right right-0`}
                             />
                           </Disclosure.Button>
                         </div>
