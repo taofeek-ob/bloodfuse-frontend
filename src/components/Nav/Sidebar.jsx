@@ -66,7 +66,7 @@ const Sidebar = ({ closeModal }) => {
                         </div>
                         {solutions.map((item) => {
                           return (
-                            <Disclosure.Panel className="text-left px-6 pt-6 text-sm text-black">
+                            <Disclosure.Panel className="text-left px-14 pt-6 text-sm text-black">
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>
@@ -103,7 +103,7 @@ const Sidebar = ({ closeModal }) => {
                         </div>
                         {resources.map((item) => {
                           return (
-                            <Disclosure.Panel className="text-left px-6 pt-6 text-sm text-black">
+                            <Disclosure.Panel className="text-left px-14 pt-6 text-sm text-black">
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>
