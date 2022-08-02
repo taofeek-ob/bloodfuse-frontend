@@ -69,7 +69,12 @@ export default function Tabs({ closeModal }) {
             <div className="mb-5">
               <h2>
                 Already a member?{" "}
-                <span className="text-red-600">Login now</span>
+                <span
+                  className="text-red-600"
+                  onClick={() => setActiveTabIndex(1)}
+                >
+                  Login now
+                </span>
               </h2>
             </div>
             <form>
