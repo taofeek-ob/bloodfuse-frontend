@@ -68,7 +68,7 @@ export default function NavBar() {
         openModalFunc={openSignUpModal}
         closeModalFunc={closeSignUpModal}
       />
-      <Popover className="relative bg-primarybg h-full text-white text-[14px]">
+      <Popover className="relative bg-primarybg h-full md:overflow-auto overflow-x-clip text-white text-[14px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6  md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -221,8 +221,8 @@ export default function NavBar() {
         <Transition
           as={Fragment}
           enter="transition ease-in-out duration-300 transform"
-          enterFrom="translate-x-full overflow-clip"
-          enterTo="translate-x-0"
+          enterFrom="translate-x-full"
+          enterTo="-translate-x-0"
           leave="transition ease-in-out duration-300 transform"
           leaveFrom="-translate-x-0"
           leaveTo="translate-x-full"
@@ -236,82 +236,82 @@ export default function NavBar() {
           leaveFrom="-translate-x-0"
           leaveTo="translate-x-full"
         > */}
-          {/* <Popover.Panel
+          <Popover.Panel
             focus
-            className="absolute top-0  inset-x-0 transition overflow-hidden z-10  md:hidden"
-          > */}
-          <div className="absolute top-0 right-0 overflow-clip   z-20 ">
-            <div className="  shadow-lg ring-1 h-screen overflow-clip  ring-black ring-opacity-5 bg-white">
-              <div className="pt-5 pb-6 ">
-                <div className="flex mt-10 px-5 mb-5 items-center justify-between">
-                  <div className="">
-                    <h3 className="font-mod-light text-2xl text-black font-semibold">
-                      Menu
-                    </h3>
+            className="absolute top-0 right-0  w-[70%] transition overflow-hidden z-20  md:hidden"
+          >
+            <div className=" ">
+              <div className="  shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
+                <div className="pt-5 pb-6  ">
+                  <div className="flex mt-10 px-5 mb-5 items-center justify-between">
+                    <div className="">
+                      <h3 className="font-mod-light text-2xl text-black font-semibold">
+                        Menu
+                      </h3>
+                    </div>
+                    <div className="-mr-2">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-[#575757]  hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+                        <span className="sr-only">Close menu</span>
+                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
                   </div>
-                  {/* <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-[#575757]  hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
-                      <span className="sr-only">Close menu</span>
-                      <XIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
-                  </div> */}
+                  <hr className="" />
+                  <div className="mt-6">
+                    <nav className="grid gap-y-8">
+                      {solutions.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        >
+                          <span className="ml-3 text-base font-medium text-gray-900">
+                            {item.name}
+                          </span>
+                        </Link>
+                      ))}
+                    </nav>
+                  </div>
                 </div>
-                <hr className="" />
-                <div className="mt-6">
-                  <nav className="grid gap-y-8">
-                    {solutions.map((item) => (
+                <div className="py-6 px-5 space-y-6">
+                  <div className="grid grid-cols-2 gap-y-4 gap-x-8">
+                    {resources.map((item) => (
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        className="text-base font-medium text-gray-900 hover:text-gray-700"
                       >
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
+                        {item.name}
                       </Link>
                     ))}
-                  </nav>
-                </div>
-              </div>
-              <div className="py-6 px-5 space-y-6">
-                <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  {resources.map((item) => (
+                  </div>
+                  <div>
                     <Link
-                      key={item.name}
-                      to={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      to="/"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
                     >
-                      {item.name}
+                      Sign up
                     </Link>
-                  ))}
-                </div>
-                <div>
-                  <Link
-                    to="/"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
-                  >
-                    Sign up
-                  </Link>
-                </div>
-                <div></div>
-                <div>
-                  <Link
-                    to="/"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
-                  >
-                    Sign up
-                  </Link>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
-                    Existing Donor?{" "}
-                    <Link to="/" className="text-red-600 hover:text-red-500">
-                      Login
+                  </div>
+                  <div></div>
+                  <div>
+                    <Link
+                      to="/"
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F00530] hover:bg-red-700"
+                    >
+                      Sign up
                     </Link>
-                  </p>
+                    <p className="mt-6 text-center text-base font-medium text-gray-500">
+                      Existing Donor?{" "}
+                      <Link to="/" className="text-red-600 hover:text-red-500">
+                        Login
+                      </Link>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* </Popover.Panel> */}
+          </Popover.Panel>
           {/* </Transition.Child> */}
         </Transition>
       </Popover>
