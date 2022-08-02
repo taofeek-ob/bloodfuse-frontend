@@ -1,10 +1,11 @@
 import { Dialog, Transition } from "@headlessui/react";
+//eslint-disable-next-line
 import { Fragment, useState } from "react";
-import { FiTwitter, FiFacebook } from "react-icons/fi";
+// import { FiTwitter, FiFacebook } from "react-icons/fi";
 
 import Tabs from "./Tab.jsx";
 
-export default function MyModal({ isModalOpen, closeModalFunc }) {
+export default function MyModal({ isModalOpen, closeModalFunc, openLoginModalFunc }) {
   
 
   return (
@@ -34,9 +35,9 @@ export default function MyModal({ isModalOpen, closeModalFunc }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full px-10 md:px-28 max-w-3xl transform overflow-hidden rounded-2xl py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full px-10 md:px-28 max-w-3xl transform overflow-hidden rounded-[4px] py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <div className="mt-5">
-                    <Tabs closeModal={closeModalFunc} />
+                    <Tabs closeModal={closeModalFunc} openLoginModalFunc={openLoginModalFunc} />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

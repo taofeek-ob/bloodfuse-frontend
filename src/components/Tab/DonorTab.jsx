@@ -1,18 +1,23 @@
 import React from "react";
 
-const DonorTab = ({activeTabIndex, setActiveTabIndex}) => {
+const DonorTab = ({activeTabIndex, closeModal, openLoginModalFunc }) => {
   return (
 
     <div className={activeTabIndex === 0 ? "block mt-2" : "hidden"}>
             <h2 className=" w-full my-5 flex md:text-3xl text-xl justify-between font-extrabold text-gray-900">
-              <span>Sign up to conitnue </span>
+              <span>Sign up to continue </span>
             </h2>
             <div className="mb-5">
               <h2>
                 Already a member?{" "}
                 <span
-                  className="text-red-600"
-                  onClick={() => setActiveTabIndex(1)}
+                  className="text-red-600 cursor-pointer"
+                  onClick={() => {
+                    closeModal();
+                    setTimeout(() => {
+                      openLoginModalFunc();
+                    }, 200);
+                  }}
                 >
                   Login now
                 </span>

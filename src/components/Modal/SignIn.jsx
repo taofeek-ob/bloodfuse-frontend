@@ -1,12 +1,14 @@
 import { Dialog, Transition } from "@headlessui/react";
+//eslint-disable-next-line
 import { Fragment, useState } from "react";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
+import googleIcon from "../../assets/google-icon.png";
 
 export default function MyModal({
   isModalOpen,
   closeModalFunc,
-  openModalFunc,
+  openSignUpModalFunc,
 }) {
   //   let [isOpen, setIsOpen] = useState(isModalOpen);
 
@@ -35,7 +37,7 @@ export default function MyModal({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex h-screen sm:min-h-full items-center justify-center md:p-4 text-center ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -45,7 +47,7 @@ export default function MyModal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full px-10 md:px-28 max-w-3xl transform overflow-hidden rounded-2xl py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full sm:w-[80%] sm:mx-auto h-full sm:h-auto px-5 md:px-28 max-w-3xl transform overflow-hidden sm:rounded-[4px] py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h2"
                     className=" w-full my-5 flex md:text-3xl text-xl justify-between font-extrabold text-gray-900"
@@ -53,7 +55,7 @@ export default function MyModal({
                     <span>Sign In to Continue </span>
                     <button
                       type="button"
-                      className="justify-center text-[20px] md:-mr-20  rounded-md border border-transparent  px-4 pb-2  font-medium  hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      className="justify-center"
                       onClick={closeModalFunc}
                     >
                       <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -62,7 +64,14 @@ export default function MyModal({
                   <div className="mb-5">
                     <h2>
                       Not a member yet?{" "}
-                      <span className="text-red-600">Sign up now</span>
+                      <span className="text-red-600 cursor-pointer"
+                      onClick={() => {
+                        closeModalFunc();
+                        setTimeout(() => {
+                          openSignUpModalFunc();
+                        }, 200);
+                      }}
+                      >Sign up now</span>
                     </h2>
                   </div>
                   <div className="mt-2">
@@ -72,13 +81,13 @@ export default function MyModal({
                           type="email"
                           name="floating_email"
                           id="floating_email"
-                          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
                           placeholder=" "
                           required
                         />
                         <label
                           htmlFor="floating_email"
-                          className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                          className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
                           Email address
                         </label>
@@ -88,13 +97,13 @@ export default function MyModal({
                           type="password"
                           name="floating_password"
                           id="floating_password"
-                          className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                          className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
                           placeholder=" "
                           required
                         />
                         <label
                           htmlFor="floating_password"
-                          className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                          className="peer-focus:font-medium absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-red-600 peer-focus:dark:text-red-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                         >
                           Password
                         </label>
@@ -117,14 +126,14 @@ export default function MyModal({
                           </label>
                         </div>
                         <div>
-                          <h3 className="text-sm">Forgot your password?</h3>
+                          <h3 className="text-sm text-[#F00530] cursor-pointer">Forgot your password?</h3>
                         </div>
                       </div>
                       <button
                         type="submit"
-                        className="text-white px-7 transform uppercase text-lg bg-red-500 hover:bg-red-800 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-lg  w-full  py-5 text-center"
+                        className="text-white px-7 transform sm:uppercase text-lg bg-[#F00530] hover:bg-red-800 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-[4px]  w-full py-2 lg:py-4 text-center"
                       >
-                        Login
+                        Login now
                       </button>
                       <div className="relative my-12">
                         <div className="absolute inset-0 flex items-center">
@@ -137,18 +146,23 @@ export default function MyModal({
                         </div>
                       </div>
                     </form>
-                    <div className="flex justify-between px-auto w-full mb-7 items-center">
+                    <div className="flex gap-2 sm:px-auto justify-center w-full mb-7 items-center">
                       <div>
-                        <button className="text-white sm:px-12 px-7 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
+                        <button className="text-white sm:px-12 px-4 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
                           <div className="flex items-center space-between">
-                            <FiTwitter /> <span className="pl-2">Google</span>
+                            <img
+                              src={googleIcon}
+                              alt="google"
+                              className="h-6 w-6"
+                            />
+                             <span className="pl-2">Google</span>
                           </div>
                         </button>
                       </div>
                       <div>
                         <button
                           type="submit"
-                          className="text-white sm:px-12 px-7 text-sm sm:text-md bg-blue-700 hover:bg-lue-900 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center"
+                          className="text-white sm:px-12 px-4 text-sm sm:text-md bg-blue-700 hover:bg-blue-900 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md py-5 text-center"
                         >
                           <div className="flex items-center space-between">
                             <FiFacebook />{" "}
@@ -157,7 +171,7 @@ export default function MyModal({
                         </button>
                       </div>
                       <div>
-                        <button className="text-white sm:px-12 px-7 text-sm sm:text-md bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center">
+                        <button className="text-white sm:px-12 px-4 text-sm sm:text-md bg-blue-500 hover:bg-red-700 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md py-5 text-center">
                           <div className="flex items-center space-between">
                             <FiTwitter /> <span className="pl-2">Twitter</span>
                           </div>

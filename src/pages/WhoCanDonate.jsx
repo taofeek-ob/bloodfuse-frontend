@@ -1,6 +1,3 @@
-import React from "react";
-import Outreach from "../assets/Outreach.png";
-import HealthyMan from "../assets/HealthyMan.png";
 import { PictureCover, MainBody } from "../components/WhoCanDonatePage";
 
 const WhoCanDonate = () => {

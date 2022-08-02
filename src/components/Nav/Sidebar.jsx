@@ -6,7 +6,7 @@ import { XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import { solutions, resources } from "./NavbarData";
 
-const Sidebar = ({ closeModal }) => {
+const Sidebar = ({ openModal }) => {
   return (
     <Transition
       as={Fragment}
@@ -130,7 +130,7 @@ const Sidebar = ({ closeModal }) => {
                   <div className="mt-2 py-5 border-t-2 border-solid">
                     <button
                       className="text-black text-base font-medium px-10"
-                      onClick={closeModal}
+                      onClick={openModal}
                     >
                       <Popover.Button>Login</Popover.Button>
                     </button>

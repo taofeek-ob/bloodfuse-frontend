@@ -1,17 +1,27 @@
 import React, {useState} from "react";
+import googleIcon from "../../assets/google-icon.png";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Recepient = ({ activeTabIndex }) => {
+const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
   const [captchaRef, setCaptchaRef] = useState(true);
   const onCaptchaChange = () => setCaptchaRef(false);
-  
+
   return (
     <div className={activeTabIndex === 1 ? "block mt-2" : "hidden"}>
       <div className="flex flex-col justify-between px-auto w-full mb-7 items-center">
         <div className="flex justify-between px-auto w-full mb-7">
           <div>Sign up with</div>
           <div>
-            Already a member? <span className="text-red-600">Login now</span>{" "}
+            Already a member? 
+            <span className="text-red-600 cursor-pointer"
+             onClick={() => {
+              closeModal();
+              setTimeout(() => {
+                openLoginModalFunc();
+              }, 200);
+            }}
+            >
+              Login now</span>{" "}
           </div>
         </div>
 
@@ -19,21 +29,12 @@ const Recepient = ({ activeTabIndex }) => {
           <div>
             <button className="text-white sm:px-12 px-7 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
               <div className="flex items-center space-between">
-                <svg
+                <img
                   className="mr-2 -ml-1 w-4 h-4"
                   aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fab"
-                  data-icon="google"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 488 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-                  ></path>
-                </svg>
+                  src={googleIcon}
+                  alt="google"
+                />
                 <span className="pl-2">Google</span>
               </div>
             </button>
@@ -201,7 +202,8 @@ const Recepient = ({ activeTabIndex }) => {
                 id="recepient"
                 type="checkbox"
                 value=""
-                className="w-4 h-4 text-red-600 accent-red-500 bg-gray-100 rounded border-gray-300 focus:ring-black-500  "
+                className="w-4 h-4 text-red-600 accent-red-500 bg-gray-100 rounded border-gray-300 focus:ring-black-500"
+                required
               />
               <label
                 htmlFor="recepient"
@@ -230,7 +232,7 @@ const Recepient = ({ activeTabIndex }) => {
           <button
             type="submit"
             disabled={captchaRef}
-            className="text-white px-7 transform uppercase text-lg bg-red-500 disabled:bg-red-800 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-lg  w-full  py-5 text-center"
+            className="text-white px-7 transform uppercase text-lg bg-[#F00530] disabled:bg-red-700 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-[4px]  w-full  py-4 text-center"
           >
             Create Your Account
           </button>

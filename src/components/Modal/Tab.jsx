@@ -1,18 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { TabList, DonorTab, RecepientTab } from "../Tab";
-import ReCAPTCHA from "react-google-recaptcha";
-// import reCAPTCHA from "react-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
+import { XIcon } from "@heroicons/react/outline";
 
-// const TabList = [
-//   {
-//     label: "Sign up as donor",
-//   },
-//   {
-//     label: "Sign up as recipient",
-//   },
-// ];
 
-export default function Tabs({ closeModal }) {
+export default function Tabs({ closeModal, openLoginModalFunc }) {
   // const [captchaRef, setCaptchaRef] = useState(true);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
@@ -53,10 +45,10 @@ export default function Tabs({ closeModal }) {
           </div>
           <button
             type="button"
-            className="  justify-center text-[20px] md:-mr-12  rounded-md border border-transparent  px-4 pb-2  font-medium  hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+            className="justify-center"
             onClick={closeModal}
           >
-            X
+            <XIcon className="h-6 w-6"/>
           </button>
         </div>
         <span
@@ -68,11 +60,16 @@ export default function Tabs({ closeModal }) {
         <div>
           <DonorTab
             activeTabIndex={activeTabIndex}
-            setActiveTabIndex={setActiveTabIndex}
+            closeModal={closeModal}
+            openLoginModalFunc={openLoginModalFunc}
           />
         </div>
         <div>
-          <RecepientTab activeTabIndex={activeTabIndex} />
+          <RecepientTab
+          activeTabIndex={activeTabIndex}
+          closeModal={closeModal}
+          openLoginModalFunc={openLoginModalFunc}
+          />
         </div>
       </div>
     </div>

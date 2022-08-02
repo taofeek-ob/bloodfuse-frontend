@@ -43,17 +43,17 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row gap-24 md:gap-16 py-8 md:justify-between w-full">
           <div className="flex flex-col gap-8 items-center justify-center">
             <img src={StacksIcon} alt="" />
-            <p className="font-extrabold text-base sm:text-xl">STACKS</p>
+            <p className="font-extrabold font-moderat text-base sm:text-xl">STACKS</p>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
             <img src={CodeUpIcon} alt="" />
-            <p className="font-extrabold text-base sm:text-xl">
+            <p className="font-extrabold font-moderat text-base sm:text-xl">
               CODEUP DIAGNOSTICS
             </p>
           </div>
           <div className="flex flex-col gap-8 items-center justify-center">
             <img src={WittyIcon} alt="" />
-            <p className="font-extrabold text-base sm:text-xl">WITTYHUB</p>
+            <p className="font-extrabold font-moderat text-base sm:text-xl">WITTYHUB</p>
           </div>
         </div>
       </div>
