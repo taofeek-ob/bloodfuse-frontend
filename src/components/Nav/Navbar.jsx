@@ -1,40 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import { Fragment, useState } from "react";
-import { Popover, Transition, Disclosure } from "@headlessui/react";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
-import { ViewListIcon, XIcon } from "@heroicons/react/outline";
+import { Popover, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/solid";
+import { ViewListIcon } from "@heroicons/react/outline";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
 import SignUp from "../Modal/SignUp";
 import Sidebar from "./Sidebar";
-
-const solutions = [
-  {
-    name: "Donate Blood",
-    slug: "#",
-    href: "/",
-  },
-  {
-    name: "Request Blood",
-    slug: "#",
-    href: "/",
-  },
-];
-
-const resources = [
-  {
-    name: "How to Donate",
-    link: "/",
-    href: "/",
-  },
-  {
-    name: "Eligibilty Requirement",
-    link: "/who-can-donate",
-    href: "/who-can-donate",
-  },
-];
+import { solutions, resources } from "./NavbarData";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
