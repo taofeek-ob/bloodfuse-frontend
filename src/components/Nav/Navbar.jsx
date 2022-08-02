@@ -197,7 +197,7 @@ export default function NavBar() {
             </div>
           </div>
         </div>
-        <Sidebar openModal={openModal} />
+        <Sidebar openModal={openModal} openSignUpModal={openSignUpModal} />
       </Popover>
     </>
   );

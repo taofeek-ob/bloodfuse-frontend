@@ -18,7 +18,7 @@ const AboutUs = () => {
           About Us
         </h1>
       </div>
-      <div className="flex flex-col gap-4 items-start max-w-3xl min-h-[40vh] mx-auto px-8 py-8 md:py-24 text-[14px] text-[#333333] md:text-base font-mod-light">
+      <div className="flex flex-col gap-4 items-start max-w-3xl min-h-[40vh] mx-auto px-8 py-8 md:py-24 text-[#333333] text-base font-mod-light">
         <h1 className="font-[500] font-moderat text-2xl md:text-3xl lg:text-4xl pb-4">
           Serving To Save Lives!
         </h1>

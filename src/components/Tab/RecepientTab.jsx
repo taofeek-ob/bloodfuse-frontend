@@ -11,8 +11,8 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
       <div className="flex flex-col justify-between px-auto w-full mb-7 items-center">
         <div className="flex justify-between px-auto w-full mb-7">
           <div>Sign up with</div>
-          <div>
-            Already a member? 
+          <div className="hidden sm:flex">
+            Already a member? {"  "}
             <span className="text-red-600 cursor-pointer"
              onClick={() => {
               closeModal();
@@ -21,13 +21,13 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
               }, 200);
             }}
             >
-              Login now</span>{" "}
+            {"  "}Login now</span>
           </div>
         </div>
 
-        <div className="flex justify-between px-auto w-full mb-7 items-center">
+        <div className="flex justify-center gap-2 px-auto w-full mb-7 items-center">
           <div>
-            <button className="text-white sm:px-12 px-7 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
+            <button className="text-white sm:px-12 px-4 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
               <div className="flex items-center space-between">
                 <img
                   className="mr-2 -ml-1 w-4 h-4"
@@ -42,7 +42,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
           <div>
             <button
               type="submit"
-              className="text-white sm:px-12 px-7 text-sm sm:text-md bg-blue-700 hover:bg-lue-900 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center"
+              className="text-white sm:px-12 px-4 text-sm sm:text-md bg-blue-700 hover:bg-lue-900 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center"
             >
               <div className="flex items-center space-between">
                 <svg
@@ -65,7 +65,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
             </button>
           </div>
           <div>
-            <button className="text-white sm:px-12 px-7 text-sm sm:text-md bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center">
+            <button className="text-white sm:px-12 px-4 text-sm sm:text-md bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none  focus:ring-blue-300 font-medium rounded-md    py-5 text-center">
               <div className="flex items-center space-between">
                 <svg
                   className="mr-2 -ml-1 w-4 h-4"
@@ -87,6 +87,18 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
             </button>
           </div>
         </div>
+        <div className="block sm:hidden pb-4">
+            Already a member?{" "}
+            <span className="text-red-600 cursor-pointer"
+             onClick={() => {
+              closeModal();
+              setTimeout(() => {
+                openLoginModalFunc();
+              }, 200);
+            }}
+            >
+              Login now</span>
+          </div>
         <div className="relative my-3 mx-auto w-full">
           <div className="absolute  inset-0 flex items-center">
             <div className="w-full border-b border-gray-300"></div>
@@ -232,7 +244,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
           <button
             type="submit"
             disabled={captchaRef}
-            className="text-white px-7 transform uppercase text-lg bg-[#F00530] disabled:bg-red-700 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-[4px]  w-full  py-4 text-center"
+            className="text-white px-7 transform sm:uppercase text-lg bg-[#F00530] hover:bg-red-800 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-[4px]  w-full py-2 lg:py-4 text-center"
           >
             Create Your Account
           </button>

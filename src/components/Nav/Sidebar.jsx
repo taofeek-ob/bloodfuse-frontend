@@ -6,7 +6,7 @@ import { XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import { solutions, resources } from "./NavbarData";
 
-const Sidebar = ({ openModal }) => {
+const Sidebar = ({ openModal, openSignUpModal }) => {
   return (
     <Transition
       as={Fragment}
@@ -39,19 +39,19 @@ const Sidebar = ({ openModal }) => {
               </div>
 
               <div className="mt-2">
-                <nav className="flex flex-col justify-between items-left">
+                <nav className="flex flex-col justify-between items-left font-extrabold">
                   <Disclosure
                     as="div"
                     className="mt-2 py-5 border-t border-solid"
                   >
                     {({ open }) => (
                       <>
-                        <div className=" py-auto px-5 rounded-md ">
+                        <div className=" py-auto px-2 rounded-md ">
                           <Disclosure.Button
                             as="div"
                             className={`transition duration-100 ease-in-out ${
                               open ? "text-red-600 " : "text-black "
-                            } w-full flex justify-between px-5 items-center"
+                            } w-full flex justify-between px-2 items-center"
                             } `}
                           >
                             <span className="float-left  text-base font-medium ">
@@ -83,12 +83,12 @@ const Sidebar = ({ openModal }) => {
                   >
                     {({ open }) => (
                       <>
-                        <div className=" py-auto px-5 rounded-md ">
+                        <div className=" py-auto px-2 rounded-md ">
                           <Disclosure.Button
                             as="div"
                             className={`${
                               open ? "text-red-600 " : "text-black "
-                            } w-full flex justify-between px-5  items-center"
+                            } w-full flex justify-between px-2  items-center"
                             } `}
                           >
                             <span className="float-left  text-base font-medium ">
@@ -117,19 +117,27 @@ const Sidebar = ({ openModal }) => {
                   <div className="mt-2 py-5  border-t border-solid">
                     <Link
                       to="/aboutus"
-                      className="text-black text-base font-medium px-10"
+                      className="text-black text-base font-medium px-4"
                     >
                       <Popover.Button>About us</Popover.Button>
                     </Link>
                   </div>
                   <div className="mt-2 py-5 border-t-2 border-solid">
-                    <button className="text-black text-base font-medium px-10">
+                    <button className="text-black text-base font-medium px-4">
                       <Popover.Button>Blog</Popover.Button>
                     </button>
                   </div>
                   <div className="mt-2 py-5 border-t-2 border-solid">
                     <button
-                      className="text-black text-base font-medium px-10"
+                      className="text-black text-base font-medium px-4"
+                      onClick={openSignUpModal}
+                    >
+                      <Popover.Button>Sign Up</Popover.Button>
+                    </button>
+                  </div>
+                  <div className="mt-2 py-5 border-t-2 border-solid">
+                    <button
+                      className="text-black text-base font-medium px-4"
                       onClick={openModal}
                     >
                       <Popover.Button>Login</Popover.Button>
