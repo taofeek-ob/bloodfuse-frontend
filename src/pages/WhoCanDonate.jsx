@@ -2,7 +2,10 @@ import React from "react";
 import Outreach from "../assets/Outreach.png";
 import HealthyMan from "../assets/HealthyMan.png";
 
-import { ChevronRightIcon } from "@heroicons/react/outline";
+import {
+  ChevronRightIcon,
+  ChevronDoubleRightIcon,
+} from "@heroicons/react/outline";
 const WhoCanDonate = () => {
   return (
     <div className=" relative h-auto  text-white">
@@ -78,8 +81,8 @@ const WhoCanDonate = () => {
                 <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
                   Learn More
                 </span>
-                <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
-                <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 -ml-1" />
+                {/* <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" /> */}
+                <ChevronDoubleRightIcon className="w-3 h-3 md:w-4 md:h-4 mt-1 ml-2" />
               </button>
             </div>
           </div>
