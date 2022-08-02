@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Recepient = ({ activeTabIndex }) => {
-  const onCaptchaChange = () => setCaptchaRef(false);
   const [captchaRef, setCaptchaRef] = useState(true);
+  const onCaptchaChange = () => setCaptchaRef(false);
+  
   return (
     <div className={activeTabIndex === 1 ? "block mt-2" : "hidden"}>
       <div className="flex flex-col justify-between px-auto w-full mb-7 items-center">
