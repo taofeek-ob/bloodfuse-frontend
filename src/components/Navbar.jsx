@@ -68,7 +68,7 @@ export default function NavBar() {
         openModalFunc={openSignUpModal}
         closeModalFunc={closeSignUpModal}
       />
-      <Popover className="relative bg-primarybg h-full md:overflow-auto overflow-x-clip text-white text-[14px]">
+      <Popover className="relative bg-primarybg h-full md:overflow-visible overflow-x-clip text-white text-[14px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6  md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
