@@ -8,8 +8,8 @@ import {
 const MainBody = () => {
   return (
     <div className="flex flex-row  mx-auto  mb-20 px-4 sm:px-6 text-black md:mx-5  md:px-10 justify-between ">
-        <div className="text-left mt-10  md:mr-8 basis-full lg:basis-1/2">
-          <h1 className="text-2xl md:text-3xl text-[#333333] my-5 text-center lg:text-left">
+        <div className="text-left mt-5 md:mt-10  md:mr-8 basis-full lg:basis-1/2">
+          <h1 className="text-2xl md:text-3xl text-[#333333] my-5 text-left">
             Know if You Are Eligible To Save a Life by Donating Blood
           </h1>
           <div className="">
@@ -18,7 +18,7 @@ const MainBody = () => {
               of the requirements donors must meet to be eligible to donate
               blood based on their donation type
             </h4>
-            <h4 className="text-[#333333] mb-4 text-xl md:text-2xl">
+            <h4 className="text-[#333333] font-mod-dark mb-4 py-4 md:py-0 text-base md:text-2xl">
               Here are the essential qualifications, you can choose to donate
               blood:
             </h4>
@@ -35,7 +35,7 @@ const MainBody = () => {
                 className="w-full h-full object-center object-cover"
               />
             </div>
-            <ul className="marker:text-red-400 list-disc pl-5 space-y-6 text-[#333333] font-mod-light">
+            <ul className="marker:text-[#F00530] list-disc pl-5 space-y-6 text-[#333333] font-mod-light">
               <li>
                 To donate blood you must be in good general health, weigh at
                 least 110 pounds, and be at least 16 years old.
@@ -56,7 +56,7 @@ const MainBody = () => {
                 normal daily activities.
               </li>
             </ul>
-            <div className="lg:mr-auto px-20 md:px-4 flex lg:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start sm:w-auto">
+            <div className="lg:mr-auto px-20 md:px-4 flex lg:flex mt-6 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start sm:w-auto">
               <button type="button" className="bttn bttn-primary mb-2 ">
                 <span className="text-base py-1 items-center">
                   Donate Now
