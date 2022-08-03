@@ -65,7 +65,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                         </div>
                         {solutions.map((item, index) => {
                           return (
-                            <Disclosure.Panel className="text-left px-14 pt-6 text-base text-black" key={index}>
+                            <Disclosure.Panel className="text-left px-7 pt-6 text-base text-black" key={index}>
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>
@@ -102,7 +102,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                         </div>
                         {resources.map((item, index) => {
                           return (
-                            <Disclosure.Panel className="text-left px-14 pt-6 text-base text-black" key={index}>
+                            <Disclosure.Panel className="text-left px-7 pt-6 text-base text-black" key={index}>
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>

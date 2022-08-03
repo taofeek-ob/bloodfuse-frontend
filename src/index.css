@@ -10,6 +10,10 @@
   font-family: "ModeratLight";
   src: url("./assets/fonts/Moderat-Light.ttf");
 }
+@font-face {
+  font-family: "ModeratDark";
+  src: url("./assets/fonts/Moderat-Bold.ttf");
+}
 
 body {
   font-family: "Moderat";
@@ -20,6 +24,9 @@ body {
 }
 .font-mod-light {
   font-family: "ModeratLight";
+}
+.font-mod-dark {
+  font-family: "ModeratDark";
 }
 
 .bttn {
