@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { Popover, Transition, Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 import { XIcon } from "@heroicons/react/outline";
-
 import { Link } from "react-router-dom";
 import { solutions, resources } from "./NavbarData";
 
@@ -19,7 +18,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
     >
       <Popover.Panel
         focus
-        className="absolute top-0 right-0  w-[85%] h-screen transition overflow-hidden z-20  md:hidden"
+        className="absolute top-0 right-0 w-[85%] h-screen transition overflow-hidden z-20 md:hidden"
       >
         <div className="">
           <div className="shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
@@ -33,13 +32,13 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-[#575757]  hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="h-7 w-7" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
 
               <div className="mt-2">
-                <nav className="flex flex-col justify-between items-left font-extrabold">
+                <nav className="flex flex-col justify-between items-left">
                   <Disclosure
                     as="div"
                     className="mt-2 py-5 border-t border-solid"
@@ -91,13 +90,13 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                             } w-full flex justify-between px-2  items-center"
                             } `}
                           >
-                            <span className="float-left  text-base font-medium ">
+                            <span className="float-left text-base font-medium ">
                               <h4>Who can donate blood</h4>
                             </span>
                             <ChevronUpIcon
                            className={`transition duration-300 ease-in-out text-gray-500 ${
                             open ? "rotate-180 transform text-red-600" : ""
-                          } h-6 w-6  shrink float-right right-0`}
+                          } h-6 w-6 shrink float-right right-0`}
                             />
                           </Disclosure.Button>
                         </div>

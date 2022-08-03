@@ -38,15 +38,15 @@ export default function NavBar() {
     <>
       <SignIn
         isModalOpen={isOpen}
-        openModalFunc={openModal}
         closeModalFunc={closeModal}
         openSignUpModalFunc={openSignUpModal}
+        closeSignUpModalFunc={closeSignUpModal}
       />
       <SignUp
         isModalOpen={SignUpOpen}
-        openModalFunc={openSignUpModal}
         closeModalFunc={closeSignUpModal}
         openLoginModalFunc={openModal}
+        closeLoginModalFunc={closeModal}
       />
       <Popover className="relative bg-primarybg h-full md:overflow-visible overflow-x-clip text-white text-[14px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -197,7 +197,7 @@ export default function NavBar() {
             </div>
           </div>
         </div>
-        <Sidebar openModal={openModal} openSignUpModal={openSignUpModal} />
+        <Sidebar openModal={openModal} openSignUpModal={openSignUpModal} closeModal={closeModal} closeSignUpModal={closeSignUpModal} />
       </Popover>
     </>
   );

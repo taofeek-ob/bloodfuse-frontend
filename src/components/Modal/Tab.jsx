@@ -4,7 +4,7 @@ import { TabList, DonorTab, RecepientTab } from "../Tab";
 import { XIcon } from "@heroicons/react/outline";
 
 
-export default function Tabs({ closeModal, openLoginModalFunc }) {
+export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFunc }) {
   // const [captchaRef, setCaptchaRef] = useState(true);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
@@ -46,9 +46,12 @@ export default function Tabs({ closeModal, openLoginModalFunc }) {
           <button
             type="button"
             className="justify-center"
-            onClick={closeModal}
+            onClick={() => {
+              closeModal();
+              closeLoginModalFunc();
+            }}
           >
-            <XIcon className="h-6 w-6"/>
+            <XIcon className="h-6 w-6" />
           </button>
         </div>
         <span
@@ -66,9 +69,10 @@ export default function Tabs({ closeModal, openLoginModalFunc }) {
         </div>
         <div>
           <RecepientTab
-          activeTabIndex={activeTabIndex}
-          closeModal={closeModal}
-          openLoginModalFunc={openLoginModalFunc}
+            activeTabIndex={activeTabIndex}
+            closeModal={closeModal}
+            openLoginModalFunc={openLoginModalFunc}
+            closeLoginModalFunc={closeLoginModalFunc}
           />
         </div>
       </div>

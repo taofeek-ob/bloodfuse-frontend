@@ -1,24 +1,15 @@
 import { Dialog, Transition } from "@headlessui/react";
-//eslint-disable-next-line
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
 import googleIcon from "../../assets/google-icon.png";
 
-export default function MyModal({
+export default function SignIn ({
   isModalOpen,
   closeModalFunc,
   openSignUpModalFunc,
-}) {
-  //   let [isOpen, setIsOpen] = useState(isModalOpen);
-
-  //   function closeModal() {
-  //     setIsOpen(false);
-  //   }
-
-  //   //   function openModal() {
-  //   //     setIsOpen(true);
-  //   //   }
+  closeSignUpModalFunc
+    }) {
 
   return (
     <>
@@ -37,7 +28,7 @@ export default function MyModal({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex h-screen sm:min-h-full items-center justify-center md:p-4 text-center ">
+            <div className="flex min-h-screen sm:min-h-full items-center justify-center md:p-4 text-center ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -47,16 +38,18 @@ export default function MyModal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full sm:w-[80%] sm:mx-auto h-full sm:h-auto px-5 md:px-28 max-w-3xl transform overflow-hidden sm:rounded-[4px] py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full sm:w-[80%] sm:mx-auto h-full sm:h-auto px-5 md:px-28 max-w-3xl transform overflow-hidden sm:rounded-[4px] py-9 bg-white p-6 text-left align-middle shadow-xl">
                   <Dialog.Title
                     as="h2"
                     className=" w-full my-5 flex md:text-3xl text-xl justify-between font-extrabold text-gray-900"
                   >
-                    <span>Sign In to Continue </span>
+                    <span>Sign in to continue </span>
                     <button
                       type="button"
                       className="justify-center"
-                      onClick={closeModalFunc}
+                      onClick={() => {
+                        closeModalFunc();
+                      }}
                     >
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
@@ -65,12 +58,12 @@ export default function MyModal({
                     <h2>
                       Not a member yet?{" "}
                       <span className="text-red-600 cursor-pointer"
-                      onClick={() => {
-                        closeModalFunc();
-                        setTimeout(() => {
-                          openSignUpModalFunc();
-                        }, 200);
-                      }}
+                        onClick={() => {
+                          closeModalFunc();
+                          setTimeout(() => {
+                            openSignUpModalFunc();
+                          }, 500)
+                        }}
                       >Sign up now</span>
                     </h2>
                   </div>
@@ -155,7 +148,7 @@ export default function MyModal({
                               alt="google"
                               className="h-6 w-6"
                             />
-                             <span className="pl-2">Google</span>
+                            <span className="pl-2">Google</span>
                           </div>
                         </button>
                       </div>
