@@ -18,7 +18,7 @@ const MainBody = () => {
               of the requirements donors must meet to be eligible to donate
               blood based on their donation type
             </h4>
-            <h4 className="text-[#333333] font-mod-dark mb-4 py-4 md:py-0 text-base md:text-2xl">
+            <h4 className="text-[#333333] font-moderat mb-4 py-4 md:py-0 text-base md:text-2xl">
               Here are the essential qualifications, you can choose to donate
               blood:
             </h4>
