@@ -53,7 +53,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                             } w-full flex justify-between px-2 items-center"
                             } `}
                           >
-                            <span className="float-left  text-base font-medium ">
+                            <span className="float-left text-base font-medium ">
                               <h4>Make an Appointment</h4>
                             </span>
                             <ChevronUpIcon
@@ -65,7 +65,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                         </div>
                         {solutions.map((item, index) => {
                           return (
-                            <Disclosure.Panel className="text-left px-14 pt-6 text-sm text-black" key={index}>
+                            <Disclosure.Panel className="text-left px-14 pt-6 text-base text-black" key={index}>
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>
@@ -102,7 +102,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                         </div>
                         {resources.map((item, index) => {
                           return (
-                            <Disclosure.Panel className="text-left px-14 pt-6 text-sm text-black" key={index}>
+                            <Disclosure.Panel className="text-left px-14 pt-6 text-base text-black" key={index}>
                               <Link to={item.href}>
                                 {" "}
                                 <Popover.Button>{item.name}</Popover.Button>
