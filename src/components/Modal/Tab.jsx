@@ -46,10 +46,7 @@ export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFu
           <button
             type="button"
             className="justify-center"
-            onClick={() => {
-              closeModal();
-              closeLoginModalFunc();
-            }}
+            onClick={closeModal}
           >
             <XIcon className="h-6 w-6" />
           </button>
@@ -72,7 +69,6 @@ export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFu
             activeTabIndex={activeTabIndex}
             closeModal={closeModal}
             openLoginModalFunc={openLoginModalFunc}
-            closeLoginModalFunc={closeLoginModalFunc}
           />
         </div>
       </div>

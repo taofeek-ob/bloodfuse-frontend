@@ -18,7 +18,7 @@ const MainBody = () => {
               of the requirements donors must meet to be eligible to donate
               blood based on their donation type
             </h4>
-            <h4 className="text-[#333333] mb-4 text-[14px] sm:text-xl md:text-2xl">
+            <h4 className="text-[#333333] mb-4 text-xl md:text-2xl">
               Here are the essential qualifications, you can choose to donate
               blood:
             </h4>
@@ -58,13 +58,13 @@ const MainBody = () => {
             </ul>
             <div className="lg:mr-auto px-20 md:px-4 flex lg:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start sm:w-auto">
               <button type="button" className="bttn bttn-primary mb-2 ">
-                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
+                <span className="text-base py-1 items-center">
                   Donate Now
                 </span>
                 <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
               </button>
               <button type="button" className=" bttn bttn-extra mb-2 ">
-                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
+                <span className="text-base py-1 items-center">
                   Learn More
                 </span>
                 {/* <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" /> */}
