@@ -28,7 +28,7 @@ export default function SignIn ({
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-screen sm:min-h-full items-center justify-center md:p-4 text-center ">
+            <div className="flex h-screen sm:min-h-full items-center justify-center md:p-4 text-center ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"

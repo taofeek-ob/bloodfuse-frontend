@@ -94,7 +94,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
               closeModal();
               setTimeout(() => {
                 openLoginModalFunc();
-              }, 200);
+              }, 500);
             }}
             >
               Login now</span>
