@@ -11,7 +11,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
       <div className="flex flex-col justify-between px-auto w-full mb-7 items-center">
         <div className="flex justify-between px-auto w-full mb-7">
           <div>Sign up with</div>
-          <div className="hidden sm:flex">
+          <div className="hidden sm:flex gap-1">
             Already a member? {"  "}
             <span className="text-red-600 cursor-pointer"
              onClick={() => {
@@ -88,7 +88,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
           </div>
         </div>
         <div className="block sm:hidden pb-4">
-            Already a member?{" "}
+            Already a member?{"  "}
             <span className="text-red-600 cursor-pointer"
              onClick={() => {
               closeModal();
