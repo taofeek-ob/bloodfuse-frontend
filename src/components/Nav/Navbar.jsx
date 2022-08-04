@@ -100,9 +100,9 @@ export default function NavBar() {
                         <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-white px-2 py-6 sm:gap-8">
                             {solutions.map((item) => (
-                              <a
+                              <Link
                                 key={item.name}
-                                href={item.link}
+                                to={item.href}
                                 className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-200"
                               >
                                 <div className="">
@@ -110,7 +110,7 @@ export default function NavBar() {
                                     {item.name}
                                   </p>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -196,7 +196,12 @@ export default function NavBar() {
             </div>
           </div>
         </div>
-        <Sidebar openModal={openModal} openSignUpModal={openSignUpModal} closeModal={closeModal} closeSignUpModal={closeSignUpModal} />
+        <Sidebar
+          openModal={openModal}
+          openSignUpModal={openSignUpModal}
+          closeModal={closeModal}
+          closeSignUpModal={closeSignUpModal}
+        />
       </Popover>
     </>
   );
