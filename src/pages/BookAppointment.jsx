@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Maply from "../components/map/Map";
 import SearchBar from "../components/map/SearchBar";
+import centerList from "../components/map/CenterList";
 
 const location = {
   address:
@@ -10,11 +11,12 @@ const location = {
 };
 
 const BookAppointment = () => {
+  const [CenterList, setCenterList] = useState(centerList);
   return (
     <div className="w-full">
-      <SearchBar />
+      <SearchBar CenterList={CenterList} setCenterList={setCenterList} centerList={centerList} />
 
-      <Maply location={location} zoomLevel={17} />
+      <Maply location={location} zoomLevel={17} CenterList={CenterList} />
     </div>
   );
 };

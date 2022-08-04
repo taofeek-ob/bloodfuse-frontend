@@ -1,14 +1,15 @@
 import React from "react";
-import CenterList from "./CenterList";
 
-const Center = ({ handleClick, setIndex }) => {
+
+const Center = ({ handleClick, setIndex, CenterList }) => {
   const clickHandler = (e) => {
     setIndex(e);
     handleClick();
   };
+  if(CenterList.length <= 0 ) return <>No centers found</>
   return (
     <div className="w-full">
-      {CenterList.map((center, index) => {
+      {CenterList?.map((center, index) => {
         return (
           <div
             className="mb-6 flex flex-col md:border-0 border border-x-0 border-b-0 border-t-gray-500 "

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
 import { Icon } from "@iconify/react";
 import locationIcon from "@iconify/icons-mdi/map-marker";
+
 import BloodBag from "../../assets/BloodBag.png";
 import Hospital from "../../assets/Hospital.png";
 import DonationCenter from "../../assets/DonationCenter.png";
@@ -16,7 +17,7 @@ const LocationPin = ({ text }) => (
   </div>
 );
 
-const Map = ({ location, zoomLevel }) => {
+const Map = ({ location, zoomLevel, CenterList }) => {
   const [show, setShow] = useState(true);
   const [index, setIndex] = useState();
   const handleClick = () => {
@@ -41,28 +42,28 @@ const Map = ({ location, zoomLevel }) => {
             </GoogleMapReact>
           </div>
           <div className="flex h-[25%] w-full text-sm ">
-            <div className="bg-red-600 text-white flex flex-col items-center justify-center w-[33%] ">
+            <div className="bg-red-600 text-white flex flex-col gap-4 items-center justify-center w-[33%] ">
               <img src={BloodBag} alt="" className="md:w-14 md:h-14 w-7 h-7" />
-              <span className="text-white">CONNECT WITH BLOOD BANK</span>
+              <span className="text-white text-center">CONNECT WITH BLOOD BANK</span>
             </div>
-            <div className="bg-white text-white flex flex-col items-center justify-center w-[33%] ">
+            <div className="bg-white text-white flex flex-col gap-4 items-center justify-center w-[33%] ">
               <img
                 src={DonationCenter}
                 alt=""
                 className="md:w-14 md:h-14 w-7 h-7 "
               />
-              <span className="text-gray-500 pl-1">
+              <span className="text-gray-500 text-center">
                 CONNECT WITH DONATION CENTER
               </span>
             </div>
             <div className=" border-r-gray-500 border my-4"></div>
-            <div className="bg-white text-white flex flex-col items-center justify-center w-[33%] ">
+            <div className="bg-white text-white flex flex-col gap-4 items-center justify-center w-[33%] ">
               <img src={Hospital} alt="" className="md:w-14 md:h-14 w-7 h-7" />
-              <span className="text-gray-500">CONNECT WITH HOSPITAL</span>
+              <span className="text-gray-500 text-center">CONNECT WITH HOSPITAL</span>
             </div>
           </div>
         </div>
-        <div className="md:w-[25%] w-full md:h-full  flex  flex-col pr-6 md:overflow-scroll float-left ">
+        <div className="md:w-[25%] w-full md:h-full  flex  flex-col pr-6 md:overflow-scroll float-left">
           <div className=" pt-6 pb-0 md:py-3">
             {show ? (
               <span className="text-black">Donation Center Near You</span>
@@ -73,7 +74,7 @@ const Map = ({ location, zoomLevel }) => {
           <div className="md:border-b-red-500 border-0 md:border mb-6"></div>
           <div>
             {show ? (
-              <Center handleClick={handleClick} setIndex={setIndex} />
+              <Center handleClick={handleClick} setIndex={setIndex} CenterList={CenterList} />
             ) : (
               <Schedule index={index} />
             )}

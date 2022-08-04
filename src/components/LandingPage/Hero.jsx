@@ -17,17 +17,15 @@ const Hero = () => {
             donated and accessed.
           </div>
           <div className="md:mr-auto flex flex-col gap-4 sm:flex-row items-center justify-center md:justify-start w-[70%] sm:w-auto">
-            <Link to="/book-appointment">
-              {" "}
-              <button type="button" className="bttn bttn-primary">
+            {" "}
+              <Link to="/book-appointment" className="bttn bttn-primary">
                 <span className="text-base items-center">Donate Now</span>
                 <ChevronRightIcon className="w-4 h-4 ml-2" />
-              </button>
-            </Link>
-            <button type="button" className="bttn bttn-secondary">
+              </Link>
+            <Link to="/" className="bttn bttn-secondary">
               <span className="text-base items-center">Request Blood</span>
               <ChevronRightIcon className="w-4 h-4 ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex items-center justify-center w-full h-auto lg:h-full lg:w-1/2">
