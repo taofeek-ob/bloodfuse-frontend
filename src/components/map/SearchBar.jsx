@@ -3,8 +3,8 @@ import { SearchIcon } from '@heroicons/react/outline'
 
 const SearchBar = ({CenterList, setCenterList, centerList }) => {
   const handleChange = (e) => {
-    if(e.target.value === "" || e.target.value === " ") return setCenterList(centerList);
-    const centerListTemp = CenterList.filter((centerList) => centerList.name.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1);
+    if(e.target.value.trim() === "") return setCenterList(centerList);
+    const centerListTemp = CenterList.filter((centerList) => centerList.name.toLowerCase().indexOf(e.target.value.trim().toLowerCase()) !== -1);
     setCenterList(centerListTemp);
     console.log("Okay");
   }
