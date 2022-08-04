@@ -4,11 +4,11 @@ import CenterList from "./CenterList";
 const Schedule = ({ index }) => {
   return (
     <>
-      {CenterList.filter((center, e) => e === index).map(({ name, e }) => {
+      {CenterList.filter((center, e) => e === index).map(({ name, x }) => {
         return (
           <div
             className="mb-4 flex flex-col  md:border-0 border border-x-0 border-b-0 border-t-gray-500 "
-            key={e}
+            key={x}
           >
             <div className="py-3 md:pb-2 ">
               <span>{name}</span>
@@ -16,17 +16,17 @@ const Schedule = ({ index }) => {
             <div className=" pt-2 pb-6 text-sm">
               <span>Appointment Schedule</span>
             </div>
-            <div class="mb-4">
+            <div className="mb-4">
               <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="Fullname"
                 type="text"
                 placeholder="Fullname"
               />
             </div>
-            <div class="mb-6">
+            <div className="mb-6">
               <input
-                class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="phone"
                 type="tel"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
@@ -34,16 +34,16 @@ const Schedule = ({ index }) => {
                 required
               />
             </div>
-            <div class="mb-6 flex justify-between gap-2">
+            <div className="mb-6 flex justify-between gap-2">
               <input
-                class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="phone"
                 type="date"
                 placeholder="date"
                 required
               />
               <input
-                class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="time"
                 type="time"
                 placeholder="00:00"
