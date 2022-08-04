@@ -8,7 +8,7 @@ const location = {
   lat: 9.058291384251444,
   lng: 7.462374396610043,
 };
-// , 7.462374396610043
+
 const BookAppointment = () => {
   return (
     <div className="w-full">

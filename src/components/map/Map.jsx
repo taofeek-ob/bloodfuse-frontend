@@ -5,15 +5,14 @@ import locationIcon from "@iconify/icons-mdi/map-marker";
 import BloodBag from "../../assets/BloodBag.png";
 import Hospital from "../../assets/Hospital.png";
 import DonationCenter from "../../assets/DonationCenter.png";
-// import CenterLu from "../../assets/DonationCenter.png";
-import CenterList from "./CenterList";
+
 import Center from "./Center";
 import Schedule from "./Schedule";
 
 const LocationPin = ({ text }) => (
   <div className="pin">
     <Icon icon={locationIcon} className="pin-icon" />
-    <p className="pin-text">{text}</p>
+    <p className="pin-text text-white w-auto">{text}</p>
   </div>
 );
 

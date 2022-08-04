@@ -10,8 +10,11 @@ const Center = ({ handleClick, setIndex }) => {
     <div className="w-full">
       {CenterList.map((center, index) => {
         return (
-          <div className="mb-6 flex flex-col md:border-0 border border-x-0 border-b-0 border-t-gray-500 ">
-            <div className=" py-4 md:pb-2" key={index}>
+          <div
+            className="mb-6 flex flex-col md:border-0 border border-x-0 border-b-0 border-t-gray-500 "
+            key={index}
+          >
+            <div className=" py-4 md:pb-2">
               <span>{center.name}</span>
             </div>
             <div className="text-sm pb-2">

@@ -4,13 +4,16 @@ import CenterList from "./CenterList";
 const Schedule = ({ index }) => {
   return (
     <>
-      {CenterList.filter((center, e) => e === index).map(({ name }) => {
+      {CenterList.filter((center, e) => e === index).map(({ name, e }) => {
         return (
-          <div className="mb-4 flex flex-col  md:border-0 border border-x-0 border-b-0 border-t-gray-500 ">
-            <div className="py-3 md:pb-2 " key={index}>
+          <div
+            className="mb-4 flex flex-col  md:border-0 border border-x-0 border-b-0 border-t-gray-500 "
+            key={e}
+          >
+            <div className="py-3 md:pb-2 ">
               <span>{name}</span>
             </div>
-            <div className=" pt-2 pb-6 text-sm" key={index}>
+            <div className=" pt-2 pb-6 text-sm">
               <span>Appointment Schedule</span>
             </div>
             <div class="mb-4">
