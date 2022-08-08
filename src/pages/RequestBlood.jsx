@@ -2,7 +2,7 @@ import React from 'react'
 
 const RequestBlood = () => {
     return (
-        <div className='flex flex-col items-center justify-center w-full h-[90vh]'>
+        <div className='flex flex-col items-center justify-center w-full min-h-[90vh]'>
             <div className='w-full md:max-w-2xl h-full md:h-auto shadow-me md:rounded-[6px]'>
                 <div className='flex flex-col gap-2 items-center h-full py-8 px-6 md:px-8'>
                     <h1 className='my-4 text-2xl md:text-[32px]'>Request Blood</h1>
