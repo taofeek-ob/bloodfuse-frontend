@@ -1,13 +1,18 @@
 import React from "react";
-import { SearchIcon } from '@heroicons/react/outline'
+import { SearchIcon } from "@heroicons/react/outline";
 
-const SearchBar = ({CenterList, setCenterList, centerList }) => {
+const SearchBar = ({ CenterList, setCenters }) => {
   const handleChange = (e) => {
-    if(e.target.value.trim() === "") return setCenterList(centerList);
-    const centerListTemp = CenterList.filter((centerList) => centerList.name.toLowerCase().indexOf(e.target.value.trim().toLowerCase()) !== -1);
-    setCenterList(centerListTemp);
+    if (e.target.value.trim() === "") return setCenters(CenterList);
+    const centerListTemp = CenterList.filter(
+      (Centers) =>
+        Centers.name
+          .toLowerCase()
+          .indexOf(e.target.value.trim().toLowerCase()) !== -1
+    );
+    setCenters(centerListTemp);
     console.log("Okay");
-  }
+  };
   return (
     <div className="my-5 mx-10">
       <form>
