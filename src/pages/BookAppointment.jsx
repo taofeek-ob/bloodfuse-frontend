@@ -15,13 +15,9 @@ const BookAppointment = () => {
   const [Centers, setCenters] = useState(CenterList);
   return (
     <div className="w-full">
-      <SearchBar
-        CenterList={Centers}
-        setCenters={setCenters}
-        centerList={CenterList}
-      />
+      <SearchBar CenterList={CenterList} setCenters={setCenters} />
 
-      <Map location={location} zoomLevel={17} CenterList={CenterList} />
+      <Map location={location} zoomLevel={17} CenterList={Centers} />
     </div>
   );
 };
