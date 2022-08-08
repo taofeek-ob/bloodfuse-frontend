@@ -1,13 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
 const VideoCard = ({ person }) => {
-  // {
-  //     name: "Oluwole Seun",
-  //     videoSrc: "",
-  //     details: "Meet 14 years old Seun from Lagos. She and others who are fighting Leukemia often need blood trans-fusions while going through chemo treatments.",
-  //     btnDescription: "Watch Seun's story on Our Youtube",
-  //     youtubeLink: "youtube.com"
-  // }
   return (
     <div className='px-8 flex flex-col'>
         <div className='w-[80%] mx-auto'>
