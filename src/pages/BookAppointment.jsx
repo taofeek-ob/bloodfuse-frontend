@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// import Maply from "../components/map/Map";
-// import SearchBar from "../components/map/SearchBar";
-// import centerList from "../components/map/CenterList";
 import { CenterList, SearchBar, Map } from "../components/map";
 
 const location = {
@@ -20,7 +17,6 @@ const BookAppointment = () => {
         setCenters={setCenters}
         centerList={CenterList}
       />
-
       <Map location={location} zoomLevel={17} CenterList={CenterList} />
     </div>
   );
