@@ -19,13 +19,11 @@ const Navbar = () => {
         <div><BellIcon className="text-black h-8 w-8 cursor-pointer" /></div>
         {/* Profile Icon */}
         <div className="flex items-center gap-2 cursor-pointer">
-          <div className="h-8 w-8 rounded-full overflow-hidden relative">
+          <div className="h-10 w-10 rounded-full overflow-hidden relative">
             <img className="absolute h-full w-full object-center object-cover" src={ProfilePhoto} alt="menu" />
           </div>
-          <div className="hidden md:flex items-center gap-2 cursor-pointer">
-          <div className="text-black">OluwaTobi Timothy</div>
+          <div className="hidden md:flex text-black">OluwaTobi Timothy</div>
           <ChevronDownIcon className="text-black h-6 w-6" />
-         </div>
         </div>
       </div>
     </div>
