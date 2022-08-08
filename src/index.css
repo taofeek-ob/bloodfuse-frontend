@@ -32,6 +32,9 @@ body {
 .bttn {
   @apply w-full sm:w-fit flex items-center justify-center md:px-8 px-4 py-3 border border-transparent;
 }
+.bttn-2 {
+  @apply w-full flex items-center justify-center md:px-8 px-4 py-3 border border-transparent;
+}
 
 .bttn-primary {
   @apply text-white bg-[#F00530] hover:bg-red-700 rounded-[4px] focus:ring-2 focus:outline-none focus:ring-red-300 focus:ring-opacity-50 transition-all duration-300 ease-in-out;
@@ -48,6 +51,10 @@ body {
 .text-incremental {
   @apply text-4xl lg:text-5xl xl:text-7xl;
 }
+.shadow-me {
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%), 0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%), 0 16px 16px hsl(0deg 0% 0% / 8%);
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: #f00530 !important;

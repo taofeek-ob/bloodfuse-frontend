@@ -7,7 +7,7 @@ export const solutions = [
   {
     name: "Request Blood",
     slug: "#",
-    href: "/",
+    href: "/request-blood",
   },
 ];
 
