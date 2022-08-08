@@ -65,7 +65,6 @@ export default function NavBar({ bgColor, textColor }) {
                 <ViewListIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-
             <Popover.Group
               as="nav"
               className="hidden md:flex md:items-center space-x-10"

@@ -8,6 +8,7 @@ import Logo  from "../../assets/logo-dark.png";
 
 const SideBar = () => {
   return (
+    <>
     <div className="hidden md:flex flex-col items-start gap-4 h-full">
       <Link to="/" className="py-5 px-4">
         <img className="h-10 w-auto" src={Logo} alt="Logo" />
@@ -41,6 +42,9 @@ const SideBar = () => {
       </Link>
       </div>
     </div>
+
+    
+    </>
   );
 };
 

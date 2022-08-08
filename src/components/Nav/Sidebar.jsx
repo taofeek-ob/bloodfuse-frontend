@@ -117,25 +117,25 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                     </Link>
                   </div>
                   <div className="mt-2 py-5 border-t-2 border-solid">
-                    <button className="text-black text-base font-medium px-4">
+                    <div className="text-black text-base font-medium px-4">
                       <Popover.Button>Blog</Popover.Button>
-                    </button>
+                    </div>
                   </div>
                   <div className="mt-2 py-5 border-t-2 border-solid">
-                    <button
+                    <div
                       className="text-black text-base font-medium px-4"
                       onClick={openSignUpModal}
                     >
                       <Popover.Button>Sign Up</Popover.Button>
-                    </button>
+                    </div>
                   </div>
                   <div className="mt-2 py-5 border-t-2 border-solid">
-                    <button
+                    <div
                       className="text-black text-base font-medium px-4"
                       onClick={openModal}
                     >
                       <Popover.Button>Login</Popover.Button>
-                    </button>
+                    </div>
                   </div>
                 </nav>
               </div>

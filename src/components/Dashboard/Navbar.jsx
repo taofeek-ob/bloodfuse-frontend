@@ -4,12 +4,15 @@ import ProfilePhoto from '../../assets/profile-photo.jpg';
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import DropletIcon from '../../assets/logo-droplet.png';
 import { MenuIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="flex items-center w-full justify-between px-6 py-5 bg-[#FCFCFC]">
       <div className="flex lg:hidden gap-4 items-center">
+      <Link to="/">
         <img className="h-8 w-auto" src={DropletIcon} alt="Logo" />
+      </Link>
         <MenuIcon className="h-8 w-8" />
       </div>
       <div className="hidden lg:block text-2xl">Dashboard</div>
