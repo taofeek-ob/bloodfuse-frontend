@@ -1,6 +1,7 @@
 import { Navbar, Footer } from "./components/LandingPage";
 import { LandingPage, AboutUs, WhoCanDonate, BookAppointment } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { LandingLayout, AppointmentLayout } from "./components/Layout";
 import "./index.css";
 
 function App() {
@@ -8,14 +9,17 @@ function App() {
     <>
       <Router>
         <>
-          <Navbar />
           <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/who-can-donate" element={<WhoCanDonate />} />
-            <Route path="/book-appointment" element={<BookAppointment />} />
+            <Route path="/" element={<LandingLayout />}>
+              <Route index element={<LandingPage />} />
+              <Route path="aboutus" element={<AboutUs />} />
+              <Route path="who-can-donate" element={<WhoCanDonate />} />
+            </Route>
+
+            <Route path="/book-appointment" element={<AppointmentLayout />}>
+              <Route index element={<BookAppointment />} />
+            </Route>
           </Routes>
-          <Footer />
         </>
       </Router>
     </>

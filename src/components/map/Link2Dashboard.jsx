@@ -1,0 +1,34 @@
+import React from "react";
+import Aid from "../../assets/aid.png";
+import Union from "../../assets/union.png";
+
+const Link2Dashboard = () => {
+  return (
+    <div className="mb-4 flex flex-col  md:border-0 border border-x-0 border-b-0 border-t-gray-500 ">
+      <div className="py-3 md:pb-2 ">
+        <span>Congratulations! Your Appointment have been Scheduled</span>
+      </div>
+      <div className="py-8">
+        <button className="rounded bg-red-500 text-white md:px-16 py-2 w-full">
+          Go To Dashboard
+        </button>
+      </div>
+
+      <div className="flex items-center w-full md:justify-between justify-evenly md:px-8 md:-ml-6 pb-10">
+        <div>
+          <img src={Aid} alt="" />
+        </div>
+        <div>
+          <img src={Union} alt="" />
+        </div>
+      </div>
+      <div className="pt-2 text-sm">
+        <span className="font-bold">Note :</span> After booking your appointment
+        with donation center, blood bank or hospital you’ll need to log into
+        your dashboard to be able to view or cancel appointments.
+      </div>
+    </div>
+  );
+};
+
+export default Link2Dashboard;

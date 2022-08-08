@@ -14,7 +14,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavBar() {
+export default function NavBar({ bgColor, textColor }) {
   let [SignUpOpen, setSignUpOpen] = useState(false);
 
   let [isOpen, setIsOpen] = useState(false);
@@ -47,7 +47,9 @@ export default function NavBar() {
         openLoginModalFunc={openModal}
         closeLoginModalFunc={closeModal}
       />
-      <Popover className="relative bg-primarybg h-full md:overflow-visible overflow-x-clip text-white text-[14px]">
+      <Popover
+        className={`relative bg-${bgColor} h-full md:overflow-visible overflow-x-clip text-${textColor} text-[14px]`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6  md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -56,7 +58,9 @@ export default function NavBar() {
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-primarybg rounded-md p-2 inline-flex items-center justify-center text-white-400 hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+              <Popover.Button
+                className={`bg--${bgColor} rounded-md p-2 inline-flex items-center justify-center text--${textColor} hover:text-white-500 hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500`}
+              >
                 <span className="sr-only">Open menu</span>
                 <ViewListIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>

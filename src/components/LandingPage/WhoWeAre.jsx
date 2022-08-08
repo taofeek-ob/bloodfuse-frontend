@@ -1,6 +1,7 @@
 import React from "react";
 import Scientist from "../../assets/Lab.png";
 import { ChevronRightIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
 
 const WhoWeAre = () => {
   return (
@@ -37,12 +38,14 @@ const WhoWeAre = () => {
               </li>
             </ul>
             <div className="lg:mr-auto hidden lg:flex mt-4 sm:mt-8 flex-col gap-4 sm:flex-row items-center justify-center lg:justify-start w-[70%] sm:w-auto">
-              <button type="button" className="bttn bttn-primary">
-                <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
-                  Donate Now
-                </span>
-                <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
-              </button>
+              <Link to="/book-appointment">
+                <button type="button" className="bttn bttn-primary">
+                  <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
+                    Donate Now
+                  </span>
+                  <ChevronRightIcon className="w-3 h-3 md:w-4 md:h-4 ml-2" />
+                </button>
+              </Link>
               <button type="button" className="bttn bttn-tertiary">
                 <span className="text-[12px] md:[14px] lg:text-base py-1 items-center">
                   Request Blood
