@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Aid from "../../assets/aid.png";
 import Union from "../../assets/union.png";
 
@@ -9,9 +10,12 @@ const Link2Dashboard = () => {
         <span>Congratulations! Your Appointment have been Scheduled</span>
       </div>
       <div className="py-8">
-        <button className="rounded bg-red-500 text-white md:px-16 py-2 w-full">
-          Go To Dashboard
-        </button>
+        <Link to="/dashboard/main">
+          {" "}
+          <button className="rounded bg-red-500 text-white md:px-16 py-2 w-full">
+            Go To Dashboard
+          </button>
+        </Link>
       </div>
 
       <div className="flex items-center w-full md:justify-between justify-evenly md:px-8 md:-ml-6 pb-10">
