@@ -3,7 +3,7 @@ import React from 'react'
 const RequestBlood = () => {
     return (
         <div className='flex flex-col items-center justify-start md:justify-center w-full min-h-[90vh]'>
-            <div className='w-full md:max-w-2xl h-full md:h-auto md:shadow-me md:rounded-[6px]'>
+            <div className='w-full md:max-w-2xl h-full md:h-auto md:shadow-xl md:rounded-[6px]'>
                 <div className='flex flex-col gap-2 items-center h-full py-8 px-6 md:px-8'>
                     <h1 className='my-4 text-2xl md:text-[32px]'>Request Blood</h1>
                     {/* Create a form to get user's blood type, gender, center or hospital and phone number */}
