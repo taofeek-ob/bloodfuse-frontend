@@ -114,21 +114,23 @@ const Dashboard = () => {
           </span>{" "}
         <div className="h-[250px] relative">
         <img src={Gradient} alt="" className=" object-cover w-full h-full " />
-          <div className=" text-white absolute left-0 w-full top-0  px-4 py-4 md:py-6 items-center flex justify-between">
-            <div className="flex flex-col justify-between xl:py-2">
-              <span className="pb-2 xl:pb-4 xl:text-2xl">
+          <div className=" text-white absolute inset-0 w-full md:w-[90%] mx-auto h-full  px-4 py-4 md:py-6 items-center flex justify-center">
+            <div className="flex flex-col  justify-between xl:py-2 w-[60%] sm:w-[70%]">
+              <span className="pb-2 xl:pb-4 text-xl xl:text-2xl">
                 Donate blood and earn STX
               </span>
-              <span className="text-xs xl:text-base pb-4 xl:pb-8">
+              <div className="pb-4 xl:pb-8 max-w-sm">
+              <span className="text-sm">
                 Not all heros wear cape, help save a life and get paid in STX
                 for every donation you make.
               </span>
-              <button className="rounded bg-white text-red-500 w-fit px-4 md:px-6 py-2">
+              </div>
+              <button className="rounded bg-white text-red-500 w-fit px-8 py-2">
                 Learn More
               </button>
             </div>
-            <div className="-py-10">
-              <img src={Patient} alt="" className=" h-36 xl:h-44" />
+            <div className="-py-10 w-[40%] sm:w-[30%] ">
+              <img src={Patient} alt="" className="h-36 xl:h-44 mr-auto" />
             </div>
           </div>
         </div>
