@@ -17,7 +17,7 @@ const SideBar = () => {
       
       <div className="flex flex-col items-start gap-y-6 w-full">
       <NavLink to="/dashboard/main"  className={({ isActive }) =>
-        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+        "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
       }
       >
         <div className="flex items-center gap-2 w-full py-3 px-2">
@@ -26,7 +26,7 @@ const SideBar = () => {
         </div>
       </NavLink>
       <NavLink to="/dashboard/medical"  className={({ isActive }) =>
-        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+        "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
       }
       >
         <div className="flex items-center gap-2 w-full py-3 px-2">
@@ -35,7 +35,7 @@ const SideBar = () => {
         </div>
       </NavLink>
       <NavLink to="/dashboard/wallet"  className={({ isActive }) =>
-        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+        "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
       }
       >
         <div className="flex items-center gap-2 w-full py-3 px-2">
@@ -45,7 +45,7 @@ const SideBar = () => {
       </NavLink>
       <NavLink to="/dashboard/history" 
       className={({ isActive }) =>
-      "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+      "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
       }
       >
         <div className="flex items-center gap-2 w-full py-3 px-2">
