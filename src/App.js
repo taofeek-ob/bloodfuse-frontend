@@ -1,6 +1,18 @@
-import {LandingPage, AboutUs, WhoCanDonate, BookAppointment, Dashboard, RequestBlood } from "./pages";
+import {
+  LandingPage,
+  AboutUs,
+  WhoCanDonate,
+  BookAppointment,
+  Dashboard,
+  RequestBlood,
+} from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {LandingLayout, AppointmentLayout,RequestLayout, DashboardLayout } from "./components/Layout";
+import {
+  LandingLayout,
+  AppointmentLayout,
+  RequestLayout,
+  DashboardLayout,
+} from "./components/Layout";
 import "./index.css";
 
 function App() {
@@ -21,15 +33,15 @@ function App() {
             </Route>
             {/* RequestBlood Page Routes */}
             <Route path="/request-blood" element={<RequestLayout />}>
-              <Route index element={<RequestBlood  />} />
+              <Route index element={<RequestBlood />} />
             </Route>
             {/* Dashboard Page Routes */}
             <Route path="/dashboard" element={<DashboardLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="/dashboard/main" element={<Dashboard />} />
-              <Route path="/dashboard/medical" element={<Dashboard />} />
-              <Route path="/dashboard/wallet" element={<Dashboard />} />
-              <Route path="/dashboard/history" element={<Dashboard />} />
+              <Route path="medical" element={<Dashboard />} />
+              <Route path="wallet" element={<Dashboard />} />
+              <Route path="history" element={<Dashboard />} />
             </Route>
           </Routes>
         </>

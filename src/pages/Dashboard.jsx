@@ -1,5 +1,6 @@
 import React from "react";
 import Gradient from "../assets/gradient.png";
+import GaugeChart from "react-gauge-chart";
 import {
   AreaChart,
   Area,
@@ -16,6 +17,7 @@ import {
 } from "recharts";
 import Calendar from "react-calendar";
 import "./Calendar.css";
+import Patient from "../assets/patient.png";
 import { ArrowRightIcon, ArrowUpIcon } from "@heroicons/react/outline";
 const data = [
   {
@@ -104,22 +106,44 @@ const PerformanceData = [
 ];
 const Dashboard = () => {
   return (
-    <div className="grid  grid-cols-1 md:grid-cols-3 auto-rows-auto grid-flow-row gap-4 w-full  h-full p-6">
-      <div className=" md:col-span-2 ">
+    <div className="grid  grid-cols-1 md:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
+      <div className=" md:col-span-2">
         <div>
-          <span className="font-bold h-fit">Hello Oluwatobi</span>{" "}
+          <span className="font-bold h-fit">
+            Dashboard {">>"} Hello Oluwatobi
+          </span>{" "}
         </div>
-        <div className="py-2 h-min md:col-span-2">
-          <img src={Gradient} alt="" className="h-min" />
+        <div className="py-2 h-48 md:col-span-2  relative ">
+          <img src={Gradient} alt="" className=" object-cover w-full h-full " />
+          <div className=" text-white absolute left-0 w-full top-0  px-4 sm:py-auto py-2 items-center flex justify-between">
+            <div className="flex flex-col justify-between xl:py-2">
+              <span className="pb-2 xl:pb-4 xl:text-2xl">
+                Donate blood and earn STX
+              </span>
+              <span className="text-xs xl:text-base pb-4 xl:pb-8">
+                Not all heros wear cape, help save a life and get paid in STX
+                for every donation you make.
+              </span>
+              <button className="rounded bg-white text-red-500 w-fit p-1">
+                Learn More
+              </button>
+            </div>
+            <div className="-py-10">
+              <img src={Patient} alt="" className=" h-36 xl:h-44" />
+            </div>
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3  gap-4 items-start md:col-span-2 ">
+        <div className="py-2 md:hidden h-auto w-full">
+          <Calendar />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 mt-2  gap-4 items-start md:col-span-2 ">
           <div className="flex flex-col justify-between bg-white rounded ">
-            <div className="flex justify-between px-2 pb-6 ">
+            <div className="flex justify-between px-2 pt-4 pb-6 ">
               <div className="flex flex-col justify-between">
                 <span>Total donations</span>
                 <span className="text-[12px]">Last Month</span>
               </div>
-              <div className="flex items-center  justify-between text-blue-600 ">
+              <div className="flex items-center  justify-between text-[#61A0FF] ">
                 <span className="text-3xl  ">{data.length}</span>
                 <ArrowUpIcon className=" h-7 w-6 rotate-45 pt-2 text-sm " />
               </div>
@@ -139,7 +163,7 @@ const Dashboard = () => {
                 <Area
                   type="monotone"
                   dataKey="uv"
-                  stroke="#8884d8"
+                  stroke="#61A0FF"
                   fill="#CCE0FF"
                 />
                 <Tooltip />
@@ -147,12 +171,12 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
           <div className="flex flex-col justify-between bg-white rounded ">
-            <div className="flex justify-between px-2 pb-6">
+            <div className="flex justify-between px-2 pt-4 pb-6">
               <div className="flex flex-col justify-between">
                 <span>Total donations</span>
                 <span className="text-[12px]">Last Month</span>
               </div>
-              <div className="flex items-center justify-between text-blue-600 ">
+              <div className="flex items-center justify-between text-[#FB9637] ">
                 <span className="text-3xl  ">{data.length}</span>
                 <ArrowUpIcon className=" h-7 w-6 rotate-45 pt-2 text-sm " />
               </div>
@@ -172,20 +196,20 @@ const Dashboard = () => {
                 <Area
                   type="monotone"
                   dataKey="uv"
-                  stroke="#8884d8"
-                  fill="#CCE0FF"
+                  stroke="#FB9637"
+                  fill="#FEEDDC"
                 />
                 <Tooltip />
               </AreaChart>
             </ResponsiveContainer>
           </div>
           <div className="flex flex-col justify-between bg-white rounded ">
-            <div className="flex justify-between px-2 pb-6">
+            <div className="flex justify-between px-2 pt-4 pb-6">
               <div className="flex flex-col justify-between">
                 <span>Total donations</span>
                 <span className="text-[12px]">Last Month</span>
               </div>
-              <div className="flex items-center justify-between text-blue-600 ">
+              <div className="flex items-center justify-between text-[#F00530] ">
                 <span className="text-3xl  ">{data.length}</span>
                 <ArrowUpIcon className=" h-7 w-6 rotate-45 pt-2 text-sm " />
               </div>
@@ -205,140 +229,229 @@ const Dashboard = () => {
                 <Area
                   type="monotone"
                   dataKey="uv"
-                  stroke="#8884d8"
-                  fill="#CCE0FF"
+                  stroke="#F00530"
+                  fill="#FDE3E3"
                 />
                 <Tooltip />
               </AreaChart>
             </ResponsiveContainer>
           </div>
         </div>
-        <div class="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 md:items-start">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="text-xs  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-              <tr>
-                <th
-                  scope="col"
-                  class="py-3 px-6 sticky left-0 z-10  bg-gray-50"
-                >
-                  Product name
-                </th>
-                <th scope="col" class="py-3 px-6">
-                  Color
-                </th>
-                <th scope="col" class="py-3 px-6">
-                  Category
-                </th>
-                <th scope="col" class="py-3 px-6">
-                  Price
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th
-                  scope="row"
-                  class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
-                >
-                  Apple MacBook Pro 17"
-                </th>
-                <td class="py-4 px-6">Sliver</td>
-                <td class="py-4 px-6">Laptop</td>
-                <td class="py-4 px-6">$2999</td>
-              </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                <th
-                  scope="row"
-                  class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
-                >
-                  Microsoft Surface Pro
-                </th>
-                <td class="py-4 px-6">White</td>
-                <td class="py-4 px-6">Laptop PC</td>
-                <td class="py-4 px-6">$1999</td>
-              </tr>
-              <tr class="bg-white dark:bg-gray-800">
-                <th
-                  scope="row"
-                  class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
-                >
-                  Magic Mouse 2
-                </th>
-                <td class="py-4 px-6">Black</td>
-                <td class="py-4 px-6">Accessories</td>
-                <td class="py-4 px-6">$99</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="bg-white rounded mt-4">
+          <div className="pl-4 pt-2">
+            <span className="text-2xl">Pending Appointments</span>
+          </div>
+
+          <div class="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 bg-white rounded md:items-start">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs  text-gray-700 uppercase  ">
+                <tr>
+                  <th
+                    scope="col"
+                    class="py-3 px-6 sticky left-0 z-10  bg-white"
+                  >
+                    Center Name
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                    Date
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                    Time
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                    Status
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                    Donor id
+                  </th>
+                  <th scope="col" class="py-3 px-6"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                    scope="row"
+                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                  >
+                    Abuja Blood Donation Center
+                  </th>
+                  <td class="py-4 px-6">12/04/2022</td>
+                  <td class="py-4 px-6">1:30-2:30pm</td>
+                  <td class="py-4 px-6 text-green-400">Accepted</td>
+                  <td class="py-4 px-6">aa234-678</td>
+                  <td class="py-4 px-6 text-red-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                  <th
+                    scope="row"
+                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                  >
+                    Abuja Blood Donation Center
+                  </th>
+                  <td class="py-4 px-6">12/04/2022</td>
+                  <td class="py-4 px-6">1:30-2:30pm</td>
+                  <td class="py-4 px-6 text-red-500">Declined</td>
+                  <td class="py-4 px-6">aa234-678</td>
+                  <td class="py-4 px-6 text-red-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                  <th
+                    scope="row"
+                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
+                  >
+                    Abuja Blood Donation Center
+                  </th>
+                  <td class="py-4 px-6">12/04/2022</td>
+                  <td class="py-4 px-6">1:30-2:30pm</td>
+                  <td class="py-4 px-6 text-green-500">Accepted</td>
+                  <td class="py-4 px-6">aa234-678</td>
+                  <td class="py-4 px-6 text-red-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div className="">
         <div className=" hidden md:flex justify-between">
           <span>Appointments</span>
-          <span>Book Appointment</span>
+          <span>
+            <button className="outline outline-offset-6 px-6  rounded outline-red-500 text-red-500">
+              Book new appointment
+            </button>{" "}
+          </span>
         </div>
-        <div className="py-2  row-span-2 h-auto w-full">
+        <div className="py-2 hidden md:block row-span-2 h-auto w-full">
           <Calendar />
         </div>
 
-        <div className="bg-white flex-col rounded hidden h-fit  items-start md:flex  p-5 ">
-          <div>
-            <span className="items-start text-2xl">Performance Stats</span>
+        <div className="bg-white rounded hidden flex-col justify-between md:flex h-min w-full p-5 ">
+          <div className="pb-4">
+            <span className="items-start text-xl">Performance Stats</span>
+          </div>{" "}
+          <div className=" flex flex-col justify-center  text-gray-700 px-4 py-2">
+            <GaugeChart
+              id="gauge-chart2"
+              nrOfLevels={2}
+              percent={0.26}
+              colors={["red", "#FEE6EB"]}
+              arcPadding={0}
+              needleBaseColor="red"
+              needleColor="gray"
+              arcsLength={[0.26, 0.74]}
+              textColor="gray"
+            />
+            <div className="flex justify-around items-center -mt-4 ">
+              <span className="xl:pl-4">0%</span>
+              <span className="pl-20 xl:pl-28">100%</span>
+            </div>
+            <div className="flex justify-around items-center mt-4 ">
+              <span className="">Completed</span>
+              <span className="pl-20">In Progress</span>
+            </div>
+            <div className="flex justify-around items-center mt-2 ">
+              <span className="">0%</span>
+              <span className="pl-20">100%</span>
+            </div>
           </div>
-          <div className=" flex justify-center">
-            <ResponsiveContainer width="100%" height={200}>
-              <PieChart width={200} height={200} className="overflow-x-clip">
-                <Pie
-                  dataKey="value"
-                  startAngle={180}
-                  endAngle={0}
-                  data={pieData}
-                  cx={200}
-                  cy={200}
-                  outerRadius={80}
-                  innerRadius={50}
-                  fill="#F00530"
-                  strokeWidth="0"
-                >
-                  {pieData.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-              </PieChart>
+          <div className="pb-6">
+            <span className="items-start text-xl">Your Performance</span>
+          </div>
+          <div>
+            <ResponsiveContainer width="100%" height={150}>
+              <LineChart data={PerformanceData}>
+                <XAxis dataKey="name" />
+                <CartesianGrid strokeDasharray="4 4" vertical={false} />
+                <YAxis axisLine={false} />
+                <Tooltip />
+                <Line
+                  type="monotone"
+                  dataKey="pv"
+                  stroke="#F00530"
+                  strokeWidth={2}
+                />
+              </LineChart>
             </ResponsiveContainer>
           </div>
         </div>
       </div>
 
       <div className="bg-white rounded flex flex-col justify-between md:hidden h-full p-5 ">
-        <div>
-          <span className="items-start text-2xl">Performance Stats</span>
+        <div className="pb-4">
+          <span className="items-start text-xl">Performance Stats</span>
         </div>{" "}
-        <div className=" flex justify-center">
-          <PieChart width={400} height={400}>
-            <Pie
-              dataKey="value"
-              startAngle={180}
-              endAngle={0}
-              data={pieData}
-              cx={200}
-              cy={200}
-              outerRadius={80}
-              innerRadius={50}
-              fill="#F00530"
-              strokeWidth="0"
-            >
-              {pieData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
-          </PieChart>
+        <div className=" flex flex-col justify-center text-gray-700 px-4 py-4">
+          <GaugeChart
+            id="gauge-chart2"
+            nrOfLevels={2}
+            percent={0.26}
+            colors={["red", "#FEE6EB"]}
+            arcPadding={0}
+            needleBaseColor="red"
+            needleColor="gray"
+            arcsLength={[0.26, 0.74]}
+            textColor="gray"
+          />
+          <div className="flex justify-around items-center -mt-4 ">
+            <span className="">0%</span>
+            <span className="pl-20">100%</span>
+          </div>
+          <div className="flex justify-around items-center mt-4 ">
+            <span className="">Completed</span>
+            <span className="pl-20">In Progress</span>
+          </div>
+          <div className="flex justify-around items-center mt-2 ">
+            <span className="">0%</span>
+            <span className="pl-20">100%</span>
+          </div>
+        </div>
+        <div className="pb-6">
+          <span className="items-start text-xl">Your Performance</span>
         </div>
         <div>
           <ResponsiveContainer width="100%" height={150}>
