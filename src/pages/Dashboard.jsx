@@ -123,7 +123,7 @@ const Dashboard = () => {
                 Not all heros wear cape, help save a life and get paid in STX
                 for every donation you make.
               </span>
-              <button className="rounded bg-white text-red-500 w-fit p-1">
+              <button className="rounded bg-white text-red-500 w-fit px-4 md:px-6 py-2">
                 Learn More
               </button>
             </div>
