@@ -6,9 +6,9 @@ import {
   Area,
   Tooltip,
   ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
+  // PieChart,
+  // Pie,
+  // Cell,
   Line,
   LineChart,
   XAxis,
@@ -63,9 +63,9 @@ const data = [
     amt: 2100,
   },
 ];
-
+// eslint-disable-next-line
 const COLORS = ["#F00530", "#FEE6EB"];
-
+// eslint-disable-next-line
 const pieData = [
   { name: "Group A", value: 20 },
   { name: "Group B", value: 80 },

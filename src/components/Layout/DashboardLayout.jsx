@@ -10,7 +10,7 @@ const DashboardLayout = () => {
       </div>
       <div className="flex flex-col items-center w-full lg:w-[80%] h-full">
         <Navbar />
-        <div className="bg-[#F0F0F0] w-full h-auto">
+        <div className="bg-[#F0F0F0] w-full h-full">
           <Outlet />
         </div>
       </div>
