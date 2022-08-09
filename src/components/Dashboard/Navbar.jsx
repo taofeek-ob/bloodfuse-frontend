@@ -17,7 +17,7 @@ const Navbar = () => {
             <img className="h-8 w-auto" src={DropletIcon} alt="Logo" />
           </Link>
           <Popover.Button 
-            className="flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+            className="flex items-center justify-center rounded-md p-1 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-red-500"
           >
           <span className="sr-only">Open menu</span>
             <MenuIcon className="h-8 w-8 text-[#575757]" aria-hidden="true" />
@@ -25,7 +25,7 @@ const Navbar = () => {
         </div>
         <div className="hidden lg:block text-2xl">Dashboard</div>
         <div className="flex items-center gap-6">
-          <button className="hidden md:block bg-[#FFF5F7] py-2 px-4 rounded-full text-[#F00530] border border-transparent focus:border-[#F00530]">Connect STX Account</button>
+          <button className="hidden sm:block bg-[#FFF5F7] py-2 px-4 rounded-full text-[#F00530] border border-transparent focus:border-[#F00530]">Connect STX Account</button>
           {/* Notifications Icon */}
           <div><BellIcon className="text-[#575757] h-8 w-8 cursor-pointer" /></div>
           {/* Profile Icon */}

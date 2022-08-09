@@ -52,7 +52,7 @@ body {
   @apply text-4xl lg:text-5xl xl:text-7xl;
 }
 .trans {
-  @apply transition-all duration-200 ease-in-out;
+  @apply transition-all duration-300 ease-in-out;
 }
 .shadow-me {
   box-shadow: 0 1px 1px hsl(0deg 0% 0% / 8%), 0 2px 2px hsl(0deg 0% 0% / 8%), 0 4px 4px hsl(0deg 0% 0% / 8%), 0 8px 8px hsl(0deg 0% 0% / 8%), 0 16px 16px hsl(0deg 0% 0% / 8%);
