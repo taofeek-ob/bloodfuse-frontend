@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RiHistoryLine } from "react-icons/ri";
 import {MdOutlineSpaceDashboard} from 'react-icons/md';
 import { BsWallet } from "react-icons/bs";
@@ -15,31 +15,44 @@ const SideBar = () => {
       </Link>
 
       
-      <div className="flex flex-col items-start gap-y-6">
-      <Link to="/dashboard" className="text-black py-2 px-4">
-        <div className="flex items-center gap-x-3">
+      <div className="flex flex-col items-start gap-y-6 w-full">
+      <NavLink to="/dashboard/main"  className={({ isActive }) =>
+        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+      }
+      >
+        <div className="flex items-center gap-2 w-full py-3 px-2">
         <MdOutlineSpaceDashboard className="h-6 w-6 ml-2" />
         <p>Dashboard</p>
         </div>
-      </Link>
-      <Link to="/dashboard" className="text-black py-2 px-4">
-        <div className="flex items-center gap-x-3">
+      </NavLink>
+      <NavLink to="/dashboard/medical"  className={({ isActive }) =>
+        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+      }
+      >
+        <div className="flex items-center gap-2 w-full py-3 px-2">
         <TbHeartbeat className="h-6 w-6 ml-2" />
         <p>Medicals</p>
         </div>
-      </Link>
-      <Link to="/dashboard" className="text-black py-2 px-4">
-        <div className="flex items-center gap-x-3">
+      </NavLink>
+      <NavLink to="/dashboard/wallet"  className={({ isActive }) =>
+        "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+      }
+      >
+        <div className="flex items-center gap-2 w-full py-3 px-2">
         <BsWallet className="h-6 w-6 ml-2" />
         <p>Wallet</p>
         </div>
-      </Link>
-      <Link to="/dashboard" className="text-black py-2 px-4">
-        <div className="flex items-center gap-x-3">
+      </NavLink>
+      <NavLink to="/dashboard/history" 
+      className={({ isActive }) =>
+      "flex items-center gap-x-3 w-full " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
+      }
+      >
+        <div className="flex items-center gap-2 w-full py-3 px-2">
         <RiHistoryLine className="h-6 w-6 ml-2" />
         <p>History</p>
         </div>
-      </Link>
+      </NavLink>
       </div>
     </div>
 
