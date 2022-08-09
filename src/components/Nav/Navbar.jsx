@@ -65,7 +65,6 @@ export default function NavBar({ bgColor, textColor }) {
                 <ViewListIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-
             <Popover.Group
               as="nav"
               className="hidden md:flex md:items-center space-x-10"
@@ -84,8 +83,8 @@ export default function NavBar({ bgColor, textColor }) {
                       </span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-white-600" : "text-white-400",
-                          "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500"
+                          open ? "text-white-600 rotate-180 transform" : "text-white-400",
+                          "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500 transition-all duration-200 ease-in-out"
                         )}
                         aria-hidden="true"
                       />
@@ -138,8 +137,8 @@ export default function NavBar({ bgColor, textColor }) {
                       </span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-white-600" : "text-white-400",
-                          "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500"
+                          open ? "text-white-600 rotate-180 transform" : "text-white-400",
+                          "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500 transition-all duration-200 ease-in-out"
                         )}
                         aria-hidden="true"
                       />

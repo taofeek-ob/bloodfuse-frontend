@@ -26,6 +26,10 @@ function App() {
             {/* Dashboard Page Routes */}
             <Route path="/dashboard" element={<DashboardLayout />}>
               <Route index element={<Dashboard />} />
+              <Route path="/dashboard/main" element={<Dashboard />} />
+              <Route path="/dashboard/medical" element={<Dashboard />} />
+              <Route path="/dashboard/wallet" element={<Dashboard />} />
+              <Route path="/dashboard/history" element={<Dashboard />} />
             </Route>
           </Routes>
         </>

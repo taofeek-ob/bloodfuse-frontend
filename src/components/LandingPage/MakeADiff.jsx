@@ -15,6 +15,7 @@ const MakeADiff = () => {
                         <img src={MakeADiff1} alt="" className='w-full h-full object-center object-cover' />
                     </div>
                     <p className='ml-2 py-4'>Become a Volunteer</p>
+                    {/* eslint-disable-next-line */}
                     <a href="#" className='flex gap-3 items-center text-[#F00530] ml-2 text-[14px] cursor-pointer'>
                         Learn More
                         <ChevronDoubleRightIcon className='h-3 w-3' />
@@ -25,6 +26,7 @@ const MakeADiff = () => {
                         <img src={AboutWoman} alt="" className='w-full h-full object-center object-cover' />
                     </div>
                     <p className='ml-2 py-4'>Make a Financial Donation</p>
+                    {/* eslint-disable-next-line */}
                     <a href="#" className='flex gap-3 items-center text-[#F00530] ml-2 text-[14px] cursor-pointer'>
                         Learn More
                         <ChevronDoubleRightIcon className='h-3 w-3' />
@@ -35,6 +37,7 @@ const MakeADiff = () => {
                         <img src={MakeADiff2} alt="" className='w-full h-full object-center object-cover' />
                     </div>
                     <p className='ml-2 py-4'>Host blood drive</p>
+                    {/* eslint-disable-next-line */}
                     <a href="#" className='flex gap-3 items-center text-[#F00530] ml-2 text-[14px] cursor-pointer'>
                         Learn More
                         <ChevronDoubleRightIcon className='h-3 w-3' />
