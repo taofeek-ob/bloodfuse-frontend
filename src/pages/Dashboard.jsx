@@ -18,7 +18,7 @@ import {
 import Calendar from "react-calendar";
 import "./Calendar.css";
 import Patient from "../assets/patient.png";
-import { ArrowRightIcon, ArrowUpIcon } from "@heroicons/react/outline";
+import { ArrowUpIcon } from "@heroicons/react/outline";
 const data = [
   {
     name: "Page A",
@@ -106,16 +106,15 @@ const PerformanceData = [
 ];
 const Dashboard = () => {
   return (
-    <div className="grid  grid-cols-1 md:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
-      <div className=" md:col-span-2">
-        <div>
-          <span className="font-bold h-fit">
-            Dashboard {">>"} Hello Oluwatobi
+    <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
+      {/* First Grid( Banner, 3 Cards and Pending Appointments) */}
+      <div className=" md:col-span-2 space-y-4 overflow-y-scroll">
+          <span className="font-[500] h-fit md:mb-4 text-xl md:text-2xl">
+            Hello Oluwatobi
           </span>{" "}
-        </div>
-        <div className="py-2 h-48 md:col-span-2  relative ">
-          <img src={Gradient} alt="" className=" object-cover w-full h-full " />
-          <div className=" text-white absolute left-0 w-full top-0  px-4 sm:py-auto py-2 items-center flex justify-between">
+        <div className="h-[250px] relative">
+        <img src={Gradient} alt="" className=" object-cover w-full h-full " />
+          <div className=" text-white absolute left-0 w-full top-0  px-4 py-4 md:py-6 items-center flex justify-between">
             <div className="flex flex-col justify-between xl:py-2">
               <span className="pb-2 xl:pb-4 xl:text-2xl">
                 Donate blood and earn STX
@@ -133,10 +132,10 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="py-2 md:hidden h-auto w-full">
+        <div className="py-2 lg:hidden h-auto w-full">
           <Calendar />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 mt-2  gap-4 items-start md:col-span-2 ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 mt-2 gap-2 items-start md:col-span-2">
           <div className="flex flex-col justify-between bg-white rounded ">
             <div className="flex justify-between px-2 pt-4 pb-6 ">
               <div className="flex flex-col justify-between">
@@ -178,7 +177,7 @@ const Dashboard = () => {
               </div>
               <div className="flex items-center justify-between text-[#FB9637] ">
                 <span className="text-3xl  ">{data.length}</span>
-                <ArrowUpIcon className=" h-7 w-6 rotate-45 pt-2 text-sm " />
+                <ArrowUpIcon className=" h-7 w-6 rotate-45 pt-2 text-sm" />
               </div>
             </div>
             <ResponsiveContainer width="100%" height={150}>
@@ -357,16 +356,17 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+
       <div className="">
-        <div className=" hidden md:flex justify-between">
+        <div className=" hidden md:flex items-center justify-between">
           <span>Appointments</span>
           <span>
-            <button className="outline outline-offset-6 px-6  rounded outline-red-500 text-red-500">
+            <button className="outline outline-offset-6 px-6 py-2 rounded outline-red-500 text-red-500 hidden xl:block">
               Book new appointment
             </button>{" "}
           </span>
         </div>
-        <div className="py-2 hidden md:block row-span-2 h-auto w-full">
+        <div className="py-2 hidden lg:block row-span-2 h-auto w-full">
           <Calendar />
         </div>
 
@@ -420,7 +420,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
+          {/* Performance Stats and Your Performance */}
       <div className="bg-white rounded flex flex-col justify-between md:hidden h-full p-5 ">
         <div className="pb-4">
           <span className="items-start text-xl">Performance Stats</span>
@@ -450,7 +450,7 @@ const Dashboard = () => {
             <span className="pl-20">100%</span>
           </div>
         </div>
-        <div className="pb-6">
+        <div className="py-6">
           <span className="items-start text-xl">Your Performance</span>
         </div>
         <div>

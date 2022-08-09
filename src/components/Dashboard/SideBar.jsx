@@ -54,8 +54,6 @@ const SideBar = () => {
           </NavLink>
         </div>
       </div>
-
-
     </>
   );
 };
