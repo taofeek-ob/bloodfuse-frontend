@@ -1,5 +1,5 @@
 import React from "react";
-import Gradient from "../assets/gradient.png";
+import Gradient from "../../assets/gradient.png";
 import GaugeChart from "react-gauge-chart";
 import {
   AreaChart,
@@ -17,7 +17,7 @@ import {
 } from "recharts";
 import Calendar from "react-calendar";
 import "./Calendar.css";
-import Patient from "../assets/patient.png";
+import Patient from "../../assets/patient.png";
 import { ArrowUpIcon } from "@heroicons/react/outline";
 const data = [
   {

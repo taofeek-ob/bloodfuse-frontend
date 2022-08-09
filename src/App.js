@@ -3,7 +3,6 @@ import {
   AboutUs,
   WhoCanDonate,
   BookAppointment,
-  Dashboard,
   RequestBlood,
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -14,6 +13,7 @@ import {
   DashboardLayout,
 } from "./components/Layout";
 import "./index.css";
+import { MedicalsPage, Dashboard } from "./components/Dashboard";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
             <Route path="/dashboard" element={<DashboardLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="/dashboard/main" element={<Dashboard />} />
-              <Route path="medical" element={<Dashboard />} />
+              <Route path="medical" element={<MedicalsPage />} />
               <Route path="wallet" element={<Dashboard />} />
               <Route path="history" element={<Dashboard />} />
             </Route>
