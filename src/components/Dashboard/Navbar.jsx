@@ -10,7 +10,7 @@ import SideBarMobile from './SideBarMobile';
 
 const Navbar = () => {
   return (
-    <Popover className="flex items-center w-full justify-between px-6 py-5 bg-[#FCFCFC] relative lg:overflow-visible overflow-x-clip">
+    <Popover className="flex items-center w-full justify-between px-6 py-6 bg-[#FCFCFC] relative lg:overflow-visible overflow-x-clip">
       <div className="flex items-center w-full justify-between bg-[#FCFCFC]">
         <div className="flex lg:hidden gap-2 items-center">
           <Link to="/">
