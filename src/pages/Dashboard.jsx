@@ -242,44 +242,44 @@ const Dashboard = () => {
             <span className="text-2xl">Pending Appointments</span>
           </div>
 
-          <div class="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 bg-white rounded md:items-start">
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead class="text-xs  text-gray-700 uppercase  ">
+          <div className="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 bg-white rounded md:items-start">
+            <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead className="text-xs  text-gray-700 uppercase  ">
                 <tr>
                   <th
                     scope="col"
-                    class="py-3 px-6 sticky left-0 z-10  bg-white"
+                    className="py-3 px-6 sticky left-0 z-10  bg-white"
                   >
                     Center Name
                   </th>
-                  <th scope="col" class="py-3 px-6">
+                  <th scope="col" className="py-3 px-6">
                     Date
                   </th>
-                  <th scope="col" class="py-3 px-6">
+                  <th scope="col" className="py-3 px-6">
                     Time
                   </th>
-                  <th scope="col" class="py-3 px-6">
+                  <th scope="col" className="py-3 px-6">
                     Status
                   </th>
-                  <th scope="col" class="py-3 px-6">
+                  <th scope="col" className="py-3 px-6">
                     Donor id
                   </th>
-                  <th scope="col" class="py-3 px-6"></th>
+                  <th scope="col" className="py-3 px-6"></th>
                 </tr>
               </thead>
               <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
-                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td class="py-4 px-6">12/04/2022</td>
-                  <td class="py-4 px-6">1:30-2:30pm</td>
-                  <td class="py-4 px-6 text-green-400">Accepted</td>
-                  <td class="py-4 px-6">aa234-678</td>
-                  <td class="py-4 px-6 text-red-500">
+                  <td className="py-4 px-6">12/04/2022</td>
+                  <td className="py-4 px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-6 text-green-400">Accepted</td>
+                  <td className="py-4 px-6">aa234-678</td>
+                  <td className="py-4 px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -296,18 +296,18 @@ const Dashboard = () => {
                     </svg>
                   </td>
                 </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
-                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td class="py-4 px-6">12/04/2022</td>
-                  <td class="py-4 px-6">1:30-2:30pm</td>
-                  <td class="py-4 px-6 text-red-500">Declined</td>
-                  <td class="py-4 px-6">aa234-678</td>
-                  <td class="py-4 px-6 text-red-500">
+                  <td className="py-4 px-6">12/04/2022</td>
+                  <td className="py-4 px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-6 text-red-500">Declined</td>
+                  <td className="py-4 px-6">aa234-678</td>
+                  <td className="py-4 px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -324,18 +324,18 @@ const Dashboard = () => {
                     </svg>
                   </td>
                 </tr>
-                <tr class="bg-white dark:bg-gray-800">
+                <tr className="bg-white dark:bg-gray-800">
                   <th
                     scope="row"
-                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td class="py-4 px-6">12/04/2022</td>
-                  <td class="py-4 px-6">1:30-2:30pm</td>
-                  <td class="py-4 px-6 text-green-500">Accepted</td>
-                  <td class="py-4 px-6">aa234-678</td>
-                  <td class="py-4 px-6 text-red-500">
+                  <td className="py-4 px-6">12/04/2022</td>
+                  <td className="py-4 px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-6 text-green-500">Accepted</td>
+                  <td className="py-4 px-6">aa234-678</td>
+                  <td className="py-4 px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
