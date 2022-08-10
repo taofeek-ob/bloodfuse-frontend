@@ -44,6 +44,27 @@ const historyData = [
     date: "12.04.2022",
     time: "1:30 - 2:30pm",
   },
+  {
+    location: "Surulere General Hospital",
+    bloodType: "O+",
+    amountDonated: "2 Pints",
+    date: "12.04.2022",
+    time: "1:30 - 2:30pm",
+  },
+  {
+    location: "Surulere General Hospital",
+    bloodType: "O+",
+    amountDonated: "2 Pints",
+    date: "12.04.2022",
+    time: "1:30 - 2:30pm",
+  },
+  {
+    location: "Surulere General Hospital",
+    bloodType: "O+",
+    amountDonated: "2 Pints",
+    date: "12.04.2022",
+    time: "1:30 - 2:30pm",
+  },
 ];
 
 const awardData = [
@@ -56,6 +77,21 @@ const awardData = [
     title: "Appreciation Award.jpg",
     filesize: "2mb",
     fileType: "nft",
+  },
+  {
+    title: "Appreciation Award.jpg",
+    filesize: "2mb",
+    fileType: "pdf",
+  },
+  {
+    title: "Appreciation Award.jpg",
+    filesize: "2mb",
+    fileType: "pdf",
+  },
+  {
+    title: "Appreciation Award.jpg",
+    filesize: "2mb",
+    fileType: "pdf",
   },
   {
     title: "Appreciation Award.jpg",
