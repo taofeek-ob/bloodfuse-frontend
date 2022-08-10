@@ -1,9 +1,7 @@
 
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-
-import { HeartRate, BloodCells, WeightIcon } from "../../assets/images";
-
+import { Heart, BloodCells, WeightIcon } from "../../assets/images";
 import { BsPeople } from "react-icons/bs";
 import { ChevronDownIcon, PlusIcon  } from "@heroicons/react/solid";
 import { UploadIcon,  DownloadIcon } from "@heroicons/react/outline";
@@ -44,7 +42,7 @@ const MedicalsPage = () => {
             <span className='font-mod-light text-xl'>Heart Rate</span>
             <div className='flex items-center justify-between w-full text-[#44C13C]'>
               <span className='font-mod-bold text-2xl md:text-3xl'>{personData.heartRate}bmp</span>
-              <img src={HeartRate} className='w-12 h-12' alt='' />
+              <img src={Heart} className='w-12 h-12' alt='' />
 
             </div>
             <span className="font-mod-light text-[#333333] text-opacity-40">
@@ -69,8 +67,6 @@ const MedicalsPage = () => {
         </div>
         <div className="w-full h-48 rounded-[4px]">
           {/*Blood Count */}
-      <img src={BloodCells} className="w-12 h-12" />
-
           <div className='w-full h-full py-4 px-4 shadow-sm bg-white flex flex-col gap-4 items-start'>
             <span className='font-mod-light text-xl'>Blood Count</span>
             <div className='flex items-center justify-between w-full text-[#61A0FF]'>

@@ -330,8 +330,8 @@ const Dashboard = () => {
                         <td className="py-3 px-4">{data.time}</td>
                         <td
                           className={`py-3 px-4 text-${
-                            data.status === "Accepted" ? "green" : "red"
-                          }-500`}
+                            data.status === "Accepted" ? "green-500" : "red-500"
+                          }`}
                         >
                           {data.status}
                         </td>
