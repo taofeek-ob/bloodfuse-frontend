@@ -14,10 +14,10 @@ const MedicalsPage = () => {
         bloodCount: '9,567/ml'
     }
   return (
-    <div className='w-full  h-full p-6'>
-      <h1 className="font-[500] md:mb-4 text-xl md:text-2xl">Medicals Page</h1>
+    <div className='w-full  h-full p-4'>
+      <h1 className="font-[500] text-xl md:text-2xl">Medical Report</h1>
       {/* Grid of Cards*/}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4 w-full md:max-w-7xl mt-4 md:mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4 w-full md:max-w-7xl mt-4 mb-8'>
             {/*Blood Group */}
         <div className='w-full h-48 rounded-[4px]'>
             <div className='w-full h-full py-4 px-4 shadow-sm bg-white flex flex-col gap-4 items-start'>

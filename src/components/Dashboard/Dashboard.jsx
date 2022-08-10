@@ -112,6 +112,7 @@ const Dashboard = () => {
           <span className="font-[500] h-fit md:mb-4 text-xl md:text-2xl">
             Hello Oluwatobi
           </span>{" "}
+          {/* Banner */}
         <div className="h-[250px] relative">
         <img src={Gradient} alt="" className=" object-cover w-full h-full " />
           <div className=" text-white absolute inset-0 w-full md:w-[90%] mx-auto h-full  px-4 py-4 md:py-6 items-center flex justify-center">
@@ -134,9 +135,11 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        {/* Calendar for mobile */}
         <div className="py-2 lg:hidden h-auto w-full">
           <Calendar />
         </div>
+        {/* Three Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 mt-2 gap-2 items-start md:col-span-2">
           <div className="flex flex-col justify-between bg-white rounded ">
             <div className="flex justify-between px-2 pt-4 pb-6 ">
@@ -238,6 +241,7 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
         </div>
+        {/* Pending Appointments */}
         <div className="bg-white rounded mt-4">
           <div className="pl-4 pt-2">
             <span className="text-2xl">Pending Appointments</span>
@@ -245,11 +249,11 @@ const Dashboard = () => {
 
           <div className="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 bg-white rounded md:items-start">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-              <thead className="text-xs  text-gray-700 uppercase  ">
+              <thead className="text-xs text-gray-700 uppercase ">
                 <tr>
                   <th
                     scope="col"
-                    className="py-3 px-6 sticky left-0 z-10  bg-white"
+                    className="py-3 px-4 md:px-6 sticky left-0 z-10  bg-white"
                   >
                     Center Name
                   </th>
@@ -272,15 +276,15 @@ const Dashboard = () => {
                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-4 md:px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td className="py-4 px-6">12/04/2022</td>
-                  <td className="py-4 px-6">1:30-2:30pm</td>
-                  <td className="py-4 px-6 text-green-400">Accepted</td>
-                  <td className="py-4 px-6">aa234-678</td>
-                  <td className="py-4 px-6 text-red-500">
+                  <td className="py-4 px-4 md:px-6">12/04/2022</td>
+                  <td className="py-4 px-4 md:px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-4 md:px-6 text-green-400">Accepted</td>
+                  <td className="py-4 px-4 md:px-6">aa234-678</td>
+                  <td className="py-4 px-4 md:px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -300,15 +304,15 @@ const Dashboard = () => {
                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   <th
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-4 md:px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td className="py-4 px-6">12/04/2022</td>
-                  <td className="py-4 px-6">1:30-2:30pm</td>
-                  <td className="py-4 px-6 text-red-500">Declined</td>
-                  <td className="py-4 px-6">aa234-678</td>
-                  <td className="py-4 px-6 text-red-500">
+                  <td className="py-4 px-4 md:px-6">12/04/2022</td>
+                  <td className="py-4 px-4 md:px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-4 md:px-6 text-red-500">Declined</td>
+                  <td className="py-4 px-4 md:px-6">aa234-678</td>
+                  <td className="py-4 px-4 md:px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -328,15 +332,15 @@ const Dashboard = () => {
                 <tr className="bg-white dark:bg-gray-800">
                   <th
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
+                    className="py-4 px-4 md:px-6 font-medium text-gray-900 whitespace-nowrap  dark:text-white sticky left-0 z-10 bg-white"
                   >
                     Abuja Blood Donation Center
                   </th>
-                  <td className="py-4 px-6">12/04/2022</td>
-                  <td className="py-4 px-6">1:30-2:30pm</td>
-                  <td className="py-4 px-6 text-green-500">Accepted</td>
-                  <td className="py-4 px-6">aa234-678</td>
-                  <td className="py-4 px-6 text-red-500">
+                  <td className="py-4 px-4 md:px-6">12/04/2022</td>
+                  <td className="py-4 px-4 md:px-6">1:30-2:30pm</td>
+                  <td className="py-4 px-4 md:px-6 text-green-500">Accepted</td>
+                  <td className="py-4 px-4 md:px-6">aa234-678</td>
+                  <td className="py-4 px-4 md:px-6 text-red-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -358,7 +362,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
       <div className="">
         {/* Book an appointment Button */}
         <div className=" hidden md:flex items-center justify-between">
