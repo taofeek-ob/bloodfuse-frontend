@@ -219,19 +219,19 @@ const History = () => {
                         <span>{award.title}</span>
                       </div>
                       <div>
-                        <span className="text-[#BFBFBF]">{award.fileSize}</span>
+                        <span className="text-[#BFBFBF]">{award.filesize}</span>
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 justify-center">
-                    <div className="bg-[#BFBFBF] rounded p-2">
+                    <div className="bg-[#333333] bg-opacity-5 rounded p-2">
                       <span>
-                        <DownloadIcon className="h-6 w-6" />
+                        <DownloadIcon className="h-6 w-6 text-[#575757]" />
                       </span>
                     </div>
-                    <div className="bg-[#BFBFBF] rounded p-2">
+                    <div className="bg-[#333333] bg-opacity-5 rounded p-2">
                       <span className=" ">
-                        <TrashIcon className="h-6 w-6" />
+                        <TrashIcon className="h-6 w-6 text-[#575757]" />
                       </span>
                     </div>
                   </div>
