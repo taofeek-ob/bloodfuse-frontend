@@ -107,7 +107,7 @@ export default function SignIn ({
                             id="checkbox-1"
                             type="checkbox"
                             value=""
-                            className="w-4 h-4 text-red-600 accent-red-500 bg-gray-100 rounded border-gray-300 focus:ring-black-500  "
+                            className="w-4 h-4 text-red-600 accent-red-500 bg-gray-100 rounded border-gray-300 focus:ring-0 focus:outline-none"
                           />
                           <label
                             htmlFor="checkbox-1"

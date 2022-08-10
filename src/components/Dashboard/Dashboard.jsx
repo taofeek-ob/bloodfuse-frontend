@@ -128,23 +128,15 @@ const PerformanceData = [
   },
 ];
 const Dashboard = () => {
-  // let [AppointmentOpen, setAppointmentOpen] = useState(false);
-
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);
   }
-  // function closeAppointmentModal() {
-  //   setAppointmentOpen(false);
-  // }
 
   function openModal() {
     setIsOpen(true);
   }
-  // function openAppointmentModal() {
-  //   setAppointmentOpen(true);
-  // }
 
   const [appointment, setAppointment] = useState(appointmentData);
   return (
