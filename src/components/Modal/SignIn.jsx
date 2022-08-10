@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
-import googleIcon from "../../assets/google-icon.png";
+import {GoogleIcon} from "../../assets/images";
 
 export default function SignIn ({
   isModalOpen,
@@ -144,7 +144,7 @@ export default function SignIn ({
                         <button className="text-white sm:px-12 px-4 text-sm sm:text-md  bg-black hover:bg-gray-600 focus:ring-4 focus:outline-none  focus:ring-gray-300 font-medium rounded-md    py-5 text-center">
                           <div className="flex items-center space-between">
                             <img
-                              src={googleIcon}
+                              src={GoogleIcon}
                               alt="google"
                               className="h-6 w-6"
                             />

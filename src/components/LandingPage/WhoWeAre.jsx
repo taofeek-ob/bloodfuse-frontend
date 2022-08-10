@@ -1,5 +1,6 @@
 import React from "react";
-import Scientist from "../../assets/Lab.png";
+import { Lab } from "../../assets/images";
+
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 
@@ -19,7 +20,7 @@ const WhoWeAre = () => {
             </h4>
             <div className="my-5 w-[90%] md:w-[300px] h-[300px] mx-auto block lg:hidden">
               <img
-                src={Scientist}
+                src={Lab}
                 alt=""
                 className="w-full h-full object-center object-cover"
               />
@@ -56,7 +57,7 @@ const WhoWeAre = () => {
           </div>
         </div>
         <div className="my-20 hidden lg:block basis-1/2">
-          <img src={Scientist} alt="" className="" />
+          <img src={Lab} alt="" className="" />
         </div>
       </div>
     </div>

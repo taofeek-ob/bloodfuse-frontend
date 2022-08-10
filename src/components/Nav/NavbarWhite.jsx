@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ViewListIcon } from "@heroicons/react/outline";
-import Logo from "../../assets/logo-dark.png";
+import {LogoDark} from "../../assets/images";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
 import SignUp from "../Modal/SignUp";
@@ -54,7 +54,7 @@ export default function NavBar({ bgColor, textColor }) {
           <div className="flex justify-between items-center py-6  md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link to="/">
-                <img className="h-10 w-auto" src={Logo} alt="Logo" />
+                <img className="h-10 w-auto" src={LogoDark} alt="Logo" />
               </Link>
             </div>
             <div className="-mr-2 -my-2 md:hidden">

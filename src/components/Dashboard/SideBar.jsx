@@ -4,14 +4,15 @@ import { RiHistoryLine } from "react-icons/ri";
 import { MdOutlineSpaceDashboard } from 'react-icons/md';
 import { BsWallet } from "react-icons/bs";
 import { TbHeartbeat } from "react-icons/tb";
-import Logo from "../../assets/logo-dark.png";
+
+import {LogoDark} from "../../assets/images"
 
 const SideBar = () => {
   return (
     <>
       <div className="hidden md:flex flex-col items-start gap-4 h-full">
         <Link to="/" className="py-5 px-4">
-          <img className="h-10 w-auto" src={Logo} alt="Logo" />
+          <img className="h-10 w-auto" src={LogoDark} alt="Logo" />
         </Link>
 
         <div className="flex flex-col items-start gap-y-6 w-full">

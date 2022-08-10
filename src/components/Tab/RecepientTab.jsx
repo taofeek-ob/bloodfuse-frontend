@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import googleIcon from "../../assets/google-icon.png";
+import React, { useState } from "react";
+import { GoogleIcon } from "../../assets/images";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
@@ -13,15 +13,17 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
           <div>Sign up with</div>
           <div className="hidden sm:flex gap-1">
             Already a member? {"  "}
-            <span className="text-red-600 cursor-pointer"
-             onClick={() => {
-              closeModal();
-              setTimeout(() => {
-                openLoginModalFunc();
-              }, 500);
-            }}
+            <span
+              className="text-red-600 cursor-pointer"
+              onClick={() => {
+                closeModal();
+                setTimeout(() => {
+                  openLoginModalFunc();
+                }, 500);
+              }}
             >
-            {"  "}Login now</span>
+              {"  "}Login now
+            </span>
           </div>
         </div>
 
@@ -32,7 +34,7 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
                 <img
                   className="mr-2 -ml-1 w-4 h-4"
                   aria-hidden="true"
-                  src={googleIcon}
+                  src={GoogleIcon}
                   alt="google"
                 />
                 <span className="pl-2">Google</span>
@@ -88,17 +90,19 @@ const Recepient = ({ activeTabIndex, closeModal, openLoginModalFunc }) => {
           </div>
         </div>
         <div className="block sm:hidden pb-4">
-            Already a member?{"  "}
-            <span className="text-red-600 cursor-pointer"
-             onClick={() => {
+          Already a member?{"  "}
+          <span
+            className="text-red-600 cursor-pointer"
+            onClick={() => {
               closeModal();
               setTimeout(() => {
                 openLoginModalFunc();
               }, 500);
             }}
-            >
-              Login now</span>
-          </div>
+          >
+            Login now
+          </span>
+        </div>
         <div className="relative my-3 mx-auto w-full">
           <div className="absolute  inset-0 flex items-center">
             <div className="w-full border-b border-gray-300"></div>

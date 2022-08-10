@@ -1,7 +1,6 @@
 import React from "react";
-import BloodBankLogo from "../../assets/BloodBank.png";
-import CanIDonate from "../../assets/can-i-donate.png";
-import DonateNow from "../../assets/donate-now-icon.png";
+
+import {DonateNow, CanIDonate,BloodBank} from "../../assets/images"
 import { Link } from "react-router-dom";
 
 const Details = () => {
@@ -44,7 +43,7 @@ const Details = () => {
           <div className="flex-1 flex flex-col items-center gap-6">
             <img
               className="w-14 h-14"
-              src={BloodBankLogo}
+              src={BloodBank}
               alt="Where to donate"
             />
             <h5 className="text-xl font-medium text-gray-900">

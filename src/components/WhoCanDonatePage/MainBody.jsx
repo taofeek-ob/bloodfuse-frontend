@@ -3,7 +3,7 @@ import {
   ChevronRightIcon,
   ChevronDoubleRightIcon,
 } from "@heroicons/react/outline";
-import HealthyMan from "../../assets/HealthyMan.png";
+import {HealthyMan} from "../../assets/images";
 import { Link } from "react-router-dom";
 
 const MainBody = () => {
