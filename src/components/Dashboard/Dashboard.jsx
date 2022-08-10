@@ -106,7 +106,7 @@ const PerformanceData = [
 ];
 const Dashboard = () => {
   return (
-    <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
+    <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6 overflow-hidden">
       {/* First Grid( Banner, 3 Cards and Pending Appointments) */}
       <div className=" md:col-span-2 space-y-4 overflow-y-scroll">
           <span className="font-[500] h-fit md:mb-4 text-xl md:text-2xl">
@@ -360,6 +360,7 @@ const Dashboard = () => {
       </div>
 
       <div className="">
+        {/* Book an appointment Button */}
         <div className=" hidden md:flex items-center justify-between">
           <span>Appointments</span>
           <span>
@@ -368,15 +369,16 @@ const Dashboard = () => {
             </button>{" "}
           </span>
         </div>
+        {/* Calendar on large screens */}
         <div className="py-2 hidden lg:block row-span-2 h-auto w-full">
           <Calendar />
         </div>
-
+        {/* Performance Stats and Your Performance for larger devices */}
         <div className="bg-white rounded hidden flex-col justify-between md:flex h-min w-full p-5 ">
-          <div className="pb-4">
+          <div className="pb-4 md:pb-6">
             <span className="items-start text-xl">Performance Stats</span>
           </div>{" "}
-          <div className=" flex flex-col justify-center  text-gray-700 px-4 py-2">
+          <div className="flex flex-col justify-center text-gray-700 px-4 pt-4 pb-4 md:pb-8">
             <GaugeChart
               id="gauge-chart2"
               nrOfLevels={2}
@@ -422,7 +424,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-          {/* Performance Stats and Your Performance */}
+          {/* Performance Stats and Your Performance for Smaller devices */}
       <div className="bg-white rounded flex flex-col justify-between md:hidden h-full p-5 ">
         <div className="pb-4">
           <span className="items-start text-xl">Performance Stats</span>
