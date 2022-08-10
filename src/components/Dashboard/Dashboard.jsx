@@ -292,7 +292,7 @@ const Dashboard = () => {
             </div>
 
             <div className="overflow-x-auto relative md:col-span-2 py-5 md:row-span-2 bg-white rounded md:items-start">
-              <table className="w-full whitespace-nowrap text-sm text-left text-gray-500 dark:text-gray-400">
+              <table className="w-full whitespace-nowrap text-sm text-left text-gray-500">
                 <thead className="text-xs  text-gray-700 border-b uppercase  ">
                   <tr>
                     <th
@@ -319,7 +319,7 @@ const Dashboard = () => {
                 <tbody>
                   {appointment.map((data, index) => {
                     return (
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index}>
                         <th
                           scope="row"
                           className="py-4 px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"

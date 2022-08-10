@@ -1,4 +1,3 @@
-
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Heart, BloodCells, WeightIcon } from "../../assets/images";
@@ -6,6 +5,8 @@ import { BsPeople } from "react-icons/bs";
 import { ChevronDownIcon, PlusIcon  } from "@heroicons/react/solid";
 import { UploadIcon,  DownloadIcon } from "@heroicons/react/outline";
 import { DotsVerticalIcon } from "@heroicons/react/outline";
+import { Popover } from '@headlessui/react'
+
 
 
 const MedicalsPage = () => {
@@ -28,7 +29,7 @@ const MedicalsPage = () => {
               <span className="font-mod-bold text-2xl md:text-3xl">
                 {personData.bloodGroup}
               </span>
-              <BsPeople className="w-12 h-12" />
+              <BsPeople className="w-16 h-16 md:w-12 md:h-12" />
             </div>
             <span className="font-mod-light text-[#333333] text-opacity-40">
               10% higher than last month
@@ -42,7 +43,7 @@ const MedicalsPage = () => {
             <span className='font-mod-light text-xl'>Heart Rate</span>
             <div className='flex items-center justify-between w-full text-[#44C13C]'>
               <span className='font-mod-bold text-2xl md:text-3xl'>{personData.heartRate}bmp</span>
-              <img src={Heart} className='w-12 h-12' alt='' />
+              <img src={Heart} className='w-16 h-16 md:w-12 md:h-12' alt='' />
 
             </div>
             <span className="font-mod-light text-[#333333] text-opacity-40">
@@ -57,7 +58,7 @@ const MedicalsPage = () => {
             <span className='font-mod-light text-xl'>Weight</span>
             <div className='flex items-center justify-between w-full text-[#FB9637]'>
               <span className='font-mod-bold text-2xl md:text-3xl'>{personData.weight}</span>
-              <img src={WeightIcon} className='w-12 h-12' alt=''/>
+              <img src={WeightIcon} className='w-16 h-16 md:w-12 md:h-12' alt=''/>
 
             </div>
             <span className="font-mod-light text-[#333333] text-opacity-40">
@@ -71,7 +72,7 @@ const MedicalsPage = () => {
             <span className='font-mod-light text-xl'>Blood Count</span>
             <div className='flex items-center justify-between w-full text-[#61A0FF]'>
               <span className='font-mod-bold text-2xl md:text-3xl'>{personData.bloodCount}</span>
-              <img src={BloodCells} className='w-12 h-12' alt=''/>
+              <img src={BloodCells} className='w-16 h-16 md:w-12 md:h-12' alt=''/>
 
             </div>
             <span className="font-mod-light text-[#333333] text-opacity-40">
