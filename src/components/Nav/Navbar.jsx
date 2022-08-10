@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ViewListIcon } from "@heroicons/react/outline";
-import Logo from "../../assets/logo.png";
+import {Logo} from "../../assets/images";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
 import SignUp from "../Modal/SignUp";

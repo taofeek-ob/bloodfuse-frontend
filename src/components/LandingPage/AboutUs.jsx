@@ -1,8 +1,7 @@
 import React from "react";
-import AboutWoman from "../../assets/about-woman.png";
-import StacksIcon from "../../assets/stacks-icon.png";
-import WittyIcon from "../../assets/wittyhub-icon.png";
-import CodeUpIcon from "../../assets/codeup-icon.png";
+
+import {WittyIcon, CodeUpIcon, StacksIcon, AboutWoman} from "../../assets/images"
+
 
 const AboutUs = () => {
   return (

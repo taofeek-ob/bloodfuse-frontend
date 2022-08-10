@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Aid from "../../assets/aid.png";
-import Union from "../../assets/union.png";
+import { Union, Aid } from "../../assets/images";
 
 const Link2Dashboard = () => {
   return (
@@ -18,7 +17,7 @@ const Link2Dashboard = () => {
         </Link>
       </div>
 
-      <div className="flex items-center w-full md:justify-between justify-evenly md:px-8 md:-ml-6 pb-10">
+      <div className="flex items-center w-full md:justify-between justify-evenly gap-4 md:px-8 md:-ml-6 pb-10">
         <div>
           <img src={Aid} alt="" />
         </div>

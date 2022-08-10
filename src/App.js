@@ -13,7 +13,7 @@ import {
   DashboardLayout,
 } from "./components/Layout";
 import "./index.css";
-import { MedicalsPage, Dashboard } from "./components/Dashboard";
+import { MedicalsPage, Dashboard, History } from "./components/Dashboard";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
               <Route path="/dashboard/main" element={<Dashboard />} />
               <Route path="medical" element={<MedicalsPage />} />
               <Route path="wallet" element={<Dashboard />} />
-              <Route path="history" element={<Dashboard />} />
+              <Route path="history" element={<History />} />
             </Route>
           </Routes>
         </>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Outreach from "../../assets/Outreach.png";
+import {Outreach} from "../../assets/images";
 
 const PictureCover = () => {
   return (

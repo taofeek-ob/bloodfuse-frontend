@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-import Logo from "../../assets/logo-dark.png";
+
+import {LogoDark} from "../../assets/images"
+
 import { Link, NavLink } from "react-router-dom";
 import { RiHistoryLine } from "react-icons/ri";
 import { MdOutlineSpaceDashboard } from 'react-icons/md';
@@ -30,7 +32,7 @@ const SideBarMobile = () => {
                 <Link to="/dashboard" className="focus:outline-none focus:ring-0">
                   <img
                     className="h-8 w-auto"
-                    src={Logo}
+                    src={LogoDark}
                     alt="Logo"
                   />
                 </Link>

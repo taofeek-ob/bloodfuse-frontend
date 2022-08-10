@@ -1,5 +1,6 @@
 import React from "react";
-import HeroImage from "../../assets/GroupHero.png";
+import { GroupHero } from "../../assets/images";
+
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 
@@ -18,10 +19,10 @@ const Hero = () => {
           </div>
           <div className="md:mr-auto flex flex-col gap-4 sm:flex-row items-center justify-center md:justify-start w-[70%] sm:w-auto">
             {" "}
-              <Link to="/book-appointment" className="bttn bttn-primary">
-                <span className="text-base items-center">Donate Now</span>
-                <ChevronRightIcon className="w-4 h-4 ml-2" />
-              </Link>
+            <Link to="/book-appointment" className="bttn bttn-primary">
+              <span className="text-base items-center">Donate Now</span>
+              <ChevronRightIcon className="w-4 h-4 ml-2" />
+            </Link>
             <Link to="/request-blood" className="bttn bttn-secondary">
               <span className="text-base items-center">Request Blood</span>
               <ChevronRightIcon className="w-4 h-4 ml-2" />
@@ -31,7 +32,7 @@ const Hero = () => {
         <div className="flex items-center justify-center w-full h-auto lg:h-full lg:w-1/2">
           <img
             className=" w-full max-w-2xl h-auto"
-            src={HeroImage}
+            src={GroupHero}
             alt="Doctor"
           />
         </div>
