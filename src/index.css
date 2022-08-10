@@ -45,6 +45,9 @@ body {
 .bttn-tertiary {
   @apply text-[#F00530] bg-transparent border border-[#F00530] rounded-[4px] focus:ring-2 focus:outline-none focus:ring-red-300 focus:ring-opacity-50;
 }
+.bttn-black {
+  @apply text-[#333333] bg-transparent border border-[#333333] rounded-[4px] focus:ring-2 focus:outline-none focus:ring-opacity-50;
+}
 .bttn-extra {
   @apply text-[#118DFF] bg-transparent focus:ring-2 rounded-[4px] focus:outline-none focus:ring-red-300 focus:ring-opacity-50;
 }
