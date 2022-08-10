@@ -5,6 +5,8 @@ import PeopleIcon from '../../assets/people-icon.png';
 import WeightIcon from '../../assets/weight 2.png';
 import { BsPeople } from 'react-icons/bs';
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import { PlusIcon } from "@heroicons/react/solid";
+import { DownloadIcon } from "@heroicons/react/solid";
 import { BsUpload } from 'react-icons/bs';
 
 const MedicalsPage = () => {
@@ -72,23 +74,25 @@ const MedicalsPage = () => {
           <div className='flex items-center justify-between px-6'>
             {/* First Flex */}
             <div className='flex gap-4 items-center'>
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-1 cursor-pointer'>
                 <span>View Medical Report</span>
-                <ChevronDownIcon className='w-6 h-6' />
+                <ChevronDownIcon className='w-6 h-6 text-[#445665]' />
               </div>
-              <div className='hidden lg:block'>
+              <div className='hidden lg:block cursor-pointer'>
                 <button className='bttn bttn-black'>
+                  <PlusIcon className='w-4 h-4' />
                   <span className='font-mod-light'>Create Medical Report</span>
                 </button>
               </div>
             </div>
             {/* Second Flex */}
             <div className='hidden lg:flex gap-6 items-center'>
-              <div className='flex items-center gap-2 text-[#F00530] mr-4'>
-                <span className='font-mod'>Upload Report</span>
+              <div className='flex items-center gap-2 text-[#F00530] mr-4 cursor-pointer'>
                 <BsUpload className='w-4 h-4' />
+                <span className='font-mod'>Upload Report</span>
               </div>
               <button className='bttn bttn-primary'>
+                <DownloadIcon className='w-4 h-4 mr-2' />
                 <span className='font-mod'>Download Report</span>
               </button>
             </div>

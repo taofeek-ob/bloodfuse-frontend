@@ -6,7 +6,7 @@ import { ChevronDoubleRightIcon } from '@heroicons/react/outline';
 
 const MakeADiff = () => {
     return (
-        <div className='w-full pb-8'>
+        <div className='w-full p-8 lg:pb-40 lg:pt-48'>
             <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold hidden sm:block">MORE WAYS YOU CAN MAKE A DIFFERENCE</h1>
             <h1 className="text-2xl md:text-3xl text-center py-6 px-2 font-bold block sm:hidden">MORE WAYS TO MAKE A DIFFERENCE</h1>
             <div className="flex flex-col justify-center items-center md:justify-start lg:justify-center gap-12 lg:gap-4 xl:gap-8 md:flex-row flex-wrap  max-w-7xl px-6 py-16 mx-auto">
