@@ -70,7 +70,7 @@ const History = () => {
   const [award, setAward] = useState(awardData);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full h-full p-6">
-      <span className="font-[500] hidden md:inline h-fit md:mb-4 text-xl md:text-2xl whitespace-nowrap">
+      <span className="font-[500] hidden md:inline h-fit text-xl md:text-2xl whitespace-nowrap">
         My History
       </span>
       <span className="font-[500] inline md:hidden h-fit md:mb-4 text-xl md:text-2xl whitespace-nowrap">
