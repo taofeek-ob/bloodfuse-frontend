@@ -329,8 +329,8 @@ const Dashboard = () => {
                         <td className="py-3 px-4">{data.date}</td>
                         <td className="py-3 px-4">{data.time}</td>
                         <td
-                          className={`py-3 px-4 text-${
-                            data.status === "Accepted" ? "green-500" : "red-500"
+                          className={`py-3 px-4 ${
+                            data.status === "Accepted" ? "text-green-500" : "text-red-500"
                           }`}
                         >
                           {data.status}
