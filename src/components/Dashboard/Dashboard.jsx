@@ -363,7 +363,7 @@ const Dashboard = () => {
         <div className=" hidden md:flex items-center justify-between">
           <span>Appointments</span>
           <span>
-            <button className="outline outline-offset-6 px-6 py-2 rounded outline-red-500 text-red-500 hidden xl:block">
+            <button className="outline outline-offset-6 px-4 py-2 rounded outline-red-500 text-red-500 hidden xl:block">
               Book new appointment
             </button>{" "}
           </span>
