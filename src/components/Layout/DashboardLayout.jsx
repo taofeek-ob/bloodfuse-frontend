@@ -9,6 +9,7 @@ const DashboardLayout = () => {
   if(!loginState) {
     return <Navigate to="/" />;
   }
+  
   return (
     <div className="flex items-center h-auto md:h-screen">
       <div className="w-[0%] lg:w-[15%] h-full">

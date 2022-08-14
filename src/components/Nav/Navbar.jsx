@@ -3,7 +3,7 @@ import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ViewListIcon } from "@heroicons/react/outline";
-import {Logo, ProfilePhoto } from "../../assets/images";
+import { Logo, ProfilePhoto } from "../../assets/images";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
 import SignUp from "../Modal/SignUp";
@@ -19,8 +19,8 @@ export default function NavBar({ bgColor, textColor }) {
   const { loginState, username, dispatch } = useUserContext();
 
   const handleLogout = () => {
-    dispatch({ type: 'LOGOUT'})
-  }
+    dispatch({ type: "LOGOUT" });
+  };
   let [SignUpOpen, setSignUpOpen] = useState(false);
 
   let [isOpen, setIsOpen] = useState(false);
@@ -58,7 +58,7 @@ export default function NavBar({ bgColor, textColor }) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6  md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+            <div className="flex justify-start ">
               <Link to="/">
                 <img className="h-10 w-auto" src={Logo} alt="Logo" />
               </Link>
@@ -89,7 +89,9 @@ export default function NavBar({ bgColor, textColor }) {
                       </span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-white-600 rotate-180 transform" : "text-white-400",
+                          open
+                            ? "text-white-600 rotate-180 transform"
+                            : "text-white-400",
                           "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500 transition-all duration-200 ease-in-out"
                         )}
                         aria-hidden="true"
@@ -143,7 +145,9 @@ export default function NavBar({ bgColor, textColor }) {
                       </span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? "text-white-600 rotate-180 transform" : "text-white-400",
+                          open
+                            ? "text-white-600 rotate-180 transform"
+                            : "text-white-400",
                           "ml-1 lg:ml-2 h-5 w-5 group-hover:text-white-500 transition-all duration-200 ease-in-out"
                         )}
                         aria-hidden="true"
@@ -190,33 +194,48 @@ export default function NavBar({ bgColor, textColor }) {
               </Link>
             </Popover.Group>
             {/* Display signup and sign-in button when loginState is false */}
-            {!loginState && <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <button
-                onClick={openSignUpModal}
-                className="whitespace-nowrap text-white-500 hover:text-white-900 text-[12px] lg:text-base"
-              >
-                Sign up
-              </button>
-              <button
-                onClick={openModal}
-                className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-8 py-2 border border-transparent rounded-sm shadow-sm text-[12px] lg:text-base font-normal text-white bg-red-600 hover:bg-red-700"
-              >
-                Login
-              </button>
-            </div>}
+            {!loginState && (
+              <div className="hidden md:flex items-center justify-end">
+                <button
+                  onClick={openSignUpModal}
+                  className="whitespace-nowrap text-white-500 hover:text-white-900 text-[12px] lg:text-base"
+                >
+                  Sign up
+                </button>
+                <button
+                  onClick={openModal}
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-8 py-2 border border-transparent rounded-sm shadow-sm text-[12px] lg:text-base font-normal text-white bg-red-600 hover:bg-red-700"
+                >
+                  Login
+                </button>
+              </div>
+            )}
             {/* else display user avatar and name popover when a user is not signed in */}
             {/* Profile Icon */}
-          {loginState && <div className="hidden md:flex items-center gap-2 cursor-pointer" onClick={handleLogout}>
-            <div className={`h-8 w-8 rounded-full overflow-hidden relative border-2 border-${textColor}`} >
-              <img
-                className="absolute h-full w-full object-center object-cover"
-                src={ProfilePhoto}
-                alt="menu"
-              />
-            </div>
-            <div className={`hidden md:flex text-${textColor}`}>{username}</div>
-            <ChevronDownIcon className={`text-${textColor} h-6 w-6`} />
-          </div>}
+            {loginState && (
+              <Popover className="relative">
+                {({ open }) => (
+                  <div
+                    className="hidden md:flex items-center gap-2 cursor-pointer"
+                    onClick={handleLogout}
+                  >
+                    <div
+                      className={`h-8 w-8 rounded-full overflow-hidden relative border-2 border-${textColor}`}
+                    >
+                      <img
+                        className="absolute h-full w-full object-center object-cover"
+                        src={ProfilePhoto}
+                        alt="menu"
+                      />
+                    </div>
+                    <div className={`hidden md:flex text-${textColor}`}>
+                      {username}
+                    </div>
+                    <ChevronDownIcon className={`text-${textColor} h-6 w-6`} />
+                  </div>
+                )}
+              </Popover>
+            )}
           </div>
         </div>
         <Sidebar
