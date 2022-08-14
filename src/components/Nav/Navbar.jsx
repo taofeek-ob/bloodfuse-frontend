@@ -263,7 +263,7 @@ export default function NavBar({ bgColor, textColor }) {
                           <Link to="/dashboard/main">
                          <div className="text-[12px] lg:text-base text-gray-900">Dashboard</div>
                           </Link>
-                         <div className="text-[12px] lg:text-base text-gray-900" 
+                         <div className="text-[12px] lg:text-base text-gray-900 cursor-pointer" 
                          onClick={handleLogout}
                          >Sign out</div>
                        </div>
