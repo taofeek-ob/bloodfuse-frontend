@@ -1,17 +1,22 @@
-import { BellIcon } from "@heroicons/react/outline";
-
-import { ProfilePhoto, DropletIcon } from "../../assets/images";
+import { Fragment } from "react";
+import { BellIcon, MenuIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-
-import { MenuIcon } from "@heroicons/react/outline";
+import { ProfilePhoto, DropletIcon } from "../../assets/images";
 import { Link } from "react-router-dom";
-import { Popover } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 import SideBarMobile from "./SideBarMobile";
 import { useUserContext } from "../../context/user/UserContext";
 
-
 const Navbar = () => {
-  const { username } = useUserContext();
+  const { username, dispatch } = useUserContext();
+
+  const handleLogout = () => {
+    dispatch({type: 'LOGOUT'});
+  }
+
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
   return (
     <Popover className="flex items-center w-full justify-between px-6 py-6 bg-[#FCFCFC] relative lg:overflow-visible overflow-x-clip">
       <div className="flex items-center w-full justify-between bg-[#FCFCFC]">
@@ -35,15 +40,65 @@ const Navbar = () => {
           </div>
           {/* Profile Icon */}
           <div className="flex items-center gap-2 cursor-pointer">
-            <div className="h-10 w-10 rounded-full overflow-hidden relative">
-              <img
-                className="absolute h-full w-full object-center object-cover"
-                src={ProfilePhoto}
-                alt="menu"
-              />
-            </div>
-            <div className="hidden md:flex text-black">{username}</div>
-            <ChevronDownIcon className="text-black h-6 w-6" />
+            <Popover className="relative">
+              {({ open }) => (
+                <>
+                  <Popover.Button
+                    className={classNames(
+                      open ? "text-[#F00530]" : "text-gray-800",
+                      "group bg-transparent outline-none inline-flex items-center text-base hover:text-white-900"
+                    )}
+                  >
+                    <div className="hidden md:flex items-center gap-2 cursor-pointer">
+                      <div
+                        className={`h-6 w-6 rounded-full overflow-hidden relative border border-black`}
+                      >
+                        <img
+                          className="absolute h-full w-full object-center object-cover"
+                          src={ProfilePhoto}
+                          alt="menu"
+                        />
+                      </div>
+                      <div className={`hidden md:flex trans`}>{username}</div>
+                      <ChevronDownIcon
+                        className={classNames(
+                          open ? "rotate-180 transform" : " ",
+                          "h-5 w-5 transition-all duration-200 ease-in-out"
+                        )}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </Popover.Button>
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-200"
+                    enterFrom="opacity-0 translate-y-1"
+                    enterTo="opacity-100 translate-y-0"
+                    leave="transition ease-in duration-150"
+                    leaveFrom="opacity-100 translate-y-0"
+                    leaveTo="opacity-0 translate-y-1"
+                  >
+                    <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-full max-w-md sm:px-0">
+                      <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                        <div className="relative grid gap-6 bg-white px-2 py-6 sm:gap-8">
+                          <Link to="/dashboard/main">
+                            <div className="text-[12px] lg:text-base text-gray-900">
+                              Dashboard
+                            </div>
+                          </Link>
+                          <div
+                            className="text-[12px] lg:text-base text-gray-900 cursor-pointer"
+                            onClick={handleLogout}
+                          >
+                            Sign out
+                          </div>
+                        </div>
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </>
+              )}
+            </Popover>
           </div>
         </div>
       </div>

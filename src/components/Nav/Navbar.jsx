@@ -75,7 +75,7 @@ export default function NavBar({ bgColor, textColor }) {
               as="nav"
               className="hidden md:flex md:items-center space-x-10"
             >
-              <Popover className="relative">
+              <Popover className="hiden md:relative">
                 {({ open }) => (
                   <>
                     <Popover.Button

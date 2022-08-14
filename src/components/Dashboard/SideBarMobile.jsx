@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
-
 import {LogoDark} from "../../assets/images"
-
 import { Link, NavLink } from "react-router-dom";
 import { RiHistoryLine } from "react-icons/ri";
 import { MdOutlineSpaceDashboard } from 'react-icons/md';
@@ -85,66 +83,6 @@ const SideBarMobile = () => {
           </NavLink>
         </div>
       </div>
-        {/* <div className="h-full bg-slate-50">
-          <div className="pt-5 pb-6 ">
-            <div className="flex items-center justify-between px-5">
-              <div>
-                <Link to="/dashboard" className="focus:outline-none focus:ring-0">
-                  <img
-                    className="h-8 w-auto"
-                    src={Logo}
-                    alt="Logo"
-                  />
-                </Link>
-              </div>
-              <div className="-mr-2">
-                <Popover.Button className="bg-ld rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
-                  <span className="sr-only">Close menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
-                </Popover.Button>
-              </div>
-            </div>
-            <div className="flex flex-col items-start gap-y-6 w-full mt-4">
-              <NavLink to="/dashboard/main" className={({ isActive }) =>
-                "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
-              }
-              >
-                <div className="flex items-center gap-2 py-6 w-full h-full ">
-                  <MdOutlineSpaceDashboard className="h-6 w-6 ml-2" />
-                  <p>Dashboard</p>
-                </div>
-              </NavLink>
-              <NavLink to="/dashboard/medical" className={({ isActive }) =>
-                "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
-              }
-              >
-                <div className="flex items-center gap-2 w-full py-3 px-2">
-                  <TbHeartbeat className="h-6 w-6 ml-2" />
-                  <p>Medicals</p>
-                </div>
-              </NavLink>
-              <NavLink to="/dashboard/wallet" className={({ isActive }) =>
-                "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
-              }
-              >
-                <div className="flex items-center gap-2 w-full py-3 px-2">
-                  <BsWallet className="h-6 w-6 ml-2" />
-                  <p>Wallet</p>
-                </div>
-              </NavLink>
-              <NavLink to="/dashboard/history"
-                className={({ isActive }) =>
-                  "flex items-center gap-x-3 w-full trans " + (isActive ? "bg-[#F00530] bg-opacity-10 text-[#F00530] before-sidebar" : "text-[#333333] bg-transparent")
-                }
-              >
-                <div className="flex items-center gap-2 w-full py-3 px-2">
-                  <RiHistoryLine className="h-6 w-6 ml-2" />
-                  <p>History</p>
-                </div>
-              </NavLink>
-            </div>
-          </div>
-        </div> */}
       </Popover.Panel>
     </Transition>
   )

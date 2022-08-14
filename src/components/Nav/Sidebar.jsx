@@ -3,12 +3,18 @@ import { Popover, Transition, Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
 import { XIcon } from "@heroicons/react/outline";
 import {LogoDark} from "../../assets/images";
+import { useUserContext } from "../../context/user/UserContext";
 
 
 import { Link } from "react-router-dom";
 import { solutions, resources } from "./NavbarData";
 
 const Sidebar = ({ openModal, openSignUpModal }) => {
+  const { loginState, dispatch } = useUserContext();
+
+  const handleLogout = () => {
+    dispatch({type: 'LOGOUT'});
+  }
   return (
     <Transition
       as={Fragment}
@@ -133,6 +139,7 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                       <Popover.Button>Blog</Popover.Button>
                     </div>
                   </div>
+                  {!loginState && <>
                   <div className="mt-2 py-5 border-t-2 border-solid">
                     <div
                       className="text-black text-base font-medium px-4"
@@ -149,6 +156,25 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
                       <Popover.Button>Login</Popover.Button>
                     </div>
                   </div>
+                  </>}
+                  {loginState && <>
+                  <div className="mt-2 py-5 border-t-2 border-solid">
+                    <Link
+                      className="text-black text-base font-medium px-4"
+                      to="/dashboard/main"
+                    >
+                      <Popover.Button>Dashboard</Popover.Button>
+                    </Link>
+                  </div>
+                  <div className="mt-2 py-5 border-t-2 border-solid">
+                    <div
+                      className="text-black text-base font-medium px-4"
+                      onClick={handleLogout}
+                    >
+                      <Popover.Button>Logout</Popover.Button>
+                    </div>
+                  </div>
+                  </>}
                 </nav>
               </div>
             </div>

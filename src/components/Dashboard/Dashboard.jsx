@@ -157,7 +157,7 @@ const Dashboard = () => {
             Hello {firstname}
           </span>
           <span className="font-[500] h-fit md:hidden md:mb-4 text-xl md:text-2xl">
-            Dashboard {">>"} Oluwatobi
+            Dashboard {">>"} {firstname}
           </span>{" "}
           <div className="h-[250px] relative">
             <img
