@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import SideBarMobile from "./SideBarMobile";
 import { useUserContext } from "../../context/user/UserContext";
+import { UploadIcon } from "@heroicons/react/outline";
 
 const Navbar = () => {
   const { username, dispatch } = useUserContext();
@@ -80,16 +81,17 @@ const Navbar = () => {
                   >
                     <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-full max-w-md sm:px-0">
                       <div className="rounded-sm shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="relative grid gap-6 bg-white px-2 py-6 sm:gap-8">
+                        <div className="relative grid gap-4 bg-white px-4 py-6">
                           <Link to="/dashboard/main">
                             <div className="text-[12px] lg:text-base text-gray-900">
                               Dashboard
                             </div>
                           </Link>
                           <div
-                            className="text-[12px] lg:text-base text-gray-900 cursor-pointer"
+                            className="flex items-center gap-1 text-[12px] lg:text-base text-gray-900 cursor-pointer"
                             onClick={handleLogout}
                           >
+                            <UploadIcon className="rotate-90 h-4 w-4"/>
                             Sign out
                           </div>
                         </div>

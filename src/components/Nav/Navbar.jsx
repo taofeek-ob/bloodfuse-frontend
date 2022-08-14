@@ -2,7 +2,7 @@
 import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { ViewListIcon } from "@heroicons/react/outline";
+import { ViewListIcon, UploadIcon } from "@heroicons/react/outline";
 import { Logo, ProfilePhoto } from "../../assets/images";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
@@ -263,9 +263,13 @@ export default function NavBar({ bgColor, textColor }) {
                           <Link to="/dashboard/main">
                          <div className="text-[12px] lg:text-base text-gray-900">Dashboard</div>
                           </Link>
-                         <div className="text-[12px] lg:text-base text-gray-900 cursor-pointer" 
-                         onClick={handleLogout}
-                         >Sign out</div>
+                          <div
+                            className="flex items-center gap-1 text-[12px] lg:text-base text-gray-900 cursor-pointer"
+                            onClick={handleLogout}
+                          >
+                            <UploadIcon className="rotate-90 h-4 w-4"/>
+                            Sign out
+                          </div>
                        </div>
                      </div>
                    </Popover.Panel>
