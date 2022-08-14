@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useUserContext } from "../../context/user/UserContext";
 import { Gradient, Patient } from "../../assets/images";
 import AppointmentModal from "../Modal/AppointmentModal";
 
@@ -128,6 +128,9 @@ const PerformanceData = [
   },
 ];
 const Dashboard = () => {
+  const {username} = useUserContext();
+  const names = username.split(' ');
+  const firstname = names[0];
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -137,7 +140,7 @@ const Dashboard = () => {
   function openModal() {
     setIsOpen(true);
   }
-
+// eslint-disable-next-line
   const [appointment, setAppointment] = useState(appointmentData);
   return (
     <>
@@ -151,7 +154,7 @@ const Dashboard = () => {
         {/* First Grid( Banner, 3 Cards and Pending Appointments) */}
         <div className=" md:col-span-2 space-y-4 overflow-y-scroll">
           <span className="font-[500] h-fit hidden md:inline md:mb-4 text-xl md:text-2xl">
-            Hello Oluwatobi
+            Hello {firstname}
           </span>
           <span className="font-[500] h-fit md:hidden md:mb-4 text-xl md:text-2xl">
             Dashboard {">>"} Oluwatobi

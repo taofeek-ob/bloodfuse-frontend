@@ -7,8 +7,11 @@ import { MenuIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import { Popover } from "@headlessui/react";
 import SideBarMobile from "./SideBarMobile";
+import { useUserContext } from "../../context/user/UserContext";
+
 
 const Navbar = () => {
+  const { username } = useUserContext();
   return (
     <Popover className="flex items-center w-full justify-between px-6 py-6 bg-[#FCFCFC] relative lg:overflow-visible overflow-x-clip">
       <div className="flex items-center w-full justify-between bg-[#FCFCFC]">
@@ -39,7 +42,7 @@ const Navbar = () => {
                 alt="menu"
               />
             </div>
-            <div className="hidden md:flex text-black">OluwaTobi Timothy</div>
+            <div className="hidden md:flex text-black">{username}</div>
             <ChevronDownIcon className="text-black h-6 w-6" />
           </div>
         </div>

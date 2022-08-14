@@ -25,8 +25,8 @@ const Sidebar = ({ openModal, openSignUpModal }) => {
       >
         <div className="">
           <div className="shadow-lg ring-1 h-screen  ring-black ring-opacity-5 bg-white">
-            <div className="pt-5 pb-6  ">
-              <div className="flex mt-10 px-8 mb-5 items-center justify-between">
+            <div className="pt- pb-6  ">
+              <div className="flex pt-4 px-8 mb-5 items-center justify-between">
                 <div className="">
                   <img className="h-10 w-auto" src={LogoDark} alt="Logo" />
                 </div>

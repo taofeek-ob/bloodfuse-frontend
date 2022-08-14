@@ -3,18 +3,24 @@ import { Fragment, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ViewListIcon } from "@heroicons/react/outline";
-import {Logo} from "../../assets/images";
+import {Logo, ProfilePhoto } from "../../assets/images";
 import { Link } from "react-router-dom";
 import SignIn from "../Modal/SignIn";
 import SignUp from "../Modal/SignUp";
 import Sidebar from "./Sidebar";
 import { solutions, resources } from "./NavbarData";
+import { useUserContext } from "../../context/user/UserContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function NavBar({ bgColor, textColor }) {
+  const { loginState, username, dispatch } = useUserContext();
+
+  const handleLogout = () => {
+    dispatch({ type: 'LOGOUT'})
+  }
   let [SignUpOpen, setSignUpOpen] = useState(false);
 
   let [isOpen, setIsOpen] = useState(false);
@@ -183,7 +189,8 @@ export default function NavBar({ bgColor, textColor }) {
                 About Us
               </Link>
             </Popover.Group>
-            <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {/* Display signup and sign-in button when loginState is false */}
+            {!loginState && <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
               <button
                 onClick={openSignUpModal}
                 className="whitespace-nowrap text-white-500 hover:text-white-900 text-[12px] lg:text-base"
@@ -196,7 +203,20 @@ export default function NavBar({ bgColor, textColor }) {
               >
                 Login
               </button>
+            </div>}
+            {/* else display user avatar and name popover when a user is not signed in */}
+            {/* Profile Icon */}
+          {loginState && <div className="hidden md:flex items-center gap-2 cursor-pointer" onClick={handleLogout}>
+            <div className={`h-8 w-8 rounded-full overflow-hidden relative border-2 border-${textColor}`} >
+              <img
+                className="absolute h-full w-full object-center object-cover"
+                src={ProfilePhoto}
+                alt="menu"
+              />
             </div>
+            <div className={`hidden md:flex text-${textColor}`}>{username}</div>
+            <ChevronDownIcon className={`text-${textColor} h-6 w-6`} />
+          </div>}
           </div>
         </div>
         <Sidebar

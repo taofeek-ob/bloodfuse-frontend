@@ -1,15 +1,20 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
 import {GoogleIcon} from "../../assets/images";
+import { useUserContext } from "../../context/user/UserContext";
 
-export default function SignIn ({
-  isModalOpen,
-  closeModalFunc,
-  openSignUpModalFunc,
-  closeSignUpModalFunc
-    }) {
+export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFunc }) {
+  const [email, setEmail ] = useState('');
+  const { dispatch } = useUserContext(); 
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if(email === '') return;
+    dispatch({type: 'LOGIN', payload: {emailAddress: email}});
+    closeModalFunc();
+  }
 
   return (
     <>
@@ -77,6 +82,8 @@ export default function SignIn ({
                           className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
                           placeholder=" "
                           required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                         <label
                           htmlFor="floating_email"
@@ -124,6 +131,7 @@ export default function SignIn ({
                       </div>
                       <button
                         type="submit"
+                        onClick={handleLogin}
                         className="text-white px-7 transform sm:uppercase text-lg bg-[#F00530] hover:bg-red-800 focus:ring-4 focus:outline-none leading-loose focus:ring-red-300 font-medium rounded-[4px]  w-full py-2 lg:py-4 text-center"
                       >
                         Login now
