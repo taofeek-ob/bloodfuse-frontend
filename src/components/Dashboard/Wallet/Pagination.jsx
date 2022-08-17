@@ -35,20 +35,14 @@ const Pagination = ({
           value={currentPage}
           onChange={(e) => setCurrentPage(e.target.value)}
         >
-          {pageNumbers.map((pgNumber) => (
-            <option value={pgNumber}>
-              <a
-                href="#"
-                aria-current="page"
-                className="z-10    relative inline-flex items-center px-4 py-2 border text-sm font-medium "
-              >
-                {pgNumber}
-              </a>
+          {pageNumbers.map((pgNumber, index) => (
+            <option value={pgNumber} key={index} className="hover:bg-gray-300">
+              {pgNumber}
             </option>
           ))}
         </select>
         <button
-          className=" px-4 py-2 border border-gray-300 disabled:bg-gray-100 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+          className=" px-4 py-2 border border-gray-300 disabled:cursor-not-allowed disabled:bg-gray-100 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
           onClick={prevPage}
           disabled={currentPage === 1}
         >
@@ -56,15 +50,19 @@ const Pagination = ({
           <ArrowLeftIcon className="h-4 w-4" />
         </button>
         <div className=" hidden md:block">
-          <ul className="inline-flex items-center -space-x-px">
+          <ul className="inline-flex items-center -space-x-px cursor-pointer ">
             {pageNumbers.map((pgNumber, index) => (
-              <li onClick={() => setCurrentPage(pgNumber)} key={index}>
+              <li
+                onClick={() => setCurrentPage(pgNumber)}
+                key={index}
+                className="hover:cursor-pointer"
+              >
                 <span
                   className={`py-2 px-3 ${
                     currentPage === pgNumber
                       ? "text-white bg-red-500"
                       : "text-gray-500 bg-white"
-                  } leading-tight  border border-gray-300  `}
+                  } leading-tight  cursor-pointer border border-gray-300  `}
                 >
                   {pgNumber}
                 </span>

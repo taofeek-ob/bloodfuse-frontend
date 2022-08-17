@@ -5,9 +5,16 @@ import { BsClipboardPlus } from "react-icons/bs";
 import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import { Popover, Transition } from "@headlessui/react";
 
-import { Dollar, Vault } from "../../assets/images";
+import {
+  Dollar,
+  FundAccount,
+  Transfer,
+  Vault,
+  Withdraw,
+} from "../../../assets/images";
 import Record from "./Record";
 import Pagination from "./Pagination";
+import Table from "./Table";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -82,19 +89,19 @@ const Wallet = () => {
             </div>
             <div className="bg-white flex flex-col justify-between gap-4 items-center rounded-lg w-full py-6 border-2">
               <span>
-                <img src={Dollar} className="h-10 w-10" alt="dollar" />
+                <img src={Withdraw} className="h-10 w-10" alt="dollar" />
               </span>
               <span>Withdraw fund</span>
             </div>
             <div className="bg-white flex flex-col justify-between gap-4 items-center rounded-lg w-full py-6 border-2">
               <span>
-                <img src={Dollar} className="h-10 w-10" alt="dollar" />
+                <img src={FundAccount} className="h-10 w-10" alt="dollar" />
               </span>
               <span>Fund account</span>
             </div>
             <div className="bg-white flex flex-col justify-between gap-4 items-center rounded-lg w-full py-6 border-2">
               <span>
-                <img src={Dollar} className="h-10 w-10" alt="dollar" />
+                <img src={Transfer} className="h-10 w-10" alt="dollar" />
               </span>
               <span>Bank transfer</span>
             </div>
@@ -107,11 +114,9 @@ const Wallet = () => {
             <Popover className="relative">
               {({ open }) => (
                 <>
-                  <Popover.Button>
-                    <button className=" flex justify-between gap-2 items-center rounded-xl text-gray-200 border px-3 py-1">
-                      <BsClipboardPlus className="h-5 w-5 " />
-                      Export
-                    </button>
+                  <Popover.Button className=" flex justify-between gap-2 items-center rounded-xl text-gray-200 border px-3 py-1">
+                    <BsClipboardPlus className="h-5 w-5 " />
+                    Export
                   </Popover.Button>
                   <Transition
                     as={Fragment}
@@ -141,101 +146,7 @@ const Wallet = () => {
             </Popover>
           </div>
           {currentRecords.length > 0 ? (
-            <div className="overflow-x-auto  relative py-4 bg-white rounded md:items-start">
-              <table className="w-full text-sm text-left whitespace-nowrap text-gray-500 ">
-                <thead className="text-xs  text-gray-700 border-b   ">
-                  <tr>
-                    <th scope="col" className="py-3 px-6   bg-white ">
-                      <input
-                        id="default-radio-1"
-                        type="radio"
-                        value=""
-                        name="default-radio"
-                        className="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-black  "
-                      />
-                    </th>
-                    <th scope="col" className="py-3 px-6   z-10  bg-white ">
-                      Transaction ID
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Transaction Type
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Transaction Date
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Transaction Amount
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Receiver Address
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Payment Type
-                    </th>
-                    <th scope="col" className="py-3 px-6">
-                      Status
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="hover:bg-[#dadada]">
-                  {currentRecords.map((history, index) => {
-                    return (
-                      <tr
-                        className="py-6 text-[#BFBFBF] hover:bg-gray-200  hover:text-black bg-white "
-                        key={index}
-                      >
-                        <th
-                          scope="row"
-                          className="py-5 px-6 font-medium text-gray-900 whitespace-nowrap "
-                        >
-                          <input
-                            id="default-radio-1"
-                            type="radio"
-                            value=""
-                            name="default-radio"
-                            className="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-black  "
-                          />
-                        </th>
-                        <th
-                          scope="row"
-                          className="py-4 px-6 font-medium  whitespace-nowrap "
-                        >
-                          {history.id}
-                        </th>
-                        <td className=" py-4 text-center text-black ">
-                          {" "}
-                          {history.transactionType}
-                        </td>
-                        <td className="py-4  text-center "> {history.date}</td>
-                        <td className="py-4 px-6  text-black">
-                          {" "}
-                          {history.amount}
-                        </td>
-                        <td className="py-4 px-6 ">
-                          {history.receiverAddress}
-                        </td>
-                        <td className="py-4 px-6 text-black">
-                          {history.paymentType}
-                        </td>
-                        <td className="py-4 px-6">
-                          <span
-                            className={`py-2 px-4 rounded  ${
-                              history.status === "Completed"
-                                ? "text-[#44C13C] bg-[#F8FDF7] px-3"
-                                : history.status === "Cancelled"
-                                ? "text-[#F01E1E] bg-[#FEF5F5]"
-                                : "text-[#F5B81D] bg-[#FFFCF5] px-6"
-                            }`}
-                          >
-                            {history.status}
-                          </span>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
+            <Table record={currentRecords} />
           ) : (
             <div className="flex flex-col items-center justify-center gap-12 py-8">
               <img src={Vault} alt="vault" />
