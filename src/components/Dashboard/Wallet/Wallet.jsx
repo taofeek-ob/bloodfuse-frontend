@@ -107,7 +107,7 @@ const Wallet = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between bg-[#FCFCFC] px-4 py-6 sm:col-span-2 rounded">
+        <div className="flex flex-col justify-between bg-[white] px-4 py-6 sm:col-span-2 rounded">
           <div className="flex justify-between">
             <div>Transactions</div>
 
