@@ -19,18 +19,19 @@ const Pagination = ({
   };
 
   return (
-    <div class="py-3 flex  justify-between gap-4 place-items-center border-gray-200 text-sm sm:hidden">
+    <div className="py-3 flex  justify-between gap-4 place-items-center border-gray-200 text-sm ">
       <div className="mr-auto">
-        <span class="text-sm text-gray-700 ">
-          Showing <span class="font-semibold text-gray-900">1</span> to{" "}
-          <span class="font-semibold text-gray-900 ">{recordsPerPage}</span> of{" "}
-          <span class="font-semibold text-gray-900 ">{nPages}</span> Pages
+        <span className="text-sm text-gray-700 ">
+          Showing <span className="font-semibold text-gray-900">1</span> to{" "}
+          <span className="font-semibold text-gray-900 ">{recordsPerPage}</span>{" "}
+          of <span className="font-semibold text-gray-900 ">{nPages}</span>{" "}
+          Pages
         </span>
       </div>
-      <div class="flex  justify-between items-center gap-2 ">
-        <span className="text-sm">The page you’re on</span>
+      <div className="flex  justify-between items-center gap-2 ">
+        <span className="text-sm md:hidden">The page you’re on</span>
         <select
-          class="block appearance-none bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          className="block appearance-none bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight md:hidden focus:outline-none focus:shadow-outline"
           value={currentPage}
           onChange={(e) => setCurrentPage(e.target.value)}
         >
@@ -47,15 +48,32 @@ const Pagination = ({
           ))}
         </select>
         <button
-          className=" px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+          className=" px-4 py-2 border border-gray-300 disabled:bg-gray-100 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
           onClick={prevPage}
           disabled={currentPage === 1}
         >
           {" "}
           <ArrowLeftIcon className="h-4 w-4" />
         </button>
+        <div className=" hidden md:block">
+          <ul className="inline-flex items-center -space-x-px">
+            {pageNumbers.map((pgNumber, index) => (
+              <li onClick={() => setCurrentPage(pgNumber)} key={index}>
+                <span
+                  className={`py-2 px-3 ${
+                    currentPage === pgNumber
+                      ? "text-white bg-red-500"
+                      : "text-gray-500 bg-white"
+                  } leading-tight  border border-gray-300  `}
+                >
+                  {pgNumber}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <button
-          className={`   items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50`}
+          className={`   items-center px-4 py-2 border disabled:bg-gray-100 border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50`}
           onClick={nextPage}
           disabled={currentPage === nPages}
         >
