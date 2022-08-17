@@ -1,82 +1,33 @@
-import React, { useRef, Fragment } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useRef, Fragment } from "react";
 import { FiCopy } from "react-icons/fi";
 import { BsClipboardPlus } from "react-icons/bs";
 import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/react/solid";
 import { Popover, Transition } from "@headlessui/react";
 
 import { Dollar, Vault } from "../../assets/images";
-
-const historyData = [
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Completed",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Completed",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Cancelled",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Pending",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Cancelled",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Completed",
-  },
-  {
-    id: "AXNB12345",
-    transactionType: "Payment",
-    date: "12.04.2022",
-    amount: "122STX (100,000NGN)",
-    receiverAddress: "Q0GP2DPPE4H9N0...",
-    paymentType: "STX Transfer",
-    status: "Pending",
-  },
-];
+import Record from "./Record";
+import Pagination from "./Pagination";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 const Wallet = () => {
   const radio = useRef([]);
+  // User is currently on this page
+  const [currentPage, setCurrentPage] = useState(1);
+  // No of Records to be displayed on each page
+  const [recordsPerPage] = useState(7);
+
+  const indexOfLastRecord = currentPage * recordsPerPage;
+  const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+
+  // Records to be displayed on the current page
+  const currentRecords = Record.slice(indexOfFirstRecord, indexOfLastRecord);
+
+  // Calculate the number of pages.
+
+  const nPages = Math.ceil(Record.length / recordsPerPage);
 
   return (
     <div className="w-full  h-full p-4">
@@ -149,7 +100,7 @@ const Wallet = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between bg-[#FCFCFC] px-4 py-6 sm:col-span-2">
+        <div className="flex flex-col justify-between bg-[#FCFCFC] px-4 py-6 sm:col-span-2 rounded">
           <div className="flex justify-between">
             <div>Transactions</div>
 
@@ -189,7 +140,7 @@ const Wallet = () => {
               )}
             </Popover>
           </div>
-          {historyData.length > 0 ? (
+          {currentRecords.length > 0 ? (
             <div className="overflow-x-auto  relative py-4 bg-white rounded md:items-start">
               <table className="w-full text-sm text-left whitespace-nowrap text-gray-500 ">
                 <thead className="text-xs  text-gray-700 border-b   ">
@@ -227,7 +178,7 @@ const Wallet = () => {
                   </tr>
                 </thead>
                 <tbody className="hover:bg-[#dadada]">
-                  {historyData.map((history, index) => {
+                  {currentRecords.map((history, index) => {
                     return (
                       <tr
                         className="py-6 text-[#BFBFBF] hover:bg-gray-200  hover:text-black bg-white "
@@ -299,101 +250,14 @@ const Wallet = () => {
               </div>
             </div>
           )}
-
-          {/* <div className="overflow-x-auto  relative py-4 bg-white rounded md:items-start">
-            <table className="w-full text-sm text-left whitespace-nowrap text-gray-500 ">
-              <thead className="text-xs  text-gray-700 border-b   ">
-                <tr>
-                  <th
-                    scope="col"
-                    className="py-3 px-6 sticky left-0 z-10  bg-white "
-                  >
-                    <input
-                      id="default-radio-1"
-                      type="radio"
-                      value=""
-                      name="default-radio"
-                      className="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-black  "
-                    />
-                  </th>
-                  <th
-                    scope="col"
-                    className="py-3 px-6 sticky left-12  z-10  bg-white "
-                  >
-                    Transaction ID
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Transaction Type
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Transaction Date
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Transaction Amount
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Receiver Address
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Payment Type
-                  </th>
-                  <th scope="col" className="py-3 px-6">
-                    Status
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="hover:bg-[#dadada]">
-                {historyData.map((history, index) => {
-                  return (
-                    <tr
-                      className="py-4 hover:bg-gray-200 hover:text-semibold bg-white "
-                      key={index}
-                    >
-                      <th
-                        scope="row"
-                        className="py-3 px-6 bg-white lg:bg-transparent font-medium text-gray-900 whitespace-nowrap sticky left-0 z-10"
-                      >
-                        <input
-                          id="default-radio-1"
-                          type="radio"
-                          value=""
-                          name="default-radio"
-                          className="w-4 h-4 text-gray-600 bg-gray-100 border-gray-300 focus:ring-black  "
-                        />
-                      </th>
-                      <th
-                        scope="row"
-                        className="py-3 px-6 font-medium bg-white lg:bg-transparent hover:bg-gray-200 text-[#BFBFBF] whitespace-nowrap sticky left-12 z-10"
-                      >
-                        {history.id}
-                      </th>
-                      <td className=" py-3 text-center text-semibold">
-                        {" "}
-                        {history.transactionType}
-                      </td>
-                      <td className="py-3  text-center text-[#BFBFBF]">
-                        {" "}
-                        {history.date}
-                      </td>
-                      <td className="py-3 px-6  text-semibold">
-                        {" "}
-                        {history.amount}
-                      </td>
-                      <td className="py-3 px-6 text-[#BFBFBF]">
-                        {history.receiverAddress}
-                      </td>
-                      <td className="py-3 px-6 text-semibold">
-                        {history.paymentType}
-                      </td>
-                      <td className="py-3 px-6 text-[#BFBFBF]">
-                        {history.status}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div> */}
+        </div>
+        <div className="sm:col-span-2">
+          <Pagination
+            nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            recordsPerPage={recordsPerPage}
+          />
         </div>
       </div>
     </div>
