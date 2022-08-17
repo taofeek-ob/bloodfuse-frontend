@@ -128,8 +128,8 @@ const PerformanceData = [
   },
 ];
 const Dashboard = () => {
-  const {username} = useUserContext();
-  const names = username.split(' ');
+  const { username } = useUserContext();
+  const names = username.split(" ");
   const firstname = names[0];
   let [isOpen, setIsOpen] = useState(false);
 
@@ -140,7 +140,7 @@ const Dashboard = () => {
   function openModal() {
     setIsOpen(true);
   }
-// eslint-disable-next-line
+  // eslint-disable-next-line
   const [appointment, setAppointment] = useState(appointmentData);
   return (
     <>
@@ -322,10 +322,10 @@ const Dashboard = () => {
                 <tbody>
                   {appointment.map((data, index) => {
                     return (
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index}>
+                      <tr className="bg-white border-b " key={index}>
                         <th
                           scope="row"
-                          className="py-4 px-4 font-medium text-gray-900 whitespace-nowrap dark:text-white sticky left-0 z-10 bg-white"
+                          className="py-4 px-4 font-medium text-gray-900 whitespace-nowrap  sticky left-0 z-10 bg-white"
                         >
                           {data.centerName}
                         </th>
@@ -333,7 +333,9 @@ const Dashboard = () => {
                         <td className="py-3 px-4">{data.time}</td>
                         <td
                           className={`py-3 px-4 ${
-                            data.status === "Accepted" ? "text-green-500" : "text-red-500"
+                            data.status === "Accepted"
+                              ? "text-green-500"
+                              : "text-red-500"
                           }`}
                         >
                           {data.status}
