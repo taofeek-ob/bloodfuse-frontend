@@ -7,7 +7,7 @@ export const UserProvider = ({ children }) => {
   const initialState = {
     username: 'Taofeek Bakare',
     email: 'feekbaks@gmail.com',
-    loginState: false,
+    loginState: sessionStorage.getItem('loginState') ? true : false,
     loading: false,
   };
 
