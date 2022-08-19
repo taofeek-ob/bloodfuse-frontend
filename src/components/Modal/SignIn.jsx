@@ -4,14 +4,18 @@ import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
 import {GoogleIcon} from "../../assets/images";
 import { useUserContext } from "../../context/user/UserContext";
+import { loginAuth } from '../../api/Login'
 
 export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFunc }) {
   const [email, setEmail ] = useState('');
+  const [password, setPassword ] = useState('');
   const { dispatch } = useUserContext(); 
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if(email === '') return;
+    if(email === '' || password ==='' ) return;
+    const tokens = loginAuth({ email, password });
+    console.log(tokens);
     dispatch({type: 'LOGIN', payload: {emailAddress: email}});
     closeModalFunc();
   }
@@ -100,6 +104,8 @@ export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFu
                           className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer"
                           placeholder=" "
                           required
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                         <label
                           htmlFor="floating_password"

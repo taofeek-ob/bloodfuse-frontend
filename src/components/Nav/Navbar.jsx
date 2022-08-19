@@ -11,6 +11,7 @@ import Sidebar from "./Sidebar";
 import { solutions, resources } from "./NavbarData";
 import { useUserContext } from "../../context/user/UserContext";
 
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
