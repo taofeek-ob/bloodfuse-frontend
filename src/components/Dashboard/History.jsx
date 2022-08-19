@@ -149,7 +149,7 @@ const History = () => {
             <span className="text-2xl">Donation History</span>
           </div>
           <div className="overflow-x-auto  relative md:col-span-2 col-span-1 bg-white rounded md:items-start">
-            <table className="w-full text-sm text-left whitespace-nowrap text-gray-500 dark:text-gray-400">
+            <table className="w-full text-sm text-left whitespace-nowrap text-gray-500 ">
               <thead className="text-xs  text-gray-700 border-b   ">
                 <tr>
                   <th

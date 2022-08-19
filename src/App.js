@@ -13,7 +13,7 @@ import {
   DashboardLayout,
 } from "./components/Layout";
 import "./index.css";
-import { MedicalsPage, Dashboard, History } from "./components/Dashboard";
+import { MedicalsPage, Dashboard, History, Wallet } from "./components/Dashboard";
 import { UserProvider } from "./context/user/UserContext";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="/dashboard/main" element={<Dashboard />} />
               <Route path="medical" element={<MedicalsPage />} />
-              <Route path="wallet" element={<Dashboard />} />
+              <Route path="wallet" element={<Wallet />} />
               <Route path="history" element={<History />} />
             </Route>
           </Routes>
