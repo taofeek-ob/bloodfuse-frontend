@@ -14,8 +14,8 @@ export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFu
   const handleLogin = (e) => {
     e.preventDefault();
     if(email === '' || password ==='' ) return;
-    const tokens = loginAuth({ email, password });
-    console.log(tokens);
+    // const tokens = loginAuth({ email, password });
+    // console.log(tokens);
     dispatch({type: 'LOGIN', payload: {emailAddress: email}});
     closeModalFunc();
   }
