@@ -5,8 +5,8 @@ const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const initialState = {
-    username: 'Taofeek Bakare',
-    email: 'feekbaks@gmail.com',
+    username: '',
+    email: '',
     loginState: sessionStorage.getItem('loginState') ? true : false,
     loading: false,
   };

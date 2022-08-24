@@ -32,14 +32,17 @@ const Wallet = () => {
   // Records to be displayed on the current page
   const currentRecords = Record.slice(indexOfFirstRecord, indexOfLastRecord);
 
+  // no of items on a page
+  const itemsNo = currentRecords.length;
+
   // Calculate the number of pages.
 
   const nPages = Math.ceil(Record.length / recordsPerPage);
 
   return (
     <div className="w-full  h-full p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2  gap-x-2 sm:gap-x-8 gap-y-4 w-full md:max-w-7xl mt-4 mb-8">
-        <div className="sm:col-span-2">
+      <div className="grid grid-cols-1 sm:grid-cols-3  gap-x-2 sm:gap-x-8 gap-y-4 w-full md:max-w-7xl mt-4 mb-8">
+        <div className="sm:col-span-3">
           <span className="font-[500] hidden md:inline h-fit text-xl md:text-2xl whitespace-nowrap">
             My Wallet
           </span>
@@ -56,31 +59,31 @@ const Wallet = () => {
           </div>
           <div className="">
             <span className="tracking-wide">
-              <span className="text-7xl font-semibold">0.00</span>
-              <span className="text-2xl">STX /</span>
-              <span className="text-gray-500 text-2xl"> 0.00NGN</span>
+              <span className="text-5xl font-semibold">0.00</span>
+              <span className="text-1xl">STX /</span>
+              <span className="text-gray-500 text-1xl"> 0.00NGN</span>
             </span>
           </div>
-          <div className="flex justify-start items-center gap-4  py-4">
+          <div className="flex justify-start items-center gap-4 flex-wrap py-4">
             <span className="text-gray-500">Q0GP2DPPE4H9N0G....</span>
             <FiCopy className="ml-2 text-[#BFBFBF]" />
           </div>
           <div className="flex justify-start items-center gap-4 py-4 text-white">
-            <button className="bg-red-500 py-3 lg:px-10 px-5 rounded flex gap-2 justify-between items-center ">
+            <button className="bg-red-500 py-3 px-3 lg:px-6 md:px-4  rounded flex gap-1 justify-between items-center ">
               <ArrowUpIcon className="h-5 w-5" />
               Send
             </button>
-            <button className="bg-red-500 py-3 lg:px-8 px-4 rounded flex gap-2 justify-between items-center">
+            <button className="bg-red-500 py-3 px-1 lg:px-5 md:px-2 rounded flex gap-1 justify-between items-center">
               <ArrowDownIcon className="h-5 w-5" />
               Receive
             </button>
           </div>
         </div>
-        <div className="flex  flex-col gap-4 justify-start md:justify-center bg-[#FCFCFC] rounded shadow-sm px-4 py-6">
+        <div className="flex  flex-col gap-4 sm:col-span-2 justify-start md:justify-center bg-[#FCFCFC] rounded shadow-sm px-4 py-6">
           <div className="mr-auto">
             <span>Quick Links</span>
           </div>
-          <div className=" grid grid-cols-2  sm:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-7">
+          <div className=" grid grid-cols-2  sm:grid-cols-4  gap-x-4 gap-y-7">
             <div className="bg-white flex flex-col justify-between gap-4 items-center rounded-lg w-full py-6 border-2">
               <span>
                 <img src={Dollar} className="h-10 w-10" alt="dollar" />
@@ -91,7 +94,7 @@ const Wallet = () => {
               <span>
                 <img src={Withdraw} className="h-10 w-10" alt="dollar" />
               </span>
-              <span>Withdraw fund</span>
+              <span className="">Withdraw Fund</span>
             </div>
             <div className="bg-white flex flex-col justify-between gap-4 items-center rounded-lg w-full py-6 border-2">
               <span>
@@ -107,7 +110,7 @@ const Wallet = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-between bg-[white] px-4 py-6 sm:col-span-2 rounded">
+        <div className="flex flex-col justify-between bg-[white] px-4 py-6 sm:col-span-3 rounded">
           <div className="flex justify-between">
             <div>Transactions</div>
 
@@ -162,12 +165,12 @@ const Wallet = () => {
             </div>
           )}
         </div>
-        <div className="sm:col-span-2">
+        <div className="sm:col-span-3">
           <Pagination
             nPages={nPages}
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
-            recordsPerPage={recordsPerPage}
+            recordsPerPage={itemsNo}
           />
         </div>
       </div>

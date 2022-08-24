@@ -2,23 +2,36 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 import { XIcon } from "@heroicons/react/outline";
-import {GoogleIcon} from "../../assets/images";
+import { GoogleIcon } from "../../assets/images";
 import { useUserContext } from "../../context/user/UserContext";
-import { loginAuth } from '../../api/Login'
+import { loginAuth } from "../../api/Login";
 
-export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFunc }) {
-  const [email, setEmail ] = useState('');
-  const [password, setPassword ] = useState('');
-  const { dispatch } = useUserContext(); 
+export default function SignIn({
+  isModalOpen,
+  closeModalFunc,
+  openSignUpModalFunc,
+}) {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { dispatch } = useUserContext();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if(email === '' || password ==='' ) return;
-    // const tokens = loginAuth({ email, password });
-    // console.log(tokens);
-    dispatch({type: 'LOGIN', payload: {emailAddress: email}});
+    if (email === "" || password === "") return;
+
+    const tokens = await loginAuth({ email, password });
+    console.log(tokens);
+
+    const mail = tokens.user.email;
+    const name = tokens.user.first_name + " " + tokens.user.last_name;
+
+    dispatch({
+      type: "LOGIN",
+      payload: { username: name, emailAddress: mail },
+    });
+
     closeModalFunc();
-  }
+  };
 
   return (
     <>
@@ -66,14 +79,17 @@ export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFu
                   <div className="mb-5">
                     <h2>
                       Not a member yet?{" "}
-                      <span className="text-red-600 cursor-pointer"
+                      <span
+                        className="text-red-600 cursor-pointer"
                         onClick={() => {
                           closeModalFunc();
                           setTimeout(() => {
                             openSignUpModalFunc();
-                          }, 500)
+                          }, 500);
                         }}
-                      >Sign up now</span>
+                      >
+                        Sign up now
+                      </span>
                     </h2>
                   </div>
                   <div className="mt-2">
@@ -132,7 +148,9 @@ export default function SignIn ({ isModalOpen, closeModalFunc, openSignUpModalFu
                           </label>
                         </div>
                         <div>
-                          <h3 className="text-sm text-[#F00530] cursor-pointer">Forgot your password?</h3>
+                          <h3 className="text-sm text-[#F00530] cursor-pointer">
+                            Forgot your password?
+                          </h3>
                         </div>
                       </div>
                       <button

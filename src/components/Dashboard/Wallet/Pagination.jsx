@@ -18,12 +18,22 @@ const Pagination = ({
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
 
+  const frm = () => {
+    if (currentPage === 1) {
+      return 1;
+    }
+    return currentPage * 7 - recordsPerPage + 1;
+  };
+
   return (
-    <div className="py-3 flex  justify-between gap-4 place-items-center border-gray-200 text-sm ">
-      <div className="mr-auto">
+    <div className="py-3 flex sm:flex-row flex-col justify-between gap-4 items-center sm:place-items-center border-gray-200 text-sm ">
+      <div className="sm:mr-auto">
         <span className="text-sm text-gray-700 ">
-          Showing <span className="font-semibold text-gray-900">1</span> to{" "}
-          <span className="font-semibold text-gray-900 ">{recordsPerPage}</span>{" "}
+          Showing <span className="font-semibold text-gray-900">{frm()}</span>{" "}
+          to{" "}
+          <span className="font-semibold text-gray-900 ">
+            {currentPage === 1 ? 7 : currentPage * 7}
+          </span>{" "}
           of <span className="font-semibold text-gray-900 ">{nPages}</span>{" "}
           Pages
         </span>

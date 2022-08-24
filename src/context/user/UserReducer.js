@@ -12,9 +12,11 @@ const UserReducer = (state, action) => {
       };
     case "LOGIN": {
       sessionStorage.setItem("loginState", true);
+
       return {
         ...state,
         loginState: true,
+        username: action.payload.username,
         email: action.payload.emailAddress,
       };
     }

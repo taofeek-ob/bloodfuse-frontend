@@ -6,19 +6,19 @@ export default function SignUp({
   isModalOpen,
   closeModalFunc,
   openLoginModalFunc,
-  closeLoginModalFunc
-  }) {
-  
-
+  closeLoginModalFunc,
+}) {
   return (
     <>
       <Transition appear show={isModalOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={
-          () => {
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={() => {
             closeModalFunc();
             closeLoginModalFunc();
-          }
-        }>
+          }}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -44,7 +44,11 @@ export default function SignUp({
               >
                 <Dialog.Panel className="w-full px-4 sm:px-10 md:px-28 max-w-3xl transform overflow-hidden rounded-[4px] py-9 bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <div className="mt-5">
-                    <Tabs closeModal={closeModalFunc} openLoginModalFunc={openLoginModalFunc} closeLoginModalFunc={closeLoginModalFunc} />
+                    <Tabs
+                      closeModal={closeModalFunc}
+                      openLoginModalFunc={openLoginModalFunc}
+                      closeLoginModalFunc={closeLoginModalFunc}
+                    />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
