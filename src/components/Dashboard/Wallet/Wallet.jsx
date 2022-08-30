@@ -16,11 +16,7 @@ import Record from "./Record";
 import Pagination from "./Pagination";
 import Table from "./Table";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 const Wallet = () => {
-  const radio = useRef([]);
   // User is currently on this page
   const [currentPage, setCurrentPage] = useState(1);
   // No of Records to be displayed on each page
@@ -50,7 +46,7 @@ const Wallet = () => {
             Dashboard {">>"} STX Wallet
           </span>
         </div>
-        <div className="bg-[#FCFCFC] shadow-sm flex flex-col py-2 px-4  gap-2 justify-between">
+        <div className="bg-[#FCFCFC] shadow-sm flex flex-col py-2 px-4  gap-2 justify-between rounded shadow-sm ">
           <div className="flex justify-between  py-4 ">
             <span>Total Balance</span>
             <button className="block sm:hidden text-[14px] bg-[#FFF5F7] px-4 ml-auto rounded-full text-[#F00530] border border-transparent focus:border-[#F00530]">

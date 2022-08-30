@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { TabList, DonorTab, RecepientTab } from "../Tab";
+import { TabList, DonorTab, CenterTab } from "../Tab";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { XIcon } from "@heroicons/react/outline";
 
-
-export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFunc }) {
+export default function Tabs({
+  closeModal,
+  openLoginModalFunc,
+  closeLoginModalFunc,
+}) {
   // const [captchaRef, setCaptchaRef] = useState(true);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
@@ -43,11 +46,7 @@ export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFu
               );
             })}
           </div>
-          <button
-            type="button"
-            className="justify-center"
-            onClick={closeModal}
-          >
+          <button type="button" className="justify-center" onClick={closeModal}>
             <XIcon className="h-6 w-6" />
           </button>
         </div>
@@ -65,7 +64,7 @@ export default function Tabs({ closeModal, openLoginModalFunc, closeLoginModalFu
           />
         </div>
         <div>
-          <RecepientTab
+          <CenterTab
             activeTabIndex={activeTabIndex}
             closeModal={closeModal}
             openLoginModalFunc={openLoginModalFunc}

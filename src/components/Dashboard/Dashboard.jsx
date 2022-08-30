@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useUserContext } from "../../context/user/UserContext";
 import { Gradient, Patient } from "../../assets/images";
-import AppointmentModal from "../Modal/AppointmentModal";
+
+import { Link } from "react-router-dom";
 
 import GaugeChart from "react-gauge-chart";
 import {
@@ -131,25 +132,11 @@ const Dashboard = () => {
   const { username } = useUserContext();
   const names = username.split(" ");
   const firstname = names[0];
-  let [isOpen, setIsOpen] = useState(false);
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
   // eslint-disable-next-line
   const [appointment, setAppointment] = useState(appointmentData);
   return (
     <>
-      <AppointmentModal
-        isModalOpen={isOpen}
-        closeModalFunc={closeModal}
-        // openAppointmentModal={openAppointmentModal}
-        // closeAppointmentModal={closeAppointmentModal}
-      />
       <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
         {/* First Grid( Banner, 3 Cards and Pending Appointments) */}
         <div className=" md:col-span-2 space-y-4 overflow-y-scroll">
@@ -357,12 +344,11 @@ const Dashboard = () => {
           <div className=" hidden md:flex items-center justify-between">
             <span className="sm:text-sm xl:text-base">Appointments</span>
             <span>
-              <button
-                className="outline xl:text-base sm:text-sm sm:px-1 sm:py-2 outline-offset-6 xl:px-6 xl:py-2 rounded outline-red-500 text-red-500 block"
-                onClick={openModal}
-              >
-                Book new appointment
-              </button>{" "}
+              <Link to="/book-appointment">
+                <button className="outline xl:text-base sm:text-sm sm:px-1 sm:py-2 outline-offset-6 xl:px-6 xl:py-2 rounded outline-red-500 text-red-500 block">
+                  Book new appointment
+                </button>{" "}
+              </Link>
             </span>
           </div>
           <div className="py-2 hidden lg:block row-span-2 h-auto w-full">

@@ -1,9 +1,9 @@
 const TabList = [
   {
-    label: "Sign up as donor",
+    label: "Sign up as a donor",
   },
   {
-    label: "Sign up as recipient",
+    label: "Sign up as a center",
   },
 ];
 
