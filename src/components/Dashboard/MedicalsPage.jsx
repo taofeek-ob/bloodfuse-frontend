@@ -113,13 +113,57 @@ const MedicalsPage = () => {
         <div className="w-full bg-white min-h-[60vh]">
           {/* Heading */}
           <div className="py-4 w-full">
-            <div className="flex items-center justify-between px-6">
+            <div className="flex items-center justify-between px-6 pb-6 border-b-2 border-[#EBEBEB]">
               {/* First Flex */}
               <div className="flex gap-4 items-center">
-                <div className="flex items-center gap-1 cursor-pointer">
+                {/* <div className="flex items-center gap-1 cursor-pointer">
                   <span>View Medical Report</span>
                   <ChevronDownIcon className="w-6 h-6 text-[#445665]" />
-                </div>
+                </div> */}
+                <Popover className="relative ">
+                  {({ open }) => (
+                    <>
+                      <Popover.Button className=" flex  gap-1 items-center px-3 py-1">
+                        <span>View Medical Report</span>
+                        <ChevronDownIcon className="w-6 h-6 text-[#445665]" />
+                      </Popover.Button>
+                      <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-200"
+                        enterFrom="opacity-0 translate-y-1"
+                        enterTo="opacity-100 translate-y-0"
+                        leave="transition ease-in duration-150"
+                        leaveFrom="opacity-100 translate-y-0"
+                        leaveTo="opacity-0 translate-y-1"
+                      >
+                        <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-12  w-max rounded-2 ">
+                          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
+                            <div className="relative grid text-[14px] gap-4 bg-white p-2  ">
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                January
+                              </div>
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                February
+                              </div>
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                March
+                              </div>
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                April
+                              </div>
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                May
+                              </div>
+                              <div className=" px-4 py-2  hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                                June
+                              </div>
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
                 <div className="hidden lg:block cursor-pointer">
                   <button className="bttn bttn-black">
                     <PlusIcon className="w-4 h-4" />
