@@ -36,17 +36,17 @@ const Wallet = () => {
   const nPages = Math.ceil(Record.length / recordsPerPage);
 
   return (
-    <div className="w-full  h-full p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-3  gap-x-2 sm:gap-x-8 gap-y-4 w-full md:max-w-7xl mt-4 mb-8">
+    <div className="w-full  h-full p-4 overflow-x-hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-3  gap-x-2 sm:gap-x-8 gap-y-4 w-full md:max-w-7xl mb-8">
         <div className="sm:col-span-3">
-          <span className="font-[500] hidden md:inline h-fit text-xl md:text-2xl whitespace-nowrap">
+          <span className="font-[500] hidden md:inlinet text-xl md:text-2xl whitespace-nowrap">
             My Wallet
           </span>
-          <span className="font-[500] inline md:hidden h-fit md:mb-4 text-xl md:text-2xl whitespace-nowrap">
+          <span className="font-[500] inline md:hidden  md:mb-4 text-xl md:text-2xl whitespace-nowrap">
             Dashboard {">>"} STX Wallet
           </span>
         </div>
-        <div className="bg-[#FCFCFC] shadow-sm flex flex-col py-2 px-4  gap-2 justify-between rounded shadow-sm ">
+        <div className="bg-[#FCFCFC] flex flex-col py-2 px-4  gap-2 justify-between rounded shadow-sm ">
           <div className="flex justify-between  py-4 ">
             <span>Total Balance</span>
             <button className="block sm:hidden text-[14px] bg-[#FFF5F7] px-4 ml-auto rounded-full text-[#F00530] border border-transparent focus:border-[#F00530]">

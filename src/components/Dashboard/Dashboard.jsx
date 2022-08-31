@@ -137,7 +137,7 @@ const Dashboard = () => {
   const [appointment, setAppointment] = useState(appointmentData);
   return (
     <>
-      <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-6">
+      <div className="grid  grid-cols-1 lg:grid-cols-3  grid-flow-row gap-4 w-full  h-full p-4">
         {/* First Grid( Banner, 3 Cards and Pending Appointments) */}
         <div className=" md:col-span-2 space-y-4 overflow-y-scroll">
           <span className="font-[500] h-fit hidden md:inline md:mb-4 text-xl md:text-2xl">

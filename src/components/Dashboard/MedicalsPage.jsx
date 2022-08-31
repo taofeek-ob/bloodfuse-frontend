@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { Heart, BloodCells, WeightIcon } from "../../assets/images";
 import { BsPeople } from "react-icons/bs";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/solid";
 import { UploadIcon, DownloadIcon } from "@heroicons/react/outline";
 import { DotsVerticalIcon } from "@heroicons/react/outline";
-import { Popover } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 
 import MedicalInfo from "../Modal/MedicalInfo";
 
@@ -34,7 +34,7 @@ const MedicalsPage = () => {
         // openAppointmentModal={openAppointmentModal}
         // closeAppointmentModal={closeAppointmentModal}
       />
-      <div className="w-full  h-full p-4">
+      <div className="w-full  h-full p-4 overflow-x-hidden">
         <h1 className="font-[500] text-xl md:text-2xl">Medical Report</h1>
         {/* Grid of Cards*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-2 gap-y-4 w-full md:max-w-7xl mt-4 mb-8">
@@ -142,9 +142,48 @@ const MedicalsPage = () => {
                 </button>
               </div>
               {/* Dropdown Icon for mobile */}
-              <div className="block lg:hidden">
-                <DotsVerticalIcon className="w-6 h-6 text-[#445665]" />
-              </div>
+              <Popover className="relative block lg:hidden">
+                {({ open }) => (
+                  <>
+                    <Popover.Button className=" flex justify-between gap-2 items-center  text-gray-200 px-3 py-1">
+                      <DotsVerticalIcon className="w-6 h-6 text-[#445665]" />
+                    </Popover.Button>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-200"
+                      enterFrom="opacity-0 translate-y-1"
+                      enterTo="opacity-100 translate-y-0"
+                      leave="transition ease-in duration-150"
+                      leaveFrom="opacity-100 translate-y-0"
+                      leaveTo="opacity-0 translate-y-1"
+                    >
+                      <Popover.Panel className="absolute z-20 left-1/2 transform -translate-x-1/2 mt-3 pr-36 w-max ">
+                        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 ">
+                          <div className="relative grid text-[14px] gap-4 bg-white p-2 text-gray-200  ">
+                            <div className=" px-4 py-2 flex items-center justify-start gap-1 hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                              <PlusIcon className="w-4 h-4" />{" "}
+                              <span
+                                className="font-mod-light"
+                                onClick={openModal}
+                              >
+                                Create Medical Report
+                              </span>
+                            </div>
+                            <div className=" px-4 py-2 flex justify-start items-center gap-1 hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap ">
+                              <UploadIcon className="w-5 h-5" /> Upload Report
+                            </div>
+
+                            <div className="px-4 py-2 flex justify-start items-center gap-1 hover:bg-gray-300 rounded cursor-pointer hover:text-red-400 whitespace-nowrap">
+                              <DownloadIcon className="w-5 h-5" /> Download
+                              Report
+                            </div>
+                          </div>
+                        </div>
+                      </Popover.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Popover>
             </div>
           </div>
         </div>
